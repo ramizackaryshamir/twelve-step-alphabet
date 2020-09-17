@@ -32,9 +32,10 @@ ActiveRecord::Schema.define(version: 2020_09_17_183717) do
     t.string "longitude"
     t.string "dayOfWeek"
     t.string "timeOfDay"
-    t.string "organization"
+    t.bigint "category_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["category_id"], name: "index_meetings_on_category_id"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -46,4 +47,5 @@ ActiveRecord::Schema.define(version: 2020_09_17_183717) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "meetings", "categories"
 end

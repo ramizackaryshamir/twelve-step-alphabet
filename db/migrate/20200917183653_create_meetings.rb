@@ -11,8 +11,7 @@ class CreateMeetings < ActiveRecord::Migration[6.0]
       t.string :longitude
       t.string :dayOfWeek
       t.string :timeOfDay
-      t.string :organization
-
+      t.references :category, null: false, foreign_key: true
       t.timestamps
     end
   end
