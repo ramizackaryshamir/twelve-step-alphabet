@@ -4,40 +4,55 @@ import { createUseStyles } from 'react-jss'
 import './Meeting.css'
 
 const useStyles = createUseStyles({
-  meeting: {
+  meetingCard: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
-    border: "1px solid red",
+    /*border: "1px solid red",*/
+  },
+
+  meetingCardLeft: {
+    /*border: "10px solid black",*/
+  },
+
+  meetingCardCenter: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    width: 600,
+    fontSize: 15,
+    padding: 10,
+    /*border: "10px solid black",*/
+    margin: "0px auto 0px 100px",
+  },
+
+  meetingCardRight: {
+    marginLeft: 20,
   },
 
   elementLeft: {
-    marginTop: 10,
+    marginTop: 30,
+    marginBottom: -20,
   },
 
-  meetingRight: {
-    display: 'flex',
-    flexDirection: "column",
+  elementCenter: {
+    textAlign: "justify",
+    marginBottom: 0,
+    marginTop: 3,
+  },
+
+  elementName: {
+    fontSize: 20,
+    fontWeight: 100,
+    textAlign: "justify",
+    marginBottom: 3,
+    marginTop: 3,
   },
 
   elementRight: {
     textAlign: "right",
-    marginTop: 10,
-  },
-
-  meetingCenter: {
-    display: "flex",
-    flexDirection: "column",
-    width: 600,
-    fontSize: 15,
-    padding: 10,
-    border: "10px solid black",
-    margin: "auto",
-  },
-
-  elementCenter: {
-    marginBottom: 3,
-    marginTop: 3,
+    marginTop: 30,
+    marginBottom: -20,
   },
 })
 
@@ -49,28 +64,26 @@ export default function Meeting(details) {
 
   return (
     <>
-      <div className={classes.meeting}>
-        <div>
-          <p className={classes.elementLeft}>{timeOfDay}</p>
-          <p className={classes.elementLeft}>{dayOfWeek}</p>
+      <div className={classes.meetingCard}>
+        <div className={classes.meetingCardLeft}>
+          <p className={classes.elementLeft}>{organization}</p>
+          <p className={classes.elementLeft}>{state}</p>
         </div>
+        
 
-        <div className={classes.meetingCenter}>
-          <p className={classes.elementCenter}>{name}</p>
-
+        <div className={classes.meetingCardCenter}>
+          <p className={classes.elementName}>{name}</p>
           <p className={classes.elementCenter}>{address1}</p>
-
           <p className={classes.elementCenter}>{address2}</p>
-
-          
+          <p className={classes.elementCenter}>{city}</p>
           {/*{zipcode}*/}
           {/*{latitude}{longitude}*/}
         </div>
 
-        <div className={classes.meetingRight}>
-          <p className={classes.elementRight}>{organization}</p>
-          <p className={classes.elementRight}>{state}</p>
-        </div>
+        <div className={classes.meetingCardRight}>
+          <p className={classes.elementRight}>{timeOfDay}</p>
+          <p className={classes.elementRight}>{dayOfWeek}</p>
+          </div>
       </div>
     </>
   )
