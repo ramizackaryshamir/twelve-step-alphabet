@@ -1,15 +1,24 @@
 import React from 'react'
+import { createUseStyles } from 'react-jss'
 
 //import Layout from '../../Components/shared/Layout/Layout.jsx'
 import Meeting from '../Meeting/Meeting.jsx'
 
 import './Meetings.css'
 
-export default function Meetings() {
+const useStyles = createUseStyles({
+  meetingCards: {
+    display: 'flex',
+    flexDirection: 'column',
+    margin: 100,
+}
+})
 
+export default function Meetings() {
+  const classes =useStyles()
   return (
     <>
-      <div className="meeting-card">
+      <div className={classes.meetingCards}>
         <Meeting
           name="Al-Anon"
           address1="First Presbyterian Church - ISELIN AFG, Step meeting, Families, Friends, and Observers Welcome, Beginners , Group ID 9199"
@@ -23,8 +32,7 @@ export default function Meetings() {
           longitude="-74.32277"
           organization="AL"
         />
-      </div>
-      <div className="meeting-card">
+    
         <Meeting
           name="Woodbridge Time Takes Time"
           address1="Trinity Episcopal Church Red Sexton House"
@@ -38,8 +46,7 @@ export default function Meetings() {
           longitude="-74.27074"
           organization="AA"
         />
-      </div>
-      <div className="meeting-card">
+      
         <Meeting
           name="Drink and Die"
           address1="Greenpoint Reformed Church"
