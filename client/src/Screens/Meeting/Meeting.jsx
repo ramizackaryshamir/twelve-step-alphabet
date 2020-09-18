@@ -7,36 +7,37 @@ const useStyles = createUseStyles({
   meeting: {
     display: "flex",
     flexDirection: "row",
-    justifyContent: 'space-between',
+    justifyContent: "center",
+    border: "1px solid red",
   },
 
   elementLeft: {
-    margin: 10,
+    marginTop: 10,
+  },
+
+  meetingRight: {
+    display: 'flex',
+    flexDirection: "column",
   },
 
   elementRight: {
     textAlign: "right",
-    margin: 10,
-  },
-
-  meetingRight: {
-    flexDirection: "column",
-    float: "right",
-    justifyContent: "center",
+    marginTop: 10,
   },
 
   meetingCenter: {
     display: "flex",
     flexDirection: "column",
+    width: 600,
     fontSize: 15,
     padding: 10,
     border: "10px solid black",
-    marginLeft: 250,
-    marginRight: 250,
+    margin: "auto",
   },
 
-  elementBottom: {
-    margin: 1,
+  elementCenter: {
+    marginBottom: 3,
+    marginTop: 3,
   },
 })
 
@@ -55,13 +56,13 @@ export default function Meeting(details) {
         </div>
 
         <div className={classes.meetingCenter}>
-          <p className={classes.elementBottom}>{name}</p>
+          <p className={classes.elementCenter}>{name}</p>
 
-          <p className={classes.elementBottom}>{address1}</p>
+          <p className={classes.elementCenter}>{address1}</p>
 
-          <p className={classes.elementBottom}>{address2}</p>
+          <p className={classes.elementCenter}>{address2}</p>
 
-          <p className={classes.elementBottom}>{city}</p>
+          
           {/*{zipcode}*/}
           {/*{latitude}{longitude}*/}
         </div>
