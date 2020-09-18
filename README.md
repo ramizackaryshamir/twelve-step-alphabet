@@ -62,31 +62,16 @@ src
        |__ Search/
             |__ Search.jsx
             |__ Search.css    
-       |__ Meetings/
-            |__ Meetings.jsx
-            |__ Meetings.css
-       |__ Time
-            |__ Time.jsx
-            |__ Time.css
-       |__ Meeting/
-            |__ Meeting.jsx
-            |__ Meeting.css
-       |__ Name/
-            |__ Name.jsx
-            |__ Name.css
-       |__ Address/
-            |__ Address.jsx
-            |__ Address.css
        |__ Map/
             |__Map.jsx
             |__Map.css  
-|__ Screens/
+|__ screens/
       |__ Meetings 
             |__ Meeting.jsx
             |__ Meeting.css
-      |__MeetingDetail/
-            |__ MeetingDetail.jsx
-            |__ MeetingDetail.css
+      |__Meeting/
+            |__ Meeting.jsx
+            |__ Meeting.css
       |__ PostReview/
             |__ PostReview.jsx
             |__ PostReview.css
