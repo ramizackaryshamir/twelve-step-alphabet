@@ -1,10 +1,11 @@
 import React from 'react';
-//import ReactDOM from 'react-dom'
-//import { Router } from 'react-router-dom'
+import ReactDOM from 'react-dom'
+import { Route } from 'react-router-dom'
 
 import Layout from '../shared/Layout/Layout.jsx'
 
-import  Meetings from '../../screens/Meetings/Meetings.jsx'
+import Meetings from '../../screens/Meetings/Meetings.jsx'
+import PostReview from '../../screens/PostReview/PostReview'
 
 import './App.css';
 
@@ -12,7 +13,8 @@ function App() {
   return (
     <>
       <Layout>
-        <Meetings />
+        <Route exact path='/meetings' component={Meetings} />
+        <Route exact path='/post-review' component={PostReview} />
       </Layout>
     </>
   )
