@@ -11,7 +11,7 @@ const useStyles = createUseStyles({
     margin: "auto",
   },
 
-  title: {
+  newTitle: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
@@ -21,7 +21,7 @@ const useStyles = createUseStyles({
     border: "5px solid red",
   },
 
-  userName: {
+  newUserName: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
@@ -31,7 +31,7 @@ const useStyles = createUseStyles({
     border: "5px solid green",
   },
 
-  score: {
+  newScore: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
@@ -41,7 +41,7 @@ const useStyles = createUseStyles({
     border: "5px solid blue",
   },
 
-  content: {
+  newDescription: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
@@ -54,7 +54,23 @@ const useStyles = createUseStyles({
   
 export default function ReviewForm({ rows, cols, userName, title, description }) {
   
-  const [newTitle, setNewTitle] = useState("")
+  const [formData, setFormData] = useState({
+    newTitle: '',
+    newUserName: '',
+    newDescription: '',
+    scoreValue: ''
+  });
+
+  const { newTitle, newUserName, newDescription, newScore } = formData
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prevFormData => ({
+      ...prevFormData,
+      [name]: value
+    }))
+  }
+  
+  /*const [newTitle, setNewTitle] = useState("")
   const [user, setUser] = useState("")
   const [content, setContent] = useState("")
   const [scoreValue, setScoreValue] = useState(null)
@@ -77,7 +93,7 @@ export default function ReviewForm({ rows, cols, userName, title, description })
   const handleContent = (e) => {
     const { value } = e.target
     setContent(value)
-  }
+  }*/
 
   const classes = useStyles()
 
@@ -88,17 +104,19 @@ export default function ReviewForm({ rows, cols, userName, title, description })
           <label>
             <input
               type="text"
-              className={classes.title}
+              className={classes.newTitle}
+              name='newTitle'
               value={newTitle}
-              onChange={handleNewTitle}
+              onChange={handleChange}
             >
               {title}
             </input>
             <input
               type="text"
-              className={classes.userName}
-              value={user}
-              onChange={handleUser}
+              className={classes.newUserName}
+              name ='newUserName'
+              value={newUserName}
+              onChange={handleChange}
             >
               {userName}
             </input>
@@ -106,17 +124,19 @@ export default function ReviewForm({ rows, cols, userName, title, description })
               type="number"
               min="0"
               max="5"
-              className={classes.score}
-              value={scoreValue}
-              onChange={handleScore}
+              className={classes.newScore}
+              name='newScore'
+              value={newScore}
+              onChange={handleChange}
             ></input>
             <p>
               <textarea
                 rows={rows}
                 cols={cols}
-                className={classes.content}
-                value={content}
-                onChange={handleContent}
+                className={classes.newDescription}
+                name='newDescription'
+                value={newDescription}
+                onChange={handleChange}
               >
                 {description}
               </textarea>
