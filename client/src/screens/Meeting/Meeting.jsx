@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react'
-imopoirt axios from 'axios'
+import { getAllMeetings, getOneMeeting } from '../../services/meetings.js'
 import { createUseStyles } from 'react-jss'
-
-import './Meeting.css'
 
 const useStyles = createUseStyles({
   meetingCard: {
@@ -43,6 +41,7 @@ const useStyles = createUseStyles({
   },
 
   elementName: {
+    fontFamily: 'Amatic SC',
     fontSize: 20,
     fontWeight: 100,
     textAlign: "justify",

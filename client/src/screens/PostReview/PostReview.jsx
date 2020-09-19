@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
-//import { createUseStyles } from 'react-jss'
 import Layout from '../../Components/shared/Layout/Layout.jsx'
 import ReviewForm from '../../Components/ReviewForm.jsx'
+import { postReview } from '../../services/meetings.js'
 
 
 //PostReview component form:
