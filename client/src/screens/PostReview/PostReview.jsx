@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 //import { createUseStyles } from 'react-jss'
-//import Layout from '../../Components/shared/Layout/Layout.jsx'
+import Layout from '../../Components/shared/Layout/Layout.jsx'
 import ReviewForm from '../../Components/ReviewForm.jsx'
 
 
@@ -12,11 +12,13 @@ export default function PostReview() {
   
   return (
     <>
+      <Layout>
         <div>
           <ReviewForm
             rows="35"
             cols="85" />
         </div>
+      </Layout>
     </>
   )
 }

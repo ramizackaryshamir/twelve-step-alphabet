@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+imopoirt axios from 'axios'
 import { createUseStyles } from 'react-jss'
 
 import './Meeting.css'
@@ -19,11 +20,11 @@ const useStyles = createUseStyles({
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    width: 600,
+    width: 400,
     fontSize: 15,
     padding: 10,
     /*border: "10px solid black",*/
-    margin: "0px auto 0px 100px",
+    margin: "0px auto 0px 200px",
   },
 
   meetingCardRight: {
@@ -51,17 +52,19 @@ const useStyles = createUseStyles({
 
   elementRight: {
     textAlign: "right",
+    fontWeight: 700,
     marginTop: 30,
     marginBottom: -20,
   },
 })
 
 export default function Meeting(details) {
-  
+
   const { name, address1, address2, city, state, zipcode, timeOfDay, dayOfWeek, latitude, longitude, organization } = details
   
   const classes = useStyles()
 
+  
   return (
     <>
       <div className={classes.meetingCard}>
