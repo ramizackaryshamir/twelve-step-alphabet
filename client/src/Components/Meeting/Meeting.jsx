@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react'
-import { getAllMeetings, getOneMeeting } from '../../services/meetings.js'
+import React from 'react'
 import { createUseStyles } from 'react-jss'
 
 const useStyles = createUseStyles({

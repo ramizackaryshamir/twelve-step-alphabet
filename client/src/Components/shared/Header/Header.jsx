@@ -1,6 +1,7 @@
 import React from 'react'
-import Nav from '../Nav/Nav.jsx'
 import { createUseStyles } from 'react-jss'
+
+import Nav from "../Nav/Nav.jsx"
 
 const useStyles = createUseStyles({
   header: {
