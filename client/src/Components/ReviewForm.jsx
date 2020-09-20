@@ -1,66 +1,78 @@
 import React, { useState, useEffect } from 'react'
 import { createUseStyles } from 'react-jss'
 
+import Layout from './shared/Layout/Layout.jsx'
+
 const useStyles = createUseStyles({
   form: {
     display: "flex",
-    flexDirection: "column",
+    flexDirection: "row",
     justifyContent: "center",
+    height: 1080,
   },
 
   formHeader: {
     display: "flex",
     flexDirection: "column",
-    justifyContent: "space-between",
+    alignItems: "flex-end",
+    width: 600,
     margin: "auto",
   },
 
   newTitle: {
-    fontFamily: "sans-serif",
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-between",
-    margin: "auto",
+    outline: "none",
+    fontFamily: "Rubik",
+    fontWeight: 800,
     width: 300,
     height: 30,
-    border: "5px solid red",
+    backgroundColor: "#F2DBAE",
+    borderRadius: 5,
+    border: "3px solid #BAD0D9",
+    marginBottom: 10,
   },
 
   newUserName: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-between",
-    margin: "auto",
+    outline: "none",
     width: 300,
     height: 30,
-    border: "5px solid green",
+    fontFamily: "Rubik",
+    fontWeight: 800,
+    backgroundColor: "#F2DBAE",
+    borderRadius: 5,
+    border: "3px solid #BAD0D9",
   },
 
   newScore: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-between",
-    margin: "auto",
+    outline: "none",
     width: 50,
     height: 30,
-    border: "5px solid blue",
+    backgroundColor: "#F2DBAE",
+    borderRadius: 5,
+    border: "3px solid #BAD0D9",
+    marginTop: 20,
+    marginBottom: 10,
   },
 
   newDescription: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "center",
-    margin: "auto",
+    outline: "none",
+    fontFamily: "Rubik",
+    fontWeight: 800,
     width: 600,
     height: 600,
-    border: "10px solid black",
+    backgroundColor: "#F2DBAE",
+    margin: "auto",
+    borderRadius: 15,
+    border: "10px solid #BAD0D9",
   },
 
   buttonSubmit: {
+    outline: "none",
     fontFamily: "Bungee",
     width: 100,
     height: 40,
+    border: "1px solid #F2DABD",
     borderRadius: 200,
+    backgroundColor: "#F2DABD",
   },
 })
   
@@ -87,86 +99,64 @@ export default function ReviewForm({ rows, cols, userName, title,  description }
 
   return (
     <>
-      <div className={classes.form}>
-        <form>
-          {/*onSubmit={(e) => {
+      <Layout>
+        <div className={classes.form}>
+          <form>
+            {/*onSubmit={(e) => {
             e.preventDefault();
             handleSubmit(formData);*/}
-          <label>
-            <input
-              type="text"
-              placeholder="Review Title"
-              className={classes.newTitle}
-              name="newTitle"
-              value={newTitle}
-              onChange={handleChange}
-            >
-              {title}
-            </input>
-            <input
-              type="text"
-              placeholder="Reviewed By"
-              className={classes.newUserName}
-              name="newUserName"
-              value={newUserName}
-              onChange={handleChange}
-            >
-              {userName}
-            </input>
-            <input
-              type="number"
-              min="0"
-              max="5"
-              className={classes.newScore}
-              name="newScore"
-              value={newScore}
-              onChange={handleChange}
-            ></input>
-            <p>
-              <textarea
-                rows={rows}
-                cols={cols}
-                className={classes.newDescription}
-                name="newDescription"
-                value={newDescription}
-                onChange={handleChange}
-              >
-                {description}
-              </textarea>
-            </p>
-          </label>
-          <button
-            alt="submit-button"
-            className={classes.buttonSubmit}>
-            Submit
-          </button>
-        </form>
-      </div>
+            <label>
+              <div className={classes.formHeader}>
+                <input
+                  type="number"
+                  min="0"
+                  max="5"
+                  className={classes.newScore}
+                  name="newScore"
+                  value={newScore}
+                  onChange={handleChange}
+                ></input>
+                <input
+                  type="text"
+                  placeholder="Give your review a title."
+                  className={classes.newTitle}
+                  name="newTitle"
+                  value={newTitle}
+                  onChange={handleChange}
+                >
+                  {title}
+                </input>
+                <input
+                  type="text"
+                  placeholder="Tell people who you are."
+                  className={classes.newUserName}
+                  name="newUserName"
+                  value={newUserName}
+                  onChange={handleChange}
+                >
+                  {userName}
+                </input>
+              </div>
+              <p>
+                <textarea
+                  placeholder="Tell people about your experience."
+                  rows={rows}
+                  cols={cols}
+                  className={classes.newDescription}
+                  name="newDescription"
+                  value={newDescription}
+                  onChange={handleChange}
+                >
+                  {description}
+                </textarea>
+              </p>
+            </label>
+            <button alt="submit-button" className={classes.buttonSubmit}>
+              Submit
+            </button>
+          </form>
+        </div>
+      </Layout>
     </>
   )
 }
-
-/*const [newTitle, setNewTitle] = useState("")
-  const [user, setUser] = useState("")
-  const [content, setContent] = useState("")
-  const [scoreValue, setScoreValue] = useState(null)
-
-  const handleNewTitle = (e) => {
-    const { value } = e.target
-    setNewTitle(value)
-  }
-
-  const handleUser = (e) => {
-    const { value } = e.target
-    setUser(value)
-  }
-
-  const handleScore = (e) => {
-    const { value } = e.target
-    setScoreValue(value)
-  }
-
-  const handleContent = (e) => {
-    const { value } = e.target
-    setContent(value)
-  }*/
