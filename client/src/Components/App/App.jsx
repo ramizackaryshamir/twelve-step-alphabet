@@ -12,7 +12,7 @@ function App() {
     <>
       <Switch>
         <Route
-          exact path="/meetings"
+          exact path="/"
           component={Meetings} />
         <Route
           exact path='/meeting-detail'
