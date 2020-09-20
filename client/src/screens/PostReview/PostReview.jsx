@@ -16,7 +16,9 @@ export default function PostReview() {
         <div>
           <ReviewForm
             rows="35"
-            cols="85" />
+            cols="85"
+            buttonType='Submit'
+          />
         </div>
       </Layout>
     </>
