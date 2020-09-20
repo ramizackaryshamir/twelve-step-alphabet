@@ -7,6 +7,8 @@ const useStyles = createUseStyles({
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
+    paddingBottom: 10,
+    paddingTop: 10,
     marginBottom: 5,
     marginTop: 5,
     border: "3px solid #FFD1DC",
@@ -16,6 +18,7 @@ const useStyles = createUseStyles({
 
   meetingCardLeft: {
     marginLeft: 20,
+    width: 220,
     fontFamily: "Rubik",
     fontWeight: 500,
   },
@@ -40,22 +43,23 @@ const useStyles = createUseStyles({
   },
 
   elementLeft: {
-    marginTop: 30,
+    marginTop: 20,
     marginBottom: -20,
+    paddingBottom: 10,
   },
 
   elementCenter: {
     fontFamily: "Rubik",
     fontWeight: 400,
     textAlign: "justify",
-    marginBottom: 0,
+    marginBottom: 1,
     marginTop: 3,
   },
 
   elementName: {
     fontFamily: "Amatic SC",
-    fontSize: 20,
-    fontWeight: 100,
+    fontSize: 30,
+    fontWeight: 700,
     textAlign: "justify",
     marginBottom: 3,
     marginTop: 3,
@@ -63,8 +67,9 @@ const useStyles = createUseStyles({
 
   elementRight: {
     textAlign: "right",
-    marginTop: 30,
+    marginTop: 20,
     marginBottom: -20,
+    paddingBottom: 10,
   },
 })
 

@@ -51,26 +51,22 @@ export default function MeetingsContainer() {
         <Route path="/meetings-aa">
           <Meetings
             allMeetings={allMeetings}
-            filterFn={(meeting) => meeting.category.name === "AA - Alcoholics Anonymous"}
+            filterFn={(meeting) =>
+              meeting.category.name === "AA - Alcoholics Anonymous"
+            }
           />
         </Route>
         <Route path="/meetings-al">
           <Meetings
             allMeetings={allMeetings}
-            filterFn={(meeting) => meeting.category.name === "AL - Al Anon"}
+            filterFn={(meeting) => meeting.category.name === "AL - Al-Anon"}
           />
         </Route>
 
-        <Route
-          path="/meeting-detail"
-          component={MeetingDetail} />
-        <Route
-          path="/post-review"
-          component={PostReview} />
+        <Route path="/meeting-detail" component={MeetingDetail} />
+        <Route path="/post-review" component={PostReview} />
         <Route path="/">
-          <Meetings
-            allMeetings={allMeetings}
-            filterFn={(meeting) => meeting} />
+          <Meetings allMeetings={allMeetings} filterFn={(meeting) => meeting} />
         </Route>
       </Switch>
     </>
