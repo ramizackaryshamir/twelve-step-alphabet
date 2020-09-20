@@ -27,6 +27,7 @@ const useStyles = createUseStyles({
     height: 30,
     backgroundColor: "#F2DBAE",
     borderRadius: 5,
+    padding: 10,
     border: "3px solid #BAD0D9",
     marginBottom: 10,
   },
@@ -38,6 +39,7 @@ const useStyles = createUseStyles({
     fontFamily: "Rubik",
     fontWeight: 800,
     backgroundColor: "#F2DBAE",
+    padding: 10,
     borderRadius: 5,
     border: "3px solid #BAD0D9",
   },
@@ -77,22 +79,28 @@ const useStyles = createUseStyles({
   },
 })
   
-export default function ReviewForm({ rows, cols, userName, title,  description, handleSubmit }) {
-  
+export default function ReviewForm({
+  rows,
+  cols,
+  userName,
+  title,
+  description,
+  handleSubmit,
+}) {
   const [formData, setFormData] = useState({
-    newTitle: '',
-    newUserName: '',
-    newDescription: '',
-    scoreValue: ''
-  });
+    newTitle: "",
+    newUserName: "",
+    newDescription: "",
+    scoreValue: "",
+  })
 
   const { newTitle, newUserName, newDescription, newScore } = formData
-  
+
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prevFormData => ({
+    const { name, value } = e.target
+    setFormData((prevFormData) => ({
       ...prevFormData,
-      [name]: value
+      [name]: value,
     }))
   }
 
@@ -104,10 +112,11 @@ export default function ReviewForm({ rows, cols, userName, title,  description, 
         <div className={classes.form}>
           <form
             onSubmit={(e) => {
-              e.preventDefault();
+              e.preventDefault()
               handleSubmit(formData)
             }}
-            alt='review-form'>
+            alt="review-form"
+          >
             <label>
               <div className={classes.formHeader}>
                 <input

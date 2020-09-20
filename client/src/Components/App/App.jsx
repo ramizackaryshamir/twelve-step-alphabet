@@ -4,16 +4,21 @@ import { Route, Switch } from 'react-router-dom'
 
 //import Layout from '../../Components/shared/Layout/Layout.jsx'
 import Meetings from '../../screens/Meetings/Meetings.jsx'
+import MeetingDetail from '../../screens/MeetingDetail/MeetingDetail.jsx'
 import PostReview from '../../screens/PostReview/PostReview'
-
-import './App.css';
 
 function App() {
   return (
     <>
       <Switch>
-          <Route exact path="/meetings" component={Meetings} />
-          <Route exact path="/post-review" component={PostReview} />
+        <Route
+          exact path="/meetings"
+          component={Meetings} />
+        <Route
+          exact path='/meeting-detail'
+          component={MeetingDetail} />
+        <Route
+          exact path="/post-review" component={PostReview} />
       </Switch>
     </>
   )

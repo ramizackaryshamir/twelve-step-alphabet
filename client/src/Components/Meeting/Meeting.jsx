@@ -25,6 +25,8 @@ const useStyles = createUseStyles({
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
+    textAlign: "justify",
+    textJistify: "inter-word",
     width: 400,
     fontSize: 15,
     padding: 10,

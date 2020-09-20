@@ -58,7 +58,8 @@ src
                   |__Footer.css
        |__ App/
             |__ App.jsx
-            |__ App.css
+      |__Meeting/
+            |__ Meeting.jsx
        |__ Search/
             |__ Search.jsx
             |__ Search.css    
@@ -69,8 +70,8 @@ src
       |__ Meetings 
             |__ Meeting.jsx
             |__ Meeting.css
-      |__Meeting/
-            |__ Meeting.jsx
+      |__MeetingDetail/
+            |__ MeetingDetail.jsx
             |__ Meeting.css
       |__ PostReview/
             |__ PostReview.jsx

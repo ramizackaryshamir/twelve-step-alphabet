@@ -21,13 +21,13 @@ export const destroyReview = async(id) => {
 }
 
 //Create
-export const postReview = async (reviewData) => {
-  const resp = await api.post(`${BASE_URL}/meetings`, reviewData);
+export const postReview = async (formData) => {
+  const resp = await api.post(`${BASE_URL}/meetings`, formData);
   return resp.data;
 }
 
 //Update
-export const putUpdatedReview = async (id, updatedData) => {
-  const resp = await api.put(`${BASE_URL}/meetings/${id}`, updatedData);
+export const putUpdatedReview = async (id, formData) => {
+  const resp = await api.put(`${BASE_URL}/meetings/${id}`, formData);
   return resp.data;
 }

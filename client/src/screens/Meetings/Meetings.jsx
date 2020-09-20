@@ -4,9 +4,7 @@ import axios from 'axios'
 import { createUseStyles } from 'react-jss'
 
 import Layout from '../../Components/shared/Layout/Layout.jsx'
-import Meeting, { name } from '../Meeting/Meeting.jsx'
-
-import './Meetings.css'
+import Meeting from '../../Components/Meeting/Meeting.jsx'
 
 const useStyles = createUseStyles({
   meetingCard: {
