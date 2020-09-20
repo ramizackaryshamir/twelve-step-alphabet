@@ -60,6 +60,7 @@ const useStyles = createUseStyles({
     width: 600,
     height: 600,
     backgroundColor: "#F2DBAE",
+    padding: 10,
     margin: "auto",
     borderRadius: 15,
     border: "10px solid #BAD0D9",
@@ -76,7 +77,7 @@ const useStyles = createUseStyles({
   },
 })
   
-export default function ReviewForm({ rows, cols, userName, title,  description }) {
+export default function ReviewForm({ rows, cols, userName, title,  description, handleSubmit }) {
   
   const [formData, setFormData] = useState({
     newTitle: '',
@@ -101,10 +102,12 @@ export default function ReviewForm({ rows, cols, userName, title,  description }
     <>
       <Layout>
         <div className={classes.form}>
-          <form>
-            {/*onSubmit={(e) => {
-            e.preventDefault();
-            handleSubmit(formData);*/}
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              handleSubmit(formData)
+            }}
+            alt='review-form'>
             <label>
               <div className={classes.formHeader}>
                 <input
@@ -123,6 +126,7 @@ export default function ReviewForm({ rows, cols, userName, title,  description }
                   name="newTitle"
                   value={newTitle}
                   onChange={handleChange}
+                  alt="Give your review a title."
                 >
                   {title}
                 </input>
@@ -133,6 +137,7 @@ export default function ReviewForm({ rows, cols, userName, title,  description }
                   name="newUserName"
                   value={newUserName}
                   onChange={handleChange}
+                  alt="Tell people who you are."
                 >
                   {userName}
                 </input>
