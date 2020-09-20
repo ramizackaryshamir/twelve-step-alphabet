@@ -4,6 +4,10 @@ import { createUseStyles } from 'react-jss'
 import Layout from './shared/Layout/Layout.jsx'
 
 const useStyles = createUseStyles({
+  body: {
+    backgroundColor: "#FFD1DC",
+  },
+
   form: {
     display: "flex",
     flexDirection: "row",
@@ -108,69 +112,69 @@ export default function ReviewForm({
 
   return (
     <>
-      <Layout>
-        <div className={classes.form}>
-          <form
-            onSubmit={(e) => {
-              e.preventDefault()
-              handleSubmit(formData)
-            }}
-            alt="review-form"
-          >
-            <label>
-              <div className={classes.formHeader}>
-                <input
-                  type="number"
-                  min="0"
-                  max="5"
-                  className={classes.newScore}
-                  name="newScore"
-                  value={newScore}
-                  onChange={handleChange}
-                ></input>
-                <input
-                  type="text"
-                  placeholder="Give your review a title."
-                  className={classes.newTitle}
-                  name="newTitle"
-                  value={newTitle}
-                  onChange={handleChange}
-                  alt="Give your review a title."
-                >
-                  {title}
-                </input>
-                <input
-                  type="text"
-                  placeholder="Tell people who you are."
-                  className={classes.newUserName}
-                  name="newUserName"
-                  value={newUserName}
-                  onChange={handleChange}
-                  alt="Tell people who you are."
-                >
-                  {userName}
-                </input>
-              </div>
-              <p>
-                <textarea
-                  placeholder="Tell people about your experience."
-                  rows={rows}
-                  cols={cols}
-                  className={classes.newDescription}
-                  name="newDescription"
-                  value={newDescription}
-                  onChange={handleChange}
-                >
-                  {description}
-                </textarea>
-              </p>
-            </label>
-            <button alt="submit-button" className={classes.buttonSubmit}>
-              Submit
-            </button>
-          </form>
+        <div className={classes.body}>
+          <div className={classes.form}>
+            <form
+              onSubmit={(e) => {
+                e.preventDefault()
+                handleSubmit(formData)
+              }}
+              alt="review-form"
+            >
+              <label>
+                <div className={classes.formHeader}>
+                  <input
+                    type="number"
+                    min="0"
+                    max="5"
+                    className={classes.newScore}
+                    name="newScore"
+                    value={newScore}
+                    onChange={handleChange}
+                  ></input>
+                  <input
+                    type="text"
+                    placeholder="Give your review a title."
+                    className={classes.newTitle}
+                    name="newTitle"
+                    value={newTitle}
+                    onChange={handleChange}
+                    alt="Give your review a title."
+                  >
+                    {title}
+                  </input>
+                  <input
+                    type="text"
+                    placeholder="Tell people who you are."
+                    className={classes.newUserName}
+                    name="newUserName"
+                    value={newUserName}
+                    onChange={handleChange}
+                    alt="Tell people who you are."
+                  >
+                    {userName}
+                  </input>
+                </div>
+                <p>
+                  <textarea
+                    placeholder="Tell people about your experience."
+                    rows={rows}
+                    cols={cols}
+                    className={classes.newDescription}
+                    name="newDescription"
+                    value={newDescription}
+                    onChange={handleChange}
+                  >
+                    {description}
+                  </textarea>
+                </p>
+              </label>
+              <button alt="submit-button" className={classes.buttonSubmit}>
+                Submit
+              </button>
+            </form>
+          </div>
         </div>
-      </Layout>
     </>
   )
 }

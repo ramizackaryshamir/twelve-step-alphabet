@@ -17,7 +17,7 @@ export default function Layout({ children }) {
   
   return (
     <>
-      <div className={classes.body}>
+      <div>
         <Header />
         {children}
         <Footer />

@@ -1,39 +1,37 @@
 import api from './apiConfig'
 
-const BASE_URL = 'https://twelve-step-alphabet-api.herokuapp.com/'
-
 //Read All
-export const getAllMeetings = async () => {
-  const resp = await api.get(`${BASE_URL}/meetings`);
+export const getAllMeetings = async (offset) => {
+  const resp = await api.get(`/meetings?offset=${offset}`);
   return resp.data;
 }
 
 //Read One
 export const getOneMeeting = async (id) => {
-  const resp = await api.get(`${BASE_URL}/meeting-detail/${id}`);
+  const resp = await api.get(`/meeting-detail/${id}`);
   return resp.data;
 }
 
 //Create Meeting
 export const postMeeting = async (meetingData) => {
-  const resp = await api.post(`${BASE_URL}/meetings`, meetingData);
+  const resp = await api.post(`/meetings`, meetingData);
   return resp.data;
 }
 
 //Create Review
 export const postReview = async (formData) => {
-  const resp = await api.post(`${BASE_URL}/meetings`, formData);
+  const resp = await api.post(`/meetings`, formData);
   return resp.data;
 }
 
 //Update Review
 export const putUpdatedReview = async (id, formData) => {
-  const resp = await api.put(`${BASE_URL}/meetings/${id}`, formData);
+  const resp = await api.put(`/meetings/${id}`, formData);
   return resp.data;
 }
 
 //Destroy Review
 export const destroyReview = async (id) => {
-  const resp = await api.delete(`${BASE_URL}/meetings/${id}`);
+  const resp = await api.delete(`/meetings/${id}`);
   return resp;
 }

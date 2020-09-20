@@ -3,14 +3,14 @@ class MeetingsController < ApplicationController
 
   # GET /meetings
   def index
-    @meetings = Meeting.all
+    @meetings = Meeting.limit(10).offset(params[:offset])
 
-    render json: @meetings
+    render json: @meetings, include: :category
   end
 
   # GET /meetings/1
   def show
-    render json: @meeting
+    render json: @meeting, include: :category
   end
 
   # POST /meetings
@@ -18,7 +18,7 @@ class MeetingsController < ApplicationController
     @meeting = Meeting.new(meeting_params)
 
     if @meeting.save
-      render json: @meeting, status: :created, location: @meeting
+      render json: @meeting, include: :category, status: :created
     else
       render json: @meeting.errors, status: :unprocessable_entity
     end
@@ -27,7 +27,7 @@ class MeetingsController < ApplicationController
   # PATCH/PUT /meetings/1
   def update
     if @meeting.update(meeting_params)
-      render json: @meeting
+      render json: @meeting, include: :category
     else
       render json: @meeting.errors, status: :unprocessable_entity
     end
@@ -46,6 +46,6 @@ class MeetingsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def meeting_params
-      params.require(:meeting).permit(:name, :address1, :address2, :city, :state, :zipcode, :latitude, :longitude, :dayOfWeek, :timeOfDay, :organization)
+      params.require(:meeting).permit(:name, :address1, :address2, :city, :state, :zipcode, :latitude, :longitude, :dayOfWeek, :timeOfDay, :organization, :offset)
     end
 end
