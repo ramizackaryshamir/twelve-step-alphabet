@@ -23,7 +23,7 @@ export default function Meetings() {
   //Use map to render t
   //each specific meeting using the Meeting componen in a table
   return (
-    <Layout>
+   
       <table className={classes.meetingCard}>
         <tbody>
           <Meeting
@@ -77,6 +77,5 @@ export default function Meetings() {
           />
         </tbody>
       </table>
-    </Layout>
   )
 }

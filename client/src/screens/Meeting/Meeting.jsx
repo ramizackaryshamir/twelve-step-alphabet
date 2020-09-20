@@ -4,14 +4,21 @@ import { createUseStyles } from 'react-jss'
 
 const useStyles = createUseStyles({
   meetingCard: {
+    outline: "none",
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
-    /*border: "1px solid red",*/
+    marginBottom: 5,
+    marginTop: 5,
+    border: "3px solid #FFD1DC",
+    borderRadius: 10,
+    backgroundColor: "#F2DABD",
   },
 
   meetingCardLeft: {
-    /*border: "10px solid black",*/
+    marginLeft: 20,
+    fontFamily: "Rubik",
+    fontWeight: 500,
   },
 
   meetingCardCenter: {
@@ -21,12 +28,14 @@ const useStyles = createUseStyles({
     width: 400,
     fontSize: 15,
     padding: 10,
-    /*border: "10px solid black",*/
-    margin: "0px auto 0px 200px",
+    margin: "0px auto 0px 100px",
   },
 
   meetingCardRight: {
+    marginRight: 20,
     marginLeft: 20,
+    fontFamily: "Rubik",
+    fontWeight: 500,
   },
 
   elementLeft: {
@@ -35,13 +44,15 @@ const useStyles = createUseStyles({
   },
 
   elementCenter: {
+    fontFamily: "Rubik",
+    fontWeight: 400,
     textAlign: "justify",
     marginBottom: 0,
     marginTop: 3,
   },
 
   elementName: {
-    fontFamily: 'Amatic SC',
+    fontFamily: "Amatic SC",
     fontSize: 20,
     fontWeight: 100,
     textAlign: "justify",
@@ -51,7 +62,6 @@ const useStyles = createUseStyles({
 
   elementRight: {
     textAlign: "right",
-    fontWeight: 700,
     marginTop: 30,
     marginBottom: -20,
   },
