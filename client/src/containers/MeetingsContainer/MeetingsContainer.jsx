@@ -5,7 +5,7 @@ import Meetings from "../../screens/Meetings/Meetings.jsx"
 import MeetingDetail from "../../screens/MeetingDetail/MeetingDetail.jsx"
 import PostReview from "../../screens/PostReview/PostReview"
 
-export default function MeetingsContainer({handleClick}) {
+export default function MeetingsContainer() {
   const [page, setPage] = useState(0)
   const [allMeetings, setAllMeetings] = useState([])
   const [oneMeeting, setOneMeeting] = useState('')

@@ -1,9 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { createUseStyles } from 'react-jss'
+import { nominalTypeHack } from 'prop-types'
 
 const useStyles = createUseStyles({
-  
+  link: {
+    outline: 'none',
+    textDecoration: 'none',
+    color: 'black'
+  },
+
   meetingCard: {
     outline: "none",
     display: "flex",
@@ -82,7 +88,7 @@ export default function Meeting(details) {
   const classes = useStyles()
 
   return (
-      <Link to={`/meeting-detail/${id}`}>
+      <Link to={`/meeting-detail/${id}`} className={classes.link}>
       <div
         className={classes.meetingCard}
       >
