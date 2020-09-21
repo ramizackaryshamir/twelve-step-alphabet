@@ -24,10 +24,10 @@ export default function Meetings(props) {
 
   return (
     <div className={classes.body}>
-      <table className={classes.meetingCard}>
-        <tbody>
+      <div className={classes.meetingCard}>
           {allMeetings.filter(filterFn).map((meeting) => (
             <Meeting
+              key={meeting.id}
               name={meeting.name}
               address1={meeting.address1}
               address2={meeting.address2}
@@ -38,8 +38,7 @@ export default function Meetings(props) {
               organization={meeting.category.name}
             />
           ))}
-        </tbody>
-      </table>
+      </div>
     </div>
   )
 }

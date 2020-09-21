@@ -79,9 +79,9 @@ export default function Meeting(details) {
 
   const history = useHistory()
 
-  const handleClick = () => {
-    history.push('/post-review')
-  }
+  // const handleClick = () => {
+  //   history.push('/post-review')
+  // }
   
   const { name, address1, address2, city, state, zipcode, timeOfDay, dayOfWeek, latitude, longitude, organization } = details
   
@@ -90,7 +90,7 @@ export default function Meeting(details) {
   return (
     <>
       <div
-        onClick={handleClick}
+        
         className={classes.meetingCard}
       >
         <div className={classes.meetingCardLeft}>
