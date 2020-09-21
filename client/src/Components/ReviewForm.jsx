@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { createUseStyles } from 'react-jss'
 
-import Layout from './shared/Layout/Layout.jsx'
-
 const useStyles = createUseStyles({
   body: {
     backgroundColor: "#FFD1DC",
@@ -72,15 +70,20 @@ const useStyles = createUseStyles({
     border: "10px solid #BAD0D9",
   },
 
-  buttonSubmit: {
+  button: {
     outline: "none",
     fontFamily: "Bungee",
-    width: 100,
-    height: 40,
+    color: '#F2DABD',
+    width: 200,
+    height: 60,
     border: "1px solid #F2DABD",
-    borderRadius: 200,
-    backgroundColor: "#F2DABD",
+    borderRadius: 10,
+    backgroundColor: "#000000",
   },
+  buttons: {
+    display: 'flex',
+    justifyContent: 'space-around'
+  }
 })
   
 export default function ReviewForm({
@@ -112,69 +115,77 @@ export default function ReviewForm({
 
   return (
     <>
-        <div className={classes.body}>
-          <div className={classes.form}>
-            <form
-              onSubmit={(e) => {
-                e.preventDefault()
-                handleSubmit(formData)
-              }}
-              alt="review-form"
-            >
-              <label>
-                <div className={classes.formHeader}>
-                  <input
-                    type="number"
-                    min="0"
-                    max="5"
-                    className={classes.newScore}
-                    name="newScore"
-                    value={newScore}
-                    onChange={handleChange}
-                  ></input>
-                  <input
-                    type="text"
-                    placeholder="Give your review a title."
-                    className={classes.newTitle}
-                    name="newTitle"
-                    value={newTitle}
-                    onChange={handleChange}
-                    alt="Give your review a title."
-                  >
-                    {title}
-                  </input>
-                  <input
-                    type="text"
-                    placeholder="Tell people who you are."
-                    className={classes.newUserName}
-                    name="newUserName"
-                    value={newUserName}
-                    onChange={handleChange}
-                    alt="Tell people who you are."
-                  >
-                    {userName}
-                  </input>
-                </div>
-                <p>
-                  <textarea
-                    placeholder="Tell people about your experience."
-                    rows={rows}
-                    cols={cols}
-                    className={classes.newDescription}
-                    name="newDescription"
-                    value={newDescription}
-                    onChange={handleChange}
-                  >
-                    {description}
-                  </textarea>
-                </p>
-              </label>
-              <button alt="submit-button" className={classes.buttonSubmit}>
-                Submit
+      <div className={classes.body}>
+        <div className={classes.form}>
+          <form
+            onSubmit={(e) => {
+              e.preventDefault()
+              handleSubmit(formData)
+            }}
+            alt="review-form"
+          >
+            <label>
+              <div className={classes.formHeader}>
+                <input
+                  type="number"
+                  min="0"
+                  max="5"
+                  className={classes.newScore}
+                  name="newScore"
+                  value={newScore}
+                  onChange={handleChange}
+                ></input>
+                <input
+                  type="text"
+                  placeholder="Give your review a title."
+                  className={classes.newTitle}
+                  name="newTitle"
+                  value={newTitle}
+                  onChange={handleChange}
+                  alt="Give your review a title."
+                >
+                  {title}
+                </input>
+                <input
+                  type="text"
+                  placeholder="Tell people who you are."
+                  className={classes.newUserName}
+                  name="newUserName"
+                  value={newUserName}
+                  onChange={handleChange}
+                  alt="Tell people who you are."
+                >
+                  {userName}
+                </input>
+              </div>
+              <p>
+                <textarea
+                  placeholder="Tell people about your experience."
+                  rows={rows}
+                  cols={cols}
+                  className={classes.newDescription}
+                  name="newDescription"
+                  value={newDescription}
+                  onChange={handleChange}
+                >
+                  {description}
+                </textarea>
+              </p>
+            </label>
+            <div className={classes.buttons}>
+              <button alt="submit-button" className={classes.button}>
+                Submit Review
               </button>
-            </form>
-          </div>
+              <button alt="edit-button" className={classes.button}>
+                Edit Review
+              </button>
+              <button alt="delete-button" className={classes.button}>
+                Delete Review
+              </button>
+            </div>
+          </form>
         </div>
+      </div>
     </>
   )
 }

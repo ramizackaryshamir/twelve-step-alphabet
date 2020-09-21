@@ -2,18 +2,21 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import { createUseStyles } from 'react-jss'
 
+import ReviewForm from "../../Components/ReviewForm.jsx"
 import Meeting from '../../Components/Meeting/Meeting.jsx'
 
 const useStyles = createUseStyles({
   body: {
-    backgroundColor: "FFD1DC",
+    display: "flex",
+    flexDirection: "column",
   },
-  
+
   meetingCard: {
     display: "flex",
     flexDirection: "column",
-    margin: "0px 100px 0px 100px",
-  }
+    padding: "0px 100px 0px 100px",
+    backgroundColor: "FFD1DC",
+  },
 })
 export default function MeetingDetail(props) {
   const { allMeetings } = props
@@ -41,6 +44,11 @@ export default function MeetingDetail(props) {
               />
             ))}
         </div>
+        <ReviewForm
+          rows="35"
+          cols="85"
+          buttonType="Submit Review"
+          buttonType='Update Review'/>
       </div>
     </>
   )

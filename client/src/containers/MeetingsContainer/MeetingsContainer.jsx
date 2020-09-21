@@ -3,7 +3,6 @@ import { Route, Switch, useHistory } from 'react-router-dom'
 import { getAllMeetings, getOneMeeting, postMeeting } from '../../services/meetings.js'
 import Meetings from "../../screens/Meetings/Meetings.jsx"
 import MeetingDetail from "../../screens/MeetingDetail/MeetingDetail.jsx"
-import PostReview from "../../screens/PostReview/PostReview"
 
 export default function MeetingsContainer() {
   const [page, setPage] = useState(0)
@@ -71,7 +70,6 @@ export default function MeetingsContainer() {
             allMeetings={allMeetings}
           />
         </Route>
-        <Route path="/post-review" component={PostReview} />
         <Route path="/">
           <Meetings allMeetings={allMeetings} filterFn={(meeting) => meeting} />
         </Route>
