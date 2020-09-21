@@ -66,10 +66,9 @@ export default function MeetingsContainer({handleClick}) {
           />
         </Route>
 
-        <Route path='/meeting-detail'>
+        <Route path='/meeting-detail/:id'>
           <MeetingDetail
             allMeetings={allMeetings}
-            filterFn={(meeting) => meeting.id === meeting.id}
           />
         </Route>
         <Route path="/post-review" component={PostReview} />

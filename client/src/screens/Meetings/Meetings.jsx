@@ -27,6 +27,7 @@ export default function Meetings(props) {
       <div className={classes.meetingCard}>
           {allMeetings.filter(filterFn).map((meeting) => (
             <Meeting
+              id={meeting.id}
               key={meeting.id}
               name={meeting.name}
               address1={meeting.address1}

@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { useHistory } from 'react-router-dom'
+import React from 'react'
+import { Link } from 'react-router-dom'
 import { createUseStyles } from 'react-jss'
 
 const useStyles = createUseStyles({
@@ -77,20 +77,13 @@ const useStyles = createUseStyles({
 
 export default function Meeting(details) {
 
-  const history = useHistory()
-
-  const handleClick = () => {
-    history.push('/meeting-detail')
-  }
-  
-  const { name, address1, address2, city, state, zipcode, timeOfDay, dayOfWeek, latitude, longitude, organization } = details
+  const { id, name, address1, address2, city, state, zipcode, timeOfDay, dayOfWeek, latitude, longitude, organization } = details
   
   const classes = useStyles()
 
   return (
-    <>
+      <Link to={`/meeting-detail/${id}`}>
       <div
-        onClick={handleClick}
         className={classes.meetingCard}
       >
         <div className={classes.meetingCardLeft}>
@@ -112,6 +105,7 @@ export default function Meeting(details) {
           <p className={classes.elementRight}>{dayOfWeek}</p>
         </div>
       </div>
-    </>
+      </Link>
+   
   )
 }
