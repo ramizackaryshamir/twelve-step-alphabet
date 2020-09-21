@@ -10,23 +10,27 @@ const useStyles = createUseStyles({
     margin: '0px 100px 0px 100px'
   }
 })
-export default function MeetingDetail() {
-
+export default function MeetingDetail(props) {
+  const { allMeetings, filterFn } = props
+  
   const classes = useStyles()
 
   return (
     <>
       <div className={classes.meetingCard}>
-        <Meeting
-          name="name"
-          address1="address1"
-          address2="address2"
-          city="city"
-          state="state"
-          dayOfWeek="dayOfWeek"
-          timeOfDay="timeOfDay"
-          organization="organization"
-        />
+        {allMeetings.filter(filterFn).map((meeting) => (
+          <Meeting
+            key={meeting.id}
+            name={meeting.name}
+            address1={meeting.address1}
+            address2={meeting.address2}
+            city={meeting.city}
+            state={meeting.state}
+            dayOfWeek={meeting.dayOfWeek}
+            timeOfDay={meeting.timeOfDay}
+            organization={meeting.category.name}
+          />
+        ))}
       </div>
     </>
   )
