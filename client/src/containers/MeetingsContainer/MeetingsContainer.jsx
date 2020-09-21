@@ -8,7 +8,6 @@ import PostReview from "../../screens/PostReview/PostReview"
 export default function MeetingsContainer() {
   const [page, setPage] = useState(0)
   const [allMeetings, setAllMeetings] = useState([])
-  
 
   useEffect(() => {
     fetchMeetings();

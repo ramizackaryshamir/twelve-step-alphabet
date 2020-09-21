@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useHistory } from 'react-router-dom'
 import { createUseStyles } from 'react-jss'
 
 const useStyles = createUseStyles({
+  
   meetingCard: {
     outline: "none",
     display: "flex",
@@ -75,19 +77,26 @@ const useStyles = createUseStyles({
 
 export default function Meeting(details) {
 
+  const history = useHistory()
+
+  const handleClick = () => {
+    history.push('/post-review')
+  }
+  
   const { name, address1, address2, city, state, zipcode, timeOfDay, dayOfWeek, latitude, longitude, organization } = details
   
   const classes = useStyles()
 
-  
   return (
     <>
-      <div className={classes.meetingCard}>
+      <div
+        onClick={handleClick}
+        className={classes.meetingCard}
+      >
         <div className={classes.meetingCardLeft}>
           <p className={classes.elementLeft}>{organization}</p>
           <p className={classes.elementLeft}>{state}</p>
         </div>
-        
 
         <div className={classes.meetingCardCenter}>
           <p className={classes.elementName}>{name}</p>
@@ -101,7 +110,7 @@ export default function Meeting(details) {
         <div className={classes.meetingCardRight}>
           <p className={classes.elementRight}>{timeOfDay}</p>
           <p className={classes.elementRight}>{dayOfWeek}</p>
-          </div>
+        </div>
       </div>
     </>
   )
