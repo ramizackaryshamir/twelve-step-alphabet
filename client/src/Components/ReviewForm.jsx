@@ -73,17 +73,17 @@ const useStyles = createUseStyles({
   button: {
     outline: "none",
     fontFamily: "Bungee",
-    color: '#F2DABD',
-    width: 200,
-    height: 60,
-    border: "1px solid #F2DABD",
+    color: "#000000",
+    width: 140,
+    height: 50,
+    border: "1px solid #000000",
     borderRadius: 10,
-    backgroundColor: "#000000",
+    backgroundColor: "#F2DABD",
   },
   buttons: {
-    display: 'flex',
-    justifyContent: 'space-around'
-  }
+    display: "flex",
+    justifyContent: "space-around",
+  },
 })
   
 export default function ReviewForm({
@@ -92,7 +92,7 @@ export default function ReviewForm({
   userName,
   title,
   description,
-  handleSubmit,
+  createReview
 }) {
   const [formData, setFormData] = useState({
     newTitle: "",
@@ -101,7 +101,7 @@ export default function ReviewForm({
     scoreValue: "",
   })
 
-  const { newTitle, newUserName, newDescription, newScore } = formData
+  const { newTitle, newUserName, newDescription, newScore} = formData
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -120,7 +120,8 @@ export default function ReviewForm({
           <form
             onSubmit={(e) => {
               e.preventDefault()
-              handleSubmit(formData)
+              console.log("submitting-review")
+              createReview(formData)
             }}
             alt="review-form"
           >
@@ -173,15 +174,19 @@ export default function ReviewForm({
               </p>
             </label>
             <div className={classes.buttons}>
-              <button alt="submit-button" className={classes.button}>
-                Submit Review
+              <button
+                onClick={handleChange}
+                alt="submit-button"
+                className={classes.button}
+              >
+                Submit
               </button>
-              <button alt="edit-button" className={classes.button}>
-                Edit Review
+              {/* <button alt="edit-button" className={classes.button}>
+                Edit
               </button>
-              <button alt="delete-button" className={classes.button}>
-                Delete Review
-              </button>
+              <button alt="delete-button" type={button} name='Delete' className={classes.button}>
+              Delete
+              </button> */}
             </div>
           </form>
         </div>

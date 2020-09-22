@@ -13,14 +13,14 @@ export const getOneMeeting = async (id) => {
 }
 
 //Create Meeting
-export const postMeeting = async (meetingData) => {
-  const resp = await api.post(`/meetings`, meetingData);
-  return resp.data;
-}
+// export const postMeeting = async (meetingData) => {
+//   const resp = await api.post(`/meetings`, meetingData);
+//   return resp.data;
+// }
 
 //Create Review
 export const postReview = async (formData) => {
-  const resp = await api.post(`/meetings`, formData);
+  const resp = await api.post(`/meeting-detail`, formData);
   return resp.data;
 }
 

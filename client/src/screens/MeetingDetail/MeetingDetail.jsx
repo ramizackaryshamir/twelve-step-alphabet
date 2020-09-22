@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import { createUseStyles } from 'react-jss'
 
@@ -18,8 +19,11 @@ const useStyles = createUseStyles({
     backgroundColor: "FFD1DC",
   },
 })
+
+
 export default function MeetingDetail(props) {
-  const { allMeetings } = props
+  const { createReview, allMeetings } = props
+  
   const params = useParams()
   console.log(params)
   const classes = useStyles()
@@ -32,6 +36,7 @@ export default function MeetingDetail(props) {
             .filter((meeting) => meeting.id === parseInt(params.id))
             .map((meeting) => (
               <Meeting
+                params={params.id}
                 key={meeting.id}
                 name={meeting.name}
                 address1={meeting.address1}
@@ -45,11 +50,19 @@ export default function MeetingDetail(props) {
             ))}
         </div>
         <ReviewForm
+          id={params.id}
+          createReview={createReview}
           rows="35"
           cols="85"
           buttonType="Submit Review"
-          buttonType='Update Review'/>
+          buttonType="Update Review"
+        />
       </div>
+      {/* <Link to={`/meeting-detail/${params}/edit`}>
+        <button>Edit</button>
+      </Link>
+      <button onClick={() => handleDelete(food.id)}>Delete</button>
+    */}
     </>
   )
 }

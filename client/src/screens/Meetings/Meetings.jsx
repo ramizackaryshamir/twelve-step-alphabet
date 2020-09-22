@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 import { createUseStyles } from 'react-jss'
 
 import Meeting from '../../Components/Meeting/Meeting.jsx'
-import MeetingDetail from '../MeetingDetail/MeetingDetail.jsx'
 
 const useStyles = createUseStyles({
   body: {

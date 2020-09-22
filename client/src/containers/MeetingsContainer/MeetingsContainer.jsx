@@ -1,11 +1,19 @@
 import React, { useState, useEffect } from 'react'
 import { Route, Switch, useHistory } from 'react-router-dom'
-import { getAllMeetings, getOneMeeting, postMeeting } from '../../services/meetings.js'
+import {
+  getAllMeetings,
+  getOneMeeting,
+  postReview,
+  putUpdatedReview,
+  destroyReview,
+} from "../../services/meetings.js"
+
 import Meetings from "../../screens/Meetings/Meetings.jsx"
 import MeetingDetail from "../../screens/MeetingDetail/MeetingDetail.jsx"
 
 export default function MeetingsContainer() {
   const [page, setPage] = useState(0)
+  const [review, setReview] = useState('')
   const [allMeetings, setAllMeetings] = useState([])
   const [oneMeeting, setOneMeeting] = useState('')
 
@@ -24,11 +32,11 @@ export default function MeetingsContainer() {
     const meeting = await getOneMeeting(meeting.id)
     setOneMeeting(meeting)
   }
-  const createMeeting = async (meetingData) => {
-    const newMeeting = await postMeeting(meetingData)
-    setAllMeetings((prevState) => [...prevState, newMeeting])
-    history.push("/")
-  }
+  const createReview = async (formData) => {
+    const newReview = await postReview(formData)
+    setReview(prevState => [...prevState, newReview])
+    history.push(`/meeting-detail/:id`)
+   }
 
   return (
     <>
@@ -67,6 +75,7 @@ export default function MeetingsContainer() {
 
         <Route path='/meeting-detail/:id'>
           <MeetingDetail
+            createReview={createReview}
             allMeetings={allMeetings}
           />
         </Route>
