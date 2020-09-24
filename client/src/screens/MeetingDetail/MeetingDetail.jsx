@@ -1,31 +1,16 @@
 import React, { useState, useEffect } from 'react'
-
 import { useParams } from 'react-router-dom'
-import { createUseStyles } from 'react-jss'
-
-import ReviewForm from "../../Components/ReviewForm.jsx"
+import useStyles from './MeetingDetailStyles.jsx'
+import ReviewForm from "../../Components/ReviewForm/ReviewForm.jsx"
 import Meeting from '../../Components/Meeting/Meeting.jsx'
-
-const useStyles = createUseStyles({
-  body: {
-    display: "flex",
-    flexDirection: "column",
-  },
-
-  meetingCard: {
-    display: "flex",
-    flexDirection: "column",
-    padding: "0px 100px 0px 100px",
-    backgroundColor: "FFD1DC",
-  },
-})
-
+import Review from '../../Components/Review/Review.jsx'
 
 export default function MeetingDetail(props) {
   const { createReview, allMeetings, reviews, fetchReviews } = props
-  
+ 
   const params = useParams()
   console.log(params)
+  
   const classes = useStyles()
 
   useEffect(() => {
@@ -35,7 +20,7 @@ export default function MeetingDetail(props) {
 
   return (
     <>
-      <div className={classes.body}>
+      {/* <div className={classes.body}> */}
         <div className={classes.meetingCard}>
           {allMeetings
             .filter((meeting) => meeting.id === parseInt(params.id))
@@ -54,11 +39,15 @@ export default function MeetingDetail(props) {
               />
             ))}
         </div>
-        <div>
-          {reviews.map(review => (
-            <div key={review.id}> 
-              <p>{review.description}</p>
-          </div>
+        <div className={classes.reviewCard}>
+          {reviews.map((review) => (
+          <Review 
+              key={review.id}
+              title={review.title}
+              userName={review.userName}
+              description={review.description}
+              score={review.score}
+            />
           ))}
         </div>
         <ReviewForm
@@ -68,10 +57,8 @@ export default function MeetingDetail(props) {
           createReview={createReview}
           rows="35"
           cols="85"
-          buttonType="Submit Review"
-          buttonType="Update Review"
         />
-      </div>
+      {/* </div> */}
       {/* <Link to={`/meeting-detail/${params}/edit`}>
         <button>Edit</button>
       </Link>

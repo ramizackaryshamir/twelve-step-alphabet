@@ -8,7 +8,6 @@ import {
   destroyReview,
   getAllReviews
 } from "../../services/meetings.js"
-
 import Meetings from "../../screens/Meetings/Meetings.jsx"
 import MeetingDetail from "../../screens/MeetingDetail/MeetingDetail.jsx"
 

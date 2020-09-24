@@ -1,20 +1,9 @@
 import React, { useState } from 'react'
-
-import { createUseStyles } from 'react-jss'
+import useStyles from './MeetingsStyles.jsx'
 
 import Meeting from '../../Components/Meeting/Meeting.jsx'
 
-const useStyles = createUseStyles({
-  body: {
-    backgroundColor: "#BAD0D9"
-  },
-  
-  meetingCard: {
-    display: "flex",
-    flexDirection: "column",
-    margin: "0px 100px 0px 100px"
-  }
-})
+
  
 export default function Meetings(props) {
   const { allMeetings, filterFn } = props
