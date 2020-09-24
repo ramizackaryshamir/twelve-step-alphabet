@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+
 import { useParams } from 'react-router-dom'
 import { createUseStyles } from 'react-jss'
 
@@ -22,11 +22,16 @@ const useStyles = createUseStyles({
 
 
 export default function MeetingDetail(props) {
-  const { createReview, allMeetings } = props
+  const { createReview, allMeetings, reviews, fetchReviews } = props
   
   const params = useParams()
   console.log(params)
   const classes = useStyles()
+
+  useEffect(() => {
+    fetchReviews(params.id)
+  }, [])
+  
 
   return (
     <>
@@ -49,7 +54,16 @@ export default function MeetingDetail(props) {
               />
             ))}
         </div>
+        <div>
+          {reviews.map(review => (
+            <div key={review.id}> 
+              <p>{review.description}</p>
+          </div>
+          ))}
+        </div>
         <ReviewForm
+          fetchReviews={fetchReviews}
+          reviews={reviews}
           id={params.id}
           createReview={createReview}
           rows="35"

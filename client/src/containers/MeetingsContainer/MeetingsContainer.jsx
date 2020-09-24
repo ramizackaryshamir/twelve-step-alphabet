@@ -6,6 +6,7 @@ import {
   postReview,
   putUpdatedReview,
   destroyReview,
+  getAllReviews
 } from "../../services/meetings.js"
 
 import Meetings from "../../screens/Meetings/Meetings.jsx"
@@ -13,7 +14,7 @@ import MeetingDetail from "../../screens/MeetingDetail/MeetingDetail.jsx"
 
 export default function MeetingsContainer() {
   const [page, setPage] = useState(0)
-  const [review, setReview] = useState('')
+  const [reviews, setReviews] = useState([])
   const [allMeetings, setAllMeetings] = useState([])
   const [oneMeeting, setOneMeeting] = useState('')
 
@@ -32,10 +33,16 @@ export default function MeetingsContainer() {
     const meeting = await getOneMeeting(meeting.id)
     setOneMeeting(meeting)
   }
-  const createReview = async (formData) => {
-    const newReview = await postReview(formData)
-    setReview(prevState => [...prevState, newReview])
-    history.push(`/meeting-detail/:id`)
+
+  const fetchReviews = async (id) => {
+    const reviews = await getAllReviews(id)
+    setReviews(reviews)
+  }
+
+  const createReview = async (formData, id) => {
+    const newReview = await postReview(formData, id)
+    setReviews(prevState => [...prevState, newReview])
+    // history.push(`/meeting-detail/:id`)
    }
 
   return (
@@ -75,6 +82,8 @@ export default function MeetingsContainer() {
 
         <Route path='/meeting-detail/:id'>
           <MeetingDetail
+            fetchReviews={fetchReviews}
+            reviews={reviews}
             createReview={createReview}
             allMeetings={allMeetings}
           />

@@ -6,10 +6,16 @@ export const getAllMeetings = async (offset) => {
   return resp.data;
 }
 
+export const getAllReviews = async (id) => {
+  const resp = await api.get(`/meetings/${id}/reviews`);
+  return resp.data;
+}
+
 //Read One
 export const getOneMeeting = async (id) => {
   const resp = await api.get(`/meeting-detail/${id}`);
   return resp.data;
+
 }
 
 //Create Meeting
@@ -19,8 +25,8 @@ export const getOneMeeting = async (id) => {
 // }
 
 //Create Review
-export const postReview = async (formData) => {
-  const resp = await api.post(`/meeting-detail`, formData);
+export const postReview = async (formData, id) => {
+  const resp = await api.post(`/meetings/${id}/reviews`, { review: formData });
   return resp.data;
 }
 

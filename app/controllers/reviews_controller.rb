@@ -3,9 +3,9 @@ class ReviewsController < ApplicationController
 
   # GET /reviews
   def index
-    @reviews = Review.all
+     @meeting = Meeting.find(params[:meeting_id])
 
-    render json: @reviews
+    render json: @meeting.reviews
   end
 
   # GET /reviews/1
@@ -15,10 +15,13 @@ class ReviewsController < ApplicationController
 
   # POST /reviews
   def create
+    puts params
+    @meeting = Meeting.find(params[:meeting_id])
     @review = Review.new(review_params)
+    @review.meeting = @meeting
 
     if @review.save
-      render json: @review, status: :created, location: @review
+      render json: @review, status: :created
     else
       render json: @review.errors, status: :unprocessable_entity
     end
@@ -46,6 +49,6 @@ class ReviewsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def review_params
-      params.require(:review).permit(:title, :description, :score, :userName)
+      params.require(:review).permit(:title, :description, :score, :userName, :id)
     end
 end

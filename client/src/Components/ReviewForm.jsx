@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { createUseStyles } from 'react-jss'
+import {useParams } from 'react-router-dom'
 
 const useStyles = createUseStyles({
   body: {
@@ -21,7 +22,7 @@ const useStyles = createUseStyles({
     margin: "auto",
   },
 
-  newTitle: {
+  title: {
     outline: "none",
     fontFamily: "Rubik",
     fontWeight: 800,
@@ -34,7 +35,7 @@ const useStyles = createUseStyles({
     marginBottom: 10,
   },
 
-  newUserName: {
+  userName: {
     outline: "none",
     width: 300,
     height: 30,
@@ -57,7 +58,7 @@ const useStyles = createUseStyles({
     marginBottom: 10,
   },
 
-  newDescription: {
+  description: {
     outline: "none",
     fontFamily: "Rubik",
     fontWeight: 800,
@@ -87,21 +88,18 @@ const useStyles = createUseStyles({
 })
   
 export default function ReviewForm({
-  rows,
-  cols,
-  userName,
-  title,
-  description,
-  createReview
+  rows, cols, createReview
 }) {
   const [formData, setFormData] = useState({
-    newTitle: "",
-    newUserName: "",
-    newDescription: "",
-    scoreValue: "",
+    title: "",
+    userName: "",
+    description: "",
+    score: "0",
   })
 
-  const { newTitle, newUserName, newDescription, newScore} = formData
+  const { id } = useParams()
+
+  const { title, userName, description, score} = formData
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -120,8 +118,8 @@ export default function ReviewForm({
           <form
             onSubmit={(e) => {
               e.preventDefault()
-              console.log("submitting-review")
-              createReview(formData)
+              console.log("onSubmit ReviewForm.jsx 123")
+              createReview(formData, id)
             }}
             alt="review-form"
           >
@@ -132,54 +130,66 @@ export default function ReviewForm({
                   min="0"
                   max="5"
                   className={classes.newScore}
-                  name="newScore"
-                  value={newScore}
+                  name="score"
+                  value={score}
                   onChange={handleChange}
                 ></input>
                 <input
                   type="text"
                   placeholder="Give your review a title."
-                  className={classes.newTitle}
-                  name="newTitle"
-                  value={newTitle}
+                  className={classes.title}
+                  name="title"
+                  value={title}
                   onChange={handleChange}
                   alt="Give your review a title."
-                >
-                  {title}
-                </input>
+                />
+                  
                 <input
                   type="text"
                   placeholder="Tell people who you are."
-                  className={classes.newUserName}
-                  name="newUserName"
-                  value={newUserName}
+                  className={classes.userName}
+                  name="userName"
+                  value={userName}
                   onChange={handleChange}
                   alt="Tell people who you are."
-                >
-                  {userName}
-                </input>
+                />
+               
               </div>
               <p>
                 <textarea
                   placeholder="Tell people about your experience."
                   rows={rows}
                   cols={cols}
-                  className={classes.newDescription}
-                  name="newDescription"
-                  value={newDescription}
+                  className={classes.description}
+                  name="description"
+                  value={description}
                   onChange={handleChange}
-                >
-                  {description}
-                </textarea>
+                />
+                
+      
               </p>
             </label>
             <div className={classes.buttons}>
               <button
-                onClick={handleChange}
+                
                 alt="submit-button"
                 className={classes.button}
               >
                 Submit
+              </button>
+              <button
+                
+                alt="submit-button"
+                className={classes.button}
+              >
+                Edit
+              </button>
+              <button
+                
+                alt="submit-button"
+                className={classes.button}
+              >
+                Delete
               </button>
               {/* <button alt="edit-button" className={classes.button}>
                 Edit
