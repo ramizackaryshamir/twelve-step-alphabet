@@ -15,7 +15,7 @@ export default function MeetingsContainer() {
   const [page, setPage] = useState(0)
   const [reviews, setReviews] = useState([])
   const [allMeetings, setAllMeetings] = useState([])
-  const [oneMeeting, setOneMeeting] = useState('')
+  // const [oneMeeting, setOneMeeting] = useState('')
 
   useEffect(() => {
     fetchMeetings()
@@ -28,10 +28,10 @@ export default function MeetingsContainer() {
     setAllMeetings(meetings)
   }
 
-  const fetchMeeting = async () => {
-    const meeting = await getOneMeeting(meeting.id)
-    setOneMeeting(meeting)
-  }
+  // const fetchMeeting = async () => {
+  //   const meeting = await getOneMeeting(meeting.id)
+  //   setOneMeeting(meeting)
+  // }
 
   const fetchReviews = async (id) => {
     const reviews = await getAllReviews(id)
@@ -43,6 +43,11 @@ export default function MeetingsContainer() {
     setReviews(prevState => [...prevState, newReview])
     // history.push(`/meeting-detail/:id`)
    }
+
+  const deleteReview = async (id) => {
+    const review = await destroyReview(id)
+    setReviews(prevState => [...prevState, review])
+  }
 
   return (
     <>
@@ -84,6 +89,7 @@ export default function MeetingsContainer() {
             fetchReviews={fetchReviews}
             reviews={reviews}
             createReview={createReview}
+            deleteReview={deleteReview}
             allMeetings={allMeetings}
           />
         </Route>

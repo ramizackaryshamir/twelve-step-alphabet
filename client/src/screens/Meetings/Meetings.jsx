@@ -1,10 +1,7 @@
 import React, { useState } from 'react'
 import useStyles from './MeetingsStyles.jsx'
-
 import Meeting from '../../Components/Meeting/Meeting.jsx'
 
-
- 
 export default function Meetings(props) {
   const { allMeetings, filterFn } = props
 
