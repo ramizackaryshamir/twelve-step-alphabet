@@ -109,12 +109,6 @@ export default function ReviewForm({
               >
                 Delete
               </button>
-              {/* <button alt="edit-button" className={classes.button}>
-                Edit
-              </button>
-              <button alt="delete-button" type={button} name='Delete' className={classes.button}>
-              Delete
-              </button> */}
             </div>
           </form>
         </div>
