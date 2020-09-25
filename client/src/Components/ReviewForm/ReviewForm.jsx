@@ -2,7 +2,11 @@ import React, { useState, useEffect } from 'react'
 import {useParams } from 'react-router-dom'
 import useStyles from './ReviewFormStyles.jsx' 
 export default function ReviewForm({
-  rows, cols, createReview
+  rows,
+  cols,
+  createReview,
+  deleteReview,
+  editReview
 }) {
   const [formData, setFormData] = useState({
     title: "",
@@ -40,7 +44,7 @@ export default function ReviewForm({
             <label>
               <div className={classes.formHeader}>
                 <input
-                  type="number"
+                  type="number" required
                   min="0"
                   max="5"
                   className={classes.newScore}
@@ -49,7 +53,7 @@ export default function ReviewForm({
                   onChange={handleChange}
                 ></input>
                 <input
-                  type="text"
+                  type="text" required
                   placeholder="Give your review a title."
                   className={classes.title}
                   name="title"
@@ -59,7 +63,7 @@ export default function ReviewForm({
                 />
                   
                 <input
-                  type="text"
+                  type="text" required
                   placeholder="Tell people who you are."
                   className={classes.userName}
                   name="userName"
@@ -76,7 +80,7 @@ export default function ReviewForm({
                   cols={cols}
                   className={classes.description}
                   name="description"
-                  value={description}
+                  value={description} required
                   onChange={handleChange}
                 />
                 
@@ -87,7 +91,7 @@ export default function ReviewForm({
               <button
                 onClick={(e) => {
                   e.preventDefault()
-                  console.log("onSubmit ReviewForm.jsx 123")
+                  console.log("onClick Submit button: ReviewForm.jsx 90")
                   createReview(formData, id)
                 }}
                 alt="submit-button"
@@ -103,7 +107,11 @@ export default function ReviewForm({
                 Edit
               </button>
               <button
-                
+                onClick={(e) => {
+                  e.preventDefault()
+                  debugger
+
+                }}
                 alt="submit-button"
                 className={classes.button}
               >
