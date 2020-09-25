@@ -1,7 +1,6 @@
 import { createUseStyles } from "react-jss"
 
 const useStyles = createUseStyles({
-
   reviewCard: {
     outline: "none",
     display: "flex",
@@ -10,7 +9,7 @@ const useStyles = createUseStyles({
     width: 1020,
     paddingBottom: 10,
     paddingTop: 10,
-    margin: '0 auto',
+    margin: "0 auto",
     border: "3px solid #F2DABD",
     borderRadius: 10,
     backgroundColor: "#FFD1DC",
@@ -57,6 +56,25 @@ const useStyles = createUseStyles({
     marginBottom: -20,
     paddingBottom: 10,
   },
+
+  button: {
+    outline: "none",
+    fontFamily: "Bungee",
+    color: "#000000",
+    width: 50,
+    height: 50,
+    border: "1px solid #000000",
+    borderRadius: 10,
+    marginTop: 10,
+    backgroundColor: "#F2DABD",
+  },
+
+  buttons: {
+    display: "flex",
+    flexDirection: 'column',
+    justifyContent: "center",
+    padding: 10
+  }
 })
 
 export default useStyles

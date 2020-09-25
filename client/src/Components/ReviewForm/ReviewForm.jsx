@@ -61,7 +61,6 @@ export default function ReviewForm({
                   onChange={handleChange}
                   alt="Give your review a title."
                 />
-                  
                 <input
                   type="text" required
                   placeholder="Tell people who you are."
@@ -71,7 +70,6 @@ export default function ReviewForm({
                   onChange={handleChange}
                   alt="Tell people who you are."
                 />
-               
               </div>
               <p>
                 <textarea
@@ -83,8 +81,6 @@ export default function ReviewForm({
                   value={description} required
                   onChange={handleChange}
                 />
-                
-      
               </p>
             </label>
             <div className={classes.buttons}>
@@ -99,8 +95,6 @@ export default function ReviewForm({
               >
                 Submit
               </button>
-             
-             
             </div>
           </form>
         </div>
