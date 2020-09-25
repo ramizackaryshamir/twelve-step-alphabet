@@ -99,24 +99,8 @@ export default function ReviewForm({
               >
                 Submit
               </button>
-              <button
-                
-                alt="submit-button"
-                className={classes.button}
-              >
-                Edit
-              </button>
-              <button
-                onClick={(e) => {
-                  e.preventDefault()
-                  debugger
-
-                }}
-                alt="submit-button"
-                className={classes.button}
-              >
-                Delete
-              </button>
+             
+             
             </div>
           </form>
         </div>

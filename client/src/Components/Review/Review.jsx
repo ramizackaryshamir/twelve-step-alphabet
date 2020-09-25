@@ -1,4 +1,6 @@
 import React from "react"
+import { useParams } from 'react-router-dom'
+import { deleteReview, editReview } from '../../containers/MeetingsContainer/MeetingsContainer.jsx'
 import useStyles from "./ReviewStyles.jsx"
 
 export default function Review(reviewDetails) {
@@ -8,6 +10,8 @@ export default function Review(reviewDetails) {
     score,
     userName
   } = reviewDetails
+
+  const { id } = useParams()
 
   const classes = useStyles()
 
@@ -23,6 +27,26 @@ export default function Review(reviewDetails) {
           <p className={classes.elementRight}>{score}</p>
           <p className={classes.elementRight}>{userName}</p>
         </div>
+
+        <button
+          onClick={(e) => {
+            e.preventDefault()
+            console.log("onClick Delete button: Review.jsx 34")
+          }}
+          alt="delete-button"
+          className={classes.button}
+        >
+          Delete
+        </button>
+        <button
+          onClick={(e) => {
+            e.preventDefault()
+            console.log("onClick Edit button: Review.jsx 44")
+          }}
+          alt="edit-button"
+          className={classes.button}>
+          Edit
+        </button>
       </div>
     </>
   )

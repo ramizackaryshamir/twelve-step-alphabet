@@ -41,9 +41,9 @@ export default function MeetingsContainer() {
    }
 
   //Delete Review
-  const deleteReview = async (id) => {
-    const review = await destroyReview(id)
-    setReviews(prevState => [...prevState, review])
+  const deleteReview = async (meeting_id) => {
+    const review = await destroyReview(meeting_id)
+    setReviews(review)
   }
 
   //Update Review
@@ -104,3 +104,4 @@ export default function MeetingsContainer() {
     </>
   )
 }
+

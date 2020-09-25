@@ -12,11 +12,11 @@ export const postReview = async (formData, id) => {
 }
 //Destroy Review
 export const destroyReview = async (id) => {
-  const resp = await api.delete(`/meetings/${id}`);
+  const resp = await api.delete(`/meetings/${id}/reviews`);
   return resp.data;
 }
 //Update Review
 export const updateReview = async (id, formData) => {
-  const resp = await api.put(`/meetings/${id}`, formData);
+  const resp = await api.put(`/meetings/${id}/reviews`, formData);
   return resp.data;
 }
