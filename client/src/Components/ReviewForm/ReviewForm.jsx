@@ -30,11 +30,11 @@ export default function ReviewForm({
       <div className={classes.body}>
         <div className={classes.form}>
           <form
-            onSubmit={(e) => {
-              e.preventDefault()
-              console.log("onSubmit ReviewForm.jsx 123")
-              createReview(formData, id)
-            }}
+            // onSubmit={(e) => {
+            //   e.preventDefault()
+            //   console.log("onSubmit ReviewForm.jsx 123")
+            //   createReview(formData, id)
+            // }}
             alt="review-form"
           >
             <label>
@@ -85,7 +85,11 @@ export default function ReviewForm({
             </label>
             <div className={classes.buttons}>
               <button
-                
+                onClick={(e) => {
+                  e.preventDefault()
+                  console.log("onSubmit ReviewForm.jsx 123")
+                  createReview(formData, id)
+                }}
                 alt="submit-button"
                 className={classes.button}
               >

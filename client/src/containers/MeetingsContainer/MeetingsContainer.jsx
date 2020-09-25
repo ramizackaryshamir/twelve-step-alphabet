@@ -29,7 +29,6 @@ export default function MeetingsContainer() {
     setAllMeetings(meetings)
   }
 
-
   const fetchReviews = async (id) => {
     const review = await getAllReviews(id)
     setReviews(review)
