@@ -40,6 +40,7 @@ export default function MeetingsContainer() {
     // history.push(`/meeting-detail/:id`)
    }
 
+  //Delete and Edit Buttons still need functionality 9-26-2020
   //Delete Review
   const deleteReview = async (meeting_id) => {
     const review = await destroyReview(meeting_id)

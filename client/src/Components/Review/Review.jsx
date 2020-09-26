@@ -21,11 +21,11 @@ export default function Review( reviewDetails ) {
           <p className={classes.elementTitle}>{title}</p>
           <p className={classes.elementCenter}>{description}</p>
         </div>
-
         <div className={classes.reviewCardRight}>
           <p className={classes.elementRight}>{score}</p>
           <p className={classes.elementRight}>{userName}</p>
         </div>
+        {/* Delete and Edit Buttons still need functionality 9-26-2020 */}
         <div className={classes.buttons}>
           <button
             onClick={(e) => {
@@ -48,6 +48,7 @@ export default function Review( reviewDetails ) {
             Edit
           </button>
         </div>
+        
       </div>
     </>
   )
