@@ -1,21 +1,20 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import useStyles from './MeetingDetailStyles.jsx'
-import ReviewForm from "../../Components/ReviewForm/ReviewForm.jsx"
+import useStyles from './MeetingDetail.js'
 import Meeting from '../../Components/Meeting/Meeting.jsx'
-import Review from '../../Components/Review/Review.jsx'
+
 
 export default function MeetingDetail(props) {
-  const { createReview, allMeetings, reviews, fetchReviews } = props
+  const { allMeetings, meetings } = props
  
   const params = useParams()
   console.log(params)
   
   const classes = useStyles()
 
-  useEffect(() => {
-    fetchReviews(params.id)
-  }, [])
+  // useEffect(() => {
+  //   fetchReviews(params.id)
+  // }, [])
   
 
   return (
@@ -39,25 +38,25 @@ export default function MeetingDetail(props) {
               />
             ))}
         </div>
-        <div className={classes.reviewCard}>
-          {reviews.map((review) => (
+        {/* <div className={classes.mapCard}>
+          {meetings.map((meeting) => (
           <Review 
-              key={review.id}
-              title={review.title}
-              userName={review.userName}
+              key={meeting.id}
+              longitude={meeting.longitude}
+              latitude={meeting.latitude}
               description={review.description}
               score={review.score}
             />
           ))}
-        </div>
-        <ReviewForm
+        </div> */}
+        {/* <ReviewForm
           fetchReviews={fetchReviews}
           reviews={reviews}
           id={params.id}
           createReview={createReview}
           rows="35"
           cols="85"
-        />
+        /> */}
       {/* </div> */}
       {/* <Link to={`/meeting-detail/${params}/edit`}>
         <button>Edit</button>

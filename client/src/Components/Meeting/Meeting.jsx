@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import useStyles from './MeetingStyles.jsx'
+import useStyles from './Meeting.js'
 
 export default function Meeting(details) {
 

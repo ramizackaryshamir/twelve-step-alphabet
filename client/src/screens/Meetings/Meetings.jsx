@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import useStyles from './MeetingsStyles.jsx'
+import useStyles from './Meetings.js'
 import Meeting from '../../Components/Meeting/Meeting.jsx'
 
 export default function Meetings(props) {

@@ -1,6 +1,6 @@
 import React from "react"
 import { useParams } from 'react-router-dom'
-import useStyles from "./ReviewStyles.jsx"
+import useStyles from "./Review.js"
 
 export default function Review( reviewDetails ) {
   const {
