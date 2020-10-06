@@ -18,11 +18,9 @@ export default function Layout({ children }) {
   
   return (
     <>
-      <div>
-        <Header />
-        {children}
-        <Footer />
-      </div>
+      <Header />
+      <div>{children}</div>
+      <Footer />
     </>
   )
 }

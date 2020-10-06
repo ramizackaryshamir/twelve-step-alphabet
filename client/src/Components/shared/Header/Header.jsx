@@ -8,11 +8,10 @@ const useStyles = createUseStyles({
     outline: "none",
     display: "flex",
     flexDirection: "row",
-    
-    alignItems: "flex-end",
     borderBottom: "10px solid #F2DABD",
     borderRadius: 5,
     backgroundColor: "#FFD1DC",
+    position: 'relative'
   },
 })
 

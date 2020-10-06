@@ -11,7 +11,7 @@ const useStyles = createUseStyles({
     alignItems: "flex-end",
     paddingBottom: 5,
     width: 600,
-    height: 60,
+    height: 60
   },
   navItem: {
     textDecoration: "none",
