@@ -13,7 +13,7 @@ const useStyles = createUseStyles({
     backgroundColor: "FFD1DC",
   },
 
-  reviewCard: {
+  mapCard: {
     fontFamily: "Rubik",
     fontWeight: 400,
     textAlign: "justify",

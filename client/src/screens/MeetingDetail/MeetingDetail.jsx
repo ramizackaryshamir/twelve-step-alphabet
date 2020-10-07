@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import useStyles from './MeetingDetail.js'
 import Meeting from '../../Components/Meeting/Meeting.jsx'
+import MapDetail from "../../Components/MapDetail/MapDetail.jsx"
 
 
 export default function MeetingDetail(props) {
@@ -37,7 +38,10 @@ export default function MeetingDetail(props) {
                 organization={meeting.category.name}
               />
             ))}
-        </div>
+      </div>
+      <div className={classes.mapCard}>
+        <MapDetail />
+      </div>
         {/* <div className={classes.mapCard}>
           {meetings.map((meeting) => (
           <Review 
