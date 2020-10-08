@@ -40,61 +40,39 @@
 
 src
 |__ assets/
-      |__ graphics
-      |__ images
 |__ Components/
+      |__ App/
+            |__ App.jsx
+            |__ App.test.js
+       |__ MapDetail/
+            |__ MapDetail.js   
+            |__ MapDetail.jsx
+      |__ Meeting/
+            |__ Meeting.js   
+            |__ Meeting.jsx
       |__ shared/
             |__Layout/
                   |__Layout.jsx
-                  |__Layout.css
             |__ Header/
-                  |__Header.jsx
-                  |__ Header.css
+                  |__Header.jsx      
             |__ Nav/
-                  |__ Nav.jsx
-                  |__ Nav.css
+                  |__ Nav.jsx       
             |__Footer/
                   |__Footer.jsx
-                  |__Footer.css
-       |__ App/
-            |__ App.jsx
       |__Meeting/
-            |__ Meeting.jsx
-       |__ Search/
-            |__ Search.jsx
-            |__ Search.css    
-       |__ Map/
-            |__Map.jsx
-            |__Map.css  
+            |__ Meeting.jsx   
 |__ screens/
       |__ Meetings 
-            |__ Meeting.jsx
-            |__ Meeting.css
+            |__ Meetings.jsx
+            |__ Meetings.js
       |__MeetingDetail/
             |__ MeetingDetail.jsx
-            |__ Meeting.css
-      |__ PostReview/
-            |__ PostReview.jsx
-            |__ PostReview.css
-      |__ UpdateReview/
-            |__ UpdateReview.jsx
-            |__ UpdateReview.css
+            |__ Meeting.js
 |__ services/
       |__ apiConfig.js
+      |__ meetings.js
       |__ reviews.js
-|__ controllers/
-      |__ controller.js
-|__ db/
-      |__ connection.js
-|__ models/
-      |__ meetings.js
-|__ routes/
-      |__ meetings.js
-|__ seed/
-      |__ meetings.js
-|__ server.js
 |__ index.js
-|__ index.css
 
 ```
 
