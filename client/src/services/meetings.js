@@ -1,12 +1,19 @@
 import api from './apiConfig'
 
+//https://twelve-step-alphabet-api.herokuapp.com/meetings
 export const getAllMeetings = async (offset) => {
   const resp = await api.get(`/meetings?offset=${offset}`);
   return resp.data;
 }
 
+//https://twelve-step-alphabet-api.herokuapp.com/meetings/1
+//https://twelve-step-alphabet-api.herokuapp.com/meetings/2
+//https://twelve-step-alphabet-api.herokuapp.com/meetings/3
+//https://twelve-step-alphabet-api.herokuapp.com/meetings/4
+//etc.
+
 export const getOneMeeting = async (id) => {
-  const resp = await api.get(`/meeting-detail/${id}`);
+  const resp = await api.get(`/meetings/${id}`);
   return resp.data;
 
 }
