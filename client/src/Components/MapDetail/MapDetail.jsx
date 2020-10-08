@@ -23,6 +23,14 @@ export default function MapDetail() {
       zoom: zoom
     });
   
+    //Get location of user
+    map.addControl(new mapboxgl.GeolocateControl({
+      positionOptions: {
+        enableHighAccuracy: true
+      },
+      trackUserLocation: true
+    }));
+    
     //Add navigation control
     map.addControl(new mapboxgl.NavigationControl(), "bottom-left")
 
