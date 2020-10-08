@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Route, Switch, useHistory } from 'react-router-dom'
 import {
-  getAllMeetings
+  getAllMeetings, getOneMeeting
 } from "../../services/meetings.js"
 import {
   getAllReviews,
@@ -13,21 +13,33 @@ import Meetings from "../../screens/Meetings/Meetings.jsx"
 import MeetingDetail from "../../screens/MeetingDetail/MeetingDetail.jsx"
 
 export default function MeetingsContainer() {
-  const [page, setPage] = useState(0)
-  const [reviews, setReviews] = useState([])
+  const [oneMeeting, setOneMeeting] = useState([])
   const [allMeetings, setAllMeetings] = useState([])
-  // const [oneMeeting, setOneMeeting] = useState('')
+  
+  const [reviews, setReviews] = useState([])
 
   useEffect(() => {
-    fetchMeetings()
+    fetchMeetings();
+    fetchMeeting();
   }, [])
 
   const history = useHistory()
 
   const fetchMeetings = async () => {
-    const meetings = await getAllMeetings()
-    setAllMeetings(meetings)
+    const meetings = await getAllMeetings();
+    setAllMeetings(meetings);
   }
+
+//   const getOneMeeting = async (id) => {
+//   const resp = await api.get(`/meetings/${id}`);
+//   return resp.data;
+
+// }
+  const fetchMeeting = async (id) => {
+    const meeting = await getOneMeeting(id);
+    setOneMeeting(meeting);
+  }
+
 
   const fetchReviews = async (id) => {
     const review = await getAllReviews(id)
@@ -96,6 +108,7 @@ export default function MeetingsContainer() {
             deleteReview={deleteReview}
             editReview={editReview}
             allMeetings={allMeetings}
+            oneMeeting={oneMeeting}
           />
         </Route>
         <Route path="/">

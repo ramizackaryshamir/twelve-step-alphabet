@@ -6,7 +6,7 @@ import MapDetail from "../../Components/MapDetail/MapDetail.jsx"
 
 
 export default function MeetingDetail(props) {
-  const { allMeetings, meetings } = props
+  const { allMeetings, oneMeeting} = props
  
   const params = useParams()
   console.log(params)
