@@ -3,12 +3,10 @@ import { useParams } from 'react-router-dom'
 import useStyles from './MeetingDetail.js'
 import Meeting from '../../Components/Meeting/Meeting.jsx'
 import Map from "../../Components/Map/Map.jsx"
-import { getOneMeeting } from '../../services/meetings.js'
-
 
 const MeetingDetail = (props) => {
   
-  const { allMeetings, oneMeeting, longitude, latitude } = props
+  const { allMeetings } = props
   
   const classes = useStyles()
 
@@ -18,9 +16,7 @@ const MeetingDetail = (props) => {
   return (
     <>
       <div className={classes.meetingCard}>
-        {allMeetings
-          .filter((meeting) => meeting.id === parseInt(params.id))
-          .map((meeting) => (
+        {allMeetings.filter((meeting) => meeting.id === parseInt(params.id)).map((meeting) => (
             <Meeting
               params={params.id}
               key={meeting.id}
@@ -39,9 +35,7 @@ const MeetingDetail = (props) => {
       </div>
 
       <div className={classes.mapCard}>
-        {allMeetings
-          .filter((meeting) => meeting.id === parseInt(params.id))
-          .map((meeting) => (
+        {allMeetings.filter((meeting) => meeting.id === parseInt(params.id)).map((meeting) => (
             <Map
               params={params.id}
               key={meeting.id}
