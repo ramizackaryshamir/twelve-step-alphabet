@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import useStyles from './Meetings.js'
 import Meeting from '../../Components/Meeting/Meeting.jsx'
 
-export default function Meetings(props) {
+const Meetings = (props) => {
   const { allMeetings, filterFn } = props
 
   const classes = useStyles()
@@ -28,3 +28,5 @@ export default function Meetings(props) {
     </div>
   )
 }
+
+export default Meetings;

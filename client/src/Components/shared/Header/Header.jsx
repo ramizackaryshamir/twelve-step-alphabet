@@ -4,7 +4,7 @@ import useStyles from './Header.js'
 import Nav from "../Nav/Nav.jsx"
 
 
-export default function Header() {
+const Header = () => {
   
   const classes = useStyles()
 
@@ -16,3 +16,5 @@ export default function Header() {
     </>
   )
 }
+
+export default Header;

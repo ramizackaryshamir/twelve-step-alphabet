@@ -12,7 +12,7 @@ import {
 import Meetings from "../../screens/Meetings/Meetings.jsx"
 import MeetingDetail from "../../screens/MeetingDetail/MeetingDetail.jsx"
 
-export default function MeetingsContainer() {
+const MeetingsContainer = () => {
   const [oneMeeting, setOneMeeting] = useState([])
   const [allMeetings, setAllMeetings] = useState([])
   
@@ -79,7 +79,7 @@ export default function MeetingsContainer() {
             }
           />
         </Route>
-        
+
         <Route path="/meetings-aa">
           <Meetings
             allMeetings={allMeetings}
@@ -111,3 +111,4 @@ export default function MeetingsContainer() {
   )
 }
 
+export default MeetingsContainer;

@@ -6,7 +6,7 @@ import Map from "../../Components/Map/Map.jsx"
 import { getOneMeeting } from '../../services/meetings.js'
 
 
-export default function MeetingDetail(props) {
+const MeetingDetail = (props) => {
   const { allMeetings, oneMeeting} = props
   const classes = useStyles()
 
@@ -92,6 +92,8 @@ export default function MeetingDetail(props) {
     </>
   )
 }
+
+export default MeetingDetail;
 
 // useEffect(() => {
   //   fetchReviews(params.id)

@@ -2,7 +2,7 @@ import React from 'react'
 import useStyles from './Nav.js'
 import { NavLink } from 'react-router-dom'
 
-export default function Nav() {
+const Nav = () => {
   
   const classes = useStyles()
   return (
@@ -27,3 +27,5 @@ export default function Nav() {
     </>
   )
 }
+
+export default Nav;
