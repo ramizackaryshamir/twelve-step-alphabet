@@ -14,6 +14,10 @@ const MeetingDetail = (props) => {
 
   //params is assigned the value of the id in '/meetings/id'; 1 for '/meetings/1', 2 for '/meetings/2', etc.
   const params = useParams()
+ 
+  useEffect(() => {
+    getOneMeeting(params.id)
+  }, [])
   
   return (
     <>
@@ -96,6 +100,3 @@ const MeetingDetail = (props) => {
 
 export default MeetingDetail;
 
-// useEffect(() => {
-  //   fetchReviews(params.id)
-  // }, [])
