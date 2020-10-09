@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import useStyles from './Meetings.js'
 import Meeting from '../../Components/Meeting/Meeting.jsx'
 

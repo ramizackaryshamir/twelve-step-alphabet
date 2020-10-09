@@ -6,12 +6,13 @@ mapboxgl.accessToken =
   "pk.eyJ1IjoicmFtaXphY2thcnlzaGFtaXIiLCJhIjoiY2tjajRzMXA5MWMyczJybnFoMzB0cGFveiJ9.dJGkd1gcu3cPQ_l46OQT7w";
 
 const Map = () => {
-  const classes = useStyles()
-  const mapContainerRef = useRef(null);
 
   const [lng, setLng] = useState(5);
   const [lat, setLat] = useState(34);
   const [zoom, setZoom] = useState(2);
+
+  const classes = useStyles()
+  const mapContainerRef = useRef(null)
 
   //Initialize map when component mounts
 
@@ -33,7 +34,6 @@ const Map = () => {
     
     //Add navigation control
     map.addControl(new mapboxgl.NavigationControl(), "bottom-left")
-
     map.on('move', () => {
       setLng(map.getCenter().lng.toFixed(4));
       setLat(map.getCenter().lat.toFixed(4));

@@ -1,22 +1,14 @@
 import React, { useState, useEffect } from 'react'
-import { Route, Switch, useHistory } from 'react-router-dom'
-import {
-  getAllMeetings, getOneMeeting
-} from "../../services/meetings.js"
-import {
-  getAllReviews,
-  postReview,
-  updateReview,
-  destroyReview
-} from "../../services/reviews.js"
+import { Route, Switch } from 'react-router-dom'
+import { getAllMeetings, getOneMeeting } from "../../services/meetings.js"
+
 import Meetings from "../../screens/Meetings/Meetings.jsx"
 import MeetingDetail from "../../screens/MeetingDetail/MeetingDetail.jsx"
 
 const MeetingsContainer = () => {
+  
   const [oneMeeting, setOneMeeting] = useState([])
   const [allMeetings, setAllMeetings] = useState([])
-  
-  const [reviews, setReviews] = useState([])
 
   useEffect(() => {
     fetchMeetings();
@@ -36,28 +28,6 @@ const MeetingsContainer = () => {
     const meeting = await getOneMeeting(id);
     setOneMeeting(meeting);
   }
-
-  //
-//
-  const fetchReviews = async (id) => {
-    const review = await getAllReviews(id)
-    setReviews(review)
-  }
-  const createReview = async (formData, id) => {
-    const review = await postReview(formData, id)
-    setReviews(prevState => [...prevState, review])
-    // history.push(`/meeting-detail/:id`)
-   }
-  const deleteReview = async (meeting_id) => {
-    const review = await destroyReview(meeting_id)
-    setReviews(review)
-  }
-  const editReview = async (id, formData) => {
-    const review = await updateReview(id, formData)
-    setReviews(prevState => [...prevState, review])
-  }
-//
-  //
 
   return (
     <>

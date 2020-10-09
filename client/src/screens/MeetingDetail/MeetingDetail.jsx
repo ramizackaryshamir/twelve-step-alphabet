@@ -7,9 +7,10 @@ import { getOneMeeting } from '../../services/meetings.js'
 
 
 const MeetingDetail = (props) => {
-  const { allMeetings, oneMeeting} = props
+  
+  const { allMeetings, oneMeeting } = props
+  
   const classes = useStyles()
-
 
   //params is assigned the value of the id in '/meetings/id'; 1 for '/meetings/1', 2 for '/meetings/2', etc.
   const params = useParams()
