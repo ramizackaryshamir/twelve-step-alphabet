@@ -8,24 +8,17 @@ import { getOneMeeting } from '../../services/meetings.js'
 
 export default function MeetingDetail(props) {
   const { allMeetings, oneMeeting} = props
- 
-  //params is assIgned the value of the id in '/meetings/id'; 1 for '/meetings/1', 2 for '/meetings/2', etc.
-  const params = useParams()
-  
   const classes = useStyles()
 
-  // useEffect(() => {
-  //   fetchReviews(params.id)
-  // }, [])
-  
 
+  //params is assigned the value of the id in '/meetings/id'; 1 for '/meetings/1', 2 for '/meetings/2', etc.
+  const params = useParams()
+  
   return (
     <>
-      {/* <div className={classes.body}> */}
-        <div className={classes.meetingCard}>
-          {allMeetings
-            .filter((meeting) => meeting.id === parseInt(params.id))
-            .map((meeting) => (
+      <div className={classes.meetingCard}>
+        {allMeetings
+            .filter((meeting) => meeting.id === parseInt(params.id)).map((meeting) => (
               <Meeting
                 params={params.id}
                 key={meeting.id}
@@ -40,17 +33,38 @@ export default function MeetingDetail(props) {
               />
             ))}
       </div>
-      <div className={classes.mapCard}>
-        {/*
-        //
-        // NOTE: I am here. October 08, 2020
-         {getOneMeeting.find()
-        
-        } 
+      
+      {/*
+      
+        <div className={classes.mapCard}>
+        {oneMeeting.filter((meeting) => meeting.id === parseInt(params.id)).map((meeting) => 
+        ( 
+        //NOTE: applying filter and map method in this way does not throw an error in the browser, but
+        the map no longer renders to the page October 09, 2020
+
         */}
-        <MapDetail />
-      </div>
-        {/* <div className={classes.mapCard}>
+      
+      <MapDetail
+        
+          // params={params.id}
+          // key={meeting.id}
+          // longitude={meeting.longitude}
+          // latitude={meeting.latitude}
+        
+        />
+        
+      {/* 
+
+      ))}
+      </div> 
+      
+      */}
+
+      
+        {/* 
+        //
+          //
+        <div className={classes.mapCard}>
           {meetings.map((meeting) => (
           <Review 
               key={meeting.id}
@@ -78,3 +92,7 @@ export default function MeetingDetail(props) {
     </>
   )
 }
+
+// useEffect(() => {
+  //   fetchReviews(params.id)
+  // }, [])

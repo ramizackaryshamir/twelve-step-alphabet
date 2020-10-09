@@ -23,8 +23,6 @@ export default function MeetingsContainer() {
     fetchMeeting();
   }, [])
 
-  const history = useHistory()
-
   const fetchMeetings = async () => {
     const meetings = await getAllMeetings();
     setAllMeetings(meetings);
@@ -33,37 +31,33 @@ export default function MeetingsContainer() {
 //   const getOneMeeting = async (id) => {
 //   const resp = await api.get(`/meetings/${id}`);
 //   return resp.data;
-
-// }
+//   }
   const fetchMeeting = async (id) => {
     const meeting = await getOneMeeting(id);
     setOneMeeting(meeting);
   }
 
-
+  //
+//
   const fetchReviews = async (id) => {
     const review = await getAllReviews(id)
     setReviews(review)
   }
-
   const createReview = async (formData, id) => {
     const review = await postReview(formData, id)
     setReviews(prevState => [...prevState, review])
     // history.push(`/meeting-detail/:id`)
    }
-
-  //Delete and Edit Buttons still need functionality 9-26-2020
-  //Delete Review
   const deleteReview = async (meeting_id) => {
     const review = await destroyReview(meeting_id)
     setReviews(review)
   }
-
-  //Update Review
   const editReview = async (id, formData) => {
     const review = await updateReview(id, formData)
     setReviews(prevState => [...prevState, review])
   }
+//
+  //
 
   return (
     <>
@@ -85,6 +79,7 @@ export default function MeetingsContainer() {
             }
           />
         </Route>
+        
         <Route path="/meetings-aa">
           <Meetings
             allMeetings={allMeetings}
@@ -93,6 +88,7 @@ export default function MeetingsContainer() {
             }
           />
         </Route>
+
         <Route path="/meetings-al">
           <Meetings
             allMeetings={allMeetings}
@@ -102,15 +98,11 @@ export default function MeetingsContainer() {
 
         <Route path='/meeting-detail/:id'>
           <MeetingDetail
-            fetchReviews={fetchReviews}
-            reviews={reviews}
-            createReview={createReview}
-            deleteReview={deleteReview}
-            editReview={editReview}
             allMeetings={allMeetings}
             oneMeeting={oneMeeting}
           />
         </Route>
+
         <Route path="/">
           <Meetings allMeetings={allMeetings} filterFn={(meeting) => meeting} />
         </Route>
