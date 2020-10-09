@@ -14,10 +14,6 @@ const MeetingDetail = (props) => {
 
   //params is assigned the value of the id in '/meetings/id'; 1 for '/meetings/1', 2 for '/meetings/2', etc.
   const params = useParams()
- 
-  useEffect(() => {
-    getOneMeeting(params.id)
-  }, [])
   
   return (
     <>
@@ -39,33 +35,22 @@ const MeetingDetail = (props) => {
             ))}
       </div>
       
-      {/*
+      
 
         <div className={classes.mapCard}>
-        {oneMeeting.filter((meeting) => meeting.id === parseInt(params.id)).map((meeting) => 
+        {oneMeeting.filter((meeting) => meeting.id === parseInt(params.id)).map((map) => 
         ( 
-        //NOTE: applying filter and map method in this way does not throw an error in the browser, but
-        the map no longer renders to the page October 09, 2020
-
-        */}
-      
+        //NOTE: applying filter and map method with meeting as the parameter for both methods does not throw an error in the browser, but the map only renders once the map method parameter is changed to map to the page October 09, 2020
       <Map
-        
-          // params={params.id}
-          // key={meeting.id}
-          // longitude={meeting.longitude}
-          // latitude={meeting.latitude}
-        
+              params={params.id}
+              key={params.id}
+              longitude={map.lng}
+              latitude={map.lat}
+              zoom={map.zoom}
         />
-        
-      {/* 
-
       ))}
       </div> 
-      
-      */}
-
-      
+ 
         {/* 
         //
           //

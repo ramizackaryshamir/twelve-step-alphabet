@@ -4,6 +4,7 @@ import { getAllMeetings, getOneMeeting } from "../../services/meetings.js"
 
 import Meetings from "../../screens/Meetings/Meetings.jsx"
 import MeetingDetail from "../../screens/MeetingDetail/MeetingDetail.jsx"
+import Map from "../../Components/Map/Map.jsx"
 
 const MeetingsContainer = () => {
   
@@ -69,6 +70,9 @@ const MeetingsContainer = () => {
         <Route path='/meeting-detail/:id'>
           <MeetingDetail
             allMeetings={allMeetings}
+            oneMeeting={oneMeeting}
+          />
+          <Map
             oneMeeting={oneMeeting}
           />
         </Route>
