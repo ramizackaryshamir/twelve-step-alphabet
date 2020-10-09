@@ -1,11 +1,11 @@
 import React, { useRef, useEffect, useState } from 'react'
 import mapboxgl from 'mapbox-gl'
-import useStyles from './MapDetail.js'
+import useStyles from './Map.js'
 
 mapboxgl.accessToken =
   "pk.eyJ1IjoicmFtaXphY2thcnlzaGFtaXIiLCJhIjoiY2tjajRzMXA5MWMyczJybnFoMzB0cGFveiJ9.dJGkd1gcu3cPQ_l46OQT7w";
 
-export default function MapDetail() {
+export default function Map() {
   const classes = useStyles()
   const mapContainerRef = useRef(null);
 

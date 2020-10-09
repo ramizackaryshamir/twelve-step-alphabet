@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import useStyles from './MeetingDetail.js'
 import Meeting from '../../Components/Meeting/Meeting.jsx'
-import MapDetail from "../../Components/MapDetail/MapDetail.jsx"
+import Map from "../../Components/Map/Map.jsx"
 import { getOneMeeting } from '../../services/meetings.js'
 
 
@@ -35,7 +35,7 @@ export default function MeetingDetail(props) {
       </div>
       
       {/*
-      
+
         <div className={classes.mapCard}>
         {oneMeeting.filter((meeting) => meeting.id === parseInt(params.id)).map((meeting) => 
         ( 
@@ -44,7 +44,7 @@ export default function MeetingDetail(props) {
 
         */}
       
-      <MapDetail
+      <Map
         
           // params={params.id}
           // key={meeting.id}
