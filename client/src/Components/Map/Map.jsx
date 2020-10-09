@@ -5,10 +5,10 @@ import useStyles from './Map.js'
 mapboxgl.accessToken =
   "pk.eyJ1IjoicmFtaXphY2thcnlzaGFtaXIiLCJhIjoiY2tjajRzMXA5MWMyczJybnFoMzB0cGFveiJ9.dJGkd1gcu3cPQ_l46OQT7w";
 
-const Map = ( { longitude, latitude } ) => {
+const Map = ( longitude, latitude  ) => {
 
-  const [lng, setLng] = useState(5);
-  const [lat, setLat] = useState(34);
+  const [lng, setLng] = useState('');
+  const [lat, setLat] = useState('');
   const [zoom, setZoom] = useState(2);
 
   const classes = useStyles()

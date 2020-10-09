@@ -10,20 +10,20 @@ const Meetings = (props) => {
   return (
     <div className={classes.body}>
       <div className={classes.meetingCard}>
-          {allMeetings.filter(filterFn).map((meeting) => (
-            <Meeting
-              id={meeting.id}
-              key={meeting.id}
-              name={meeting.name}
-              address1={meeting.address1}
-              address2={meeting.address2}
-              city={meeting.city}
-              state={meeting.state}
-              dayOfWeek={meeting.dayOfWeek}
-              timeOfDay={meeting.timeOfDay}
-              organization={meeting.category.name}
-            />
-          ))}
+        {allMeetings.filter(filterFn).map((meeting) => (
+          <Meeting
+            id={meeting.id}
+            key={meeting.id}
+            name={meeting.name}
+            address1={meeting.address1}
+            address2={meeting.address2}
+            city={meeting.city}
+            state={meeting.state}
+            dayOfWeek={meeting.dayOfWeek}
+            timeOfDay={meeting.timeOfDay}
+            organization={meeting.category.name}
+          />
+        ))}
       </div>
     </div>
   )

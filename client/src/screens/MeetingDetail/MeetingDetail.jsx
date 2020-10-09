@@ -32,6 +32,8 @@ const MeetingDetail = (props) => {
               dayOfWeek={meeting.dayOfWeek}
               timeOfDay={meeting.timeOfDay}
               organization={meeting.category.name}
+              longitude={meeting.longitude}
+              latitude={meeting.latitude}
             />
           ))}
       </div>
