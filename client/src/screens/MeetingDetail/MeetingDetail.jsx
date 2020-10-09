@@ -8,7 +8,7 @@ import { getOneMeeting } from '../../services/meetings.js'
 
 const MeetingDetail = (props) => {
   
-  const { allMeetings, oneMeeting } = props
+  const { allMeetings, oneMeeting, longitude, latitude } = props
   
   const classes = useStyles()
 
@@ -19,39 +19,37 @@ const MeetingDetail = (props) => {
     <>
       <div className={classes.meetingCard}>
         {allMeetings
-            .filter((meeting) => meeting.id === parseInt(params.id)).map((meeting) => (
-              <Meeting
-                params={params.id}
-                key={meeting.id}
-                name={meeting.name}
-                address1={meeting.address1}
-                address2={meeting.address2}
-                city={meeting.city}
-                state={meeting.state}
-                dayOfWeek={meeting.dayOfWeek}
-                timeOfDay={meeting.timeOfDay}
-                organization={meeting.category.name}
-              />
-            ))}
-      </div>
-      
-      
-
-        <div className={classes.mapCard}>
-        {oneMeeting.filter((meeting) => meeting.id === parseInt(params.id)).map((map) => 
-        ( 
-        //NOTE: applying filter and map method with meeting as the parameter for both methods does not throw an error in the browser, but the map only renders once the map method parameter is changed to map to the page October 09, 2020
-      <Map
+          .filter((meeting) => meeting.id === parseInt(params.id))
+          .map((meeting) => (
+            <Meeting
               params={params.id}
-              key={params.id}
-              longitude={map.lng}
-              latitude={map.lat}
-              zoom={map.zoom}
-        />
-      ))}
-      </div> 
- 
-        {/* 
+              key={meeting.id}
+              name={meeting.name}
+              address1={meeting.address1}
+              address2={meeting.address2}
+              city={meeting.city}
+              state={meeting.state}
+              dayOfWeek={meeting.dayOfWeek}
+              timeOfDay={meeting.timeOfDay}
+              organization={meeting.category.name}
+            />
+          ))}
+      </div>
+
+      <div className={classes.mapCard}>
+        {allMeetings
+          .filter((meeting) => meeting.id === parseInt(params.id))
+          .map((meeting) => (
+            <Map
+              params={params.id}
+              key={meeting.id}
+              longitude={meeting.longitude}
+              latitude={meeting.latitude}
+            />
+          ))}
+      </div>
+
+      {/* 
         //
           //
         <div className={classes.mapCard}>
@@ -65,7 +63,7 @@ const MeetingDetail = (props) => {
             />
           ))}
         </div> */}
-        {/* <ReviewForm
+      {/* <ReviewForm
           fetchReviews={fetchReviews}
           reviews={reviews}
           id={params.id}
