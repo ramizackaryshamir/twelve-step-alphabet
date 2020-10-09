@@ -2,9 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import useStyles from './Meeting.js'
 
-export default function Meeting(details) {
-
-  const { id, name, address1, address2, city, state, zipcode, timeOfDay, dayOfWeek, latitude, longitude, organization } = details
+export default function Meeting( { id, name, address1, address2, city, state, zipcode, timeOfDay, dayOfWeek, latitude, longitude, organization }) {
   
   const classes = useStyles()
 

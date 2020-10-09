@@ -3,13 +3,14 @@ import { useParams } from 'react-router-dom'
 import useStyles from './MeetingDetail.js'
 import Meeting from '../../Components/Meeting/Meeting.jsx'
 import MapDetail from "../../Components/MapDetail/MapDetail.jsx"
+import { getOneMeeting } from '../../services/meetings.js'
 
 
 export default function MeetingDetail(props) {
   const { allMeetings, oneMeeting} = props
  
+  //params is assIgned the value of the id in '/meetings/id'; 1 for '/meetings/1', 2 for '/meetings/2', etc.
   const params = useParams()
-  console.log(params)
   
   const classes = useStyles()
 
@@ -40,6 +41,13 @@ export default function MeetingDetail(props) {
             ))}
       </div>
       <div className={classes.mapCard}>
+        {/*
+        //
+        // NOTE: I am here. October 08, 2020
+         {getOneMeeting.find()
+        
+        } 
+        */}
         <MapDetail />
       </div>
         {/* <div className={classes.mapCard}>

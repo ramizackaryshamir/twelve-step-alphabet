@@ -32,6 +32,7 @@
 
 #### Wireframes
 
+[Application Architecture](https://xd.adobe.com/view/4ca673fb-51dd-4ca0-a3c6-1a295c9854fd-19f5/)
 [Prototype: iphone X, XS, 11 Pro](https://xd.adobe.com/view/21403106-c549-4c49-a64f-509952a11ae4-7413/)
 
 ### Component Hierarchy
