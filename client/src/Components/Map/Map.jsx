@@ -5,7 +5,7 @@ import useStyles from './Map.js'
 mapboxgl.accessToken =
   "pk.eyJ1IjoicmFtaXphY2thcnlzaGFtaXIiLCJhIjoiY2tjajRzMXA5MWMyczJybnFoMzB0cGFveiJ9.dJGkd1gcu3cPQ_l46OQT7w";
 
-const Map = () => {
+const Map = ( { longitude, latitude } ) => {
 
   const [lng, setLng] = useState(5);
   const [lat, setLat] = useState(34);
@@ -48,11 +48,12 @@ const Map = () => {
     <div>
       <div className={classes.mapContainer} ref={mapContainerRef}>
         <div className={classes.sidebar}>
-          <div>
-            Longitude: {lng} | Latitude {lat} | Zoom: {zoom}
+          <div
+            longitude={longitude}
+            latitude={latitude}>
+            Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
           </div>
         </div>
-        
       </div>
     </div>
   )
