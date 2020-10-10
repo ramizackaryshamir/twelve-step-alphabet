@@ -8,7 +8,7 @@ mapboxgl.accessToken =
 const Map = () => {
 
   const [state, setState] = useState({
-    lng: 4,
+    lng: 0,
     lat: 0,
     zoom: 0
   });
@@ -16,7 +16,7 @@ const Map = () => {
 
   const classes = useStyles()
   //useRefs to store references to the map  object and the map html element
-  const mapContainerRef = useRef('');
+  const mapContainerRef = useRef(null);
   
   //Initialize map when component mounts
 
@@ -27,7 +27,7 @@ const Map = () => {
       // This is where the coordinates render to Map, e.g.:
       // center: [40.60942, -74.27337]
       center: [state.lng, state.lat],
-      zoom: state.zoom,
+      zoom: state.zoom
     })
   
     //Get location of user
@@ -39,12 +39,12 @@ const Map = () => {
     }));
     
     //Add navigation control
-    map.addControl(new mapboxgl.NavigationControl(), "bottom-left")
-    map.on('move', () => {
-      setState(map.getCenter().lng.toFixed(4));
-      setState(map.getCenter().lat.toFixed(4));
-      setState(map.getZoom().toFixed(2));
-    });
+    // map.addControl(new mapboxgl.NavigationControl(), "bottom-left")
+    // map.on('move', () => {
+    //   setState(map.getCenter().lng.toFixed(4));
+    //   setState(map.getCenter().lat.toFixed(4));
+    //   setState(map.getZoom().toFixed(2));
+    // });
 
     //Clean up on unmount
     return () => map.remove();
