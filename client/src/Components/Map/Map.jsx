@@ -7,13 +7,17 @@ mapboxgl.accessToken =
 
 const Map = () => {
 
-  const [lng, setLng] = useState('');
-  const [lat, setLat] = useState('');
-  const [zoom, setZoom] = useState(2);
+  const [state, setState] = useState({
+    lng: 4,
+    lat: 0,
+    zoom: 0
+  });
+  
 
   const classes = useStyles()
-  const mapContainerRef = useRef(null)
-
+  //useRefs to store references to the map  object and the map html element
+  const mapContainerRef = useRef('');
+  
   //Initialize map when component mounts
 
   useEffect(() => {
@@ -22,8 +26,8 @@ const Map = () => {
       style: "mapbox://styles/mapbox/streets-v11",
       // This is where the coordinates render to Map, e.g.:
       // center: [40.60942, -74.27337]
-      center: [lng, lat],
-      zoom: zoom,
+      center: [state.lng, state.lat],
+      zoom: state.zoom,
     })
   
     //Get location of user
@@ -37,9 +41,9 @@ const Map = () => {
     //Add navigation control
     map.addControl(new mapboxgl.NavigationControl(), "bottom-left")
     map.on('move', () => {
-      setLng(map.getCenter().lng.toFixed(4));
-      setLat(map.getCenter().lat.toFixed(4));
-      setZoom(map.getZoom().toFixed(2));
+      setState(map.getCenter().lng.toFixed(4));
+      setState(map.getCenter().lat.toFixed(4));
+      setState(map.getZoom().toFixed(2));
     });
 
     //Clean up on unmount
@@ -51,7 +55,7 @@ const Map = () => {
       <div className={classes.mapContainer} ref={mapContainerRef}>
         <div className={classes.sidebar}>
           <div>
-            Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
+            Longitude: {state.lng} | Latitude: {state.lat} | Zoom: {state.zoom}
           </div>
         </div>
       </div>
