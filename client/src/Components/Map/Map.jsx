@@ -30,12 +30,10 @@ const Map = ({ longitude, latitude }) => {
       zoom: state.zoom
     })
 
-  setState(
-    map.getCenter(state.lng))
+  setState(map.getCenter(state.lng))
   
-  setState(
-      map.getCenter(state.lat))
-    
+  setState(map.getCenter(state.lat))
+
     //Get location of user
     map.addControl(new mapboxgl.GeolocateControl({
       positionOptions: {

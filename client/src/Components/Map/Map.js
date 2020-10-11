@@ -1,7 +1,6 @@
 import { createUseStyles } from "react-jss"
 const useStyles = createUseStyles({
 
-
   mapContainer: {
     display: "flex",
     flexDirection: "column",
@@ -11,6 +10,15 @@ const useStyles = createUseStyles({
     bottom: 40,
     left: 100,
     right: 100
+  },
+
+  marker: {
+    backgroundColor: '#FFD1D',
+    backgroundSize: 'cover',
+    width: 50,
+    height: 50,
+    borderRadius: '50%',
+    cursor: 'pointer'
   },
 
   sidebar: {
