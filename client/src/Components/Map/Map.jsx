@@ -5,13 +5,13 @@ import useStyles from './Map.js'
 mapboxgl.accessToken =
   "pk.eyJ1IjoicmFtaXphY2thcnlzaGFtaXIiLCJhIjoiY2tjajRzMXA5MWMyczJybnFoMzB0cGFveiJ9.dJGkd1gcu3cPQ_l46OQT7w";
 
-const Map = () => {
+const Map = ({ longitude, latitude }) => {
 
   const [state, setState] = useState({
-    lng: 0,
-    lat: 0,
-    zoom: 0
-  });
+    lng: longitude.toFixed(5),
+    lat: latitude.toFixed(5),
+    zoom: 0,
+  })
   
 
   const classes = useStyles()
@@ -26,10 +26,14 @@ const Map = () => {
       style: "mapbox://styles/mapbox/streets-v11",
       // This is where the coordinates render to Map, e.g.:
       // center: [40.60942, -74.27337]
-      center: [state.lng, state.lat],
+      center: [state.lng, state.lat ],
       zoom: state.zoom
     })
+  setState(
+    map.getCenter(state.lng))
   
+    setState(
+      map.getCenter(state.lat))
     //Get location of user
     map.addControl(new mapboxgl.GeolocateControl({
       positionOptions: {
@@ -55,7 +59,7 @@ const Map = () => {
       <div className={classes.mapContainer} ref={mapContainerRef}>
         <div className={classes.sidebar}>
           <div>
-            Longitude: {state.lng} | Latitude: {state.lat} | Zoom: {state.zoom}
+            Longitude: {longitude} | Latitude: {latitude} | Zoom: {state.zoom}
           </div>
         </div>
       </div>
