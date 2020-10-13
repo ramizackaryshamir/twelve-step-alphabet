@@ -43,6 +43,11 @@ const MeetingDetail = (props) => {
             <Map
               params={params.id}
               key={meeting.id}
+              name={meeting.name}
+              address1={meeting.address1}
+              address2={meeting.address2}
+              city={meeting.city}
+              state={meeting.state}
               longitude={parseFloat(meeting.longitude)}
               latitude={parseFloat(meeting.latitude)}
             />
