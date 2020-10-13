@@ -7,9 +7,9 @@ mapboxgl.accessToken =
 
 const Map = ({ longitude, latitude }) => {
 
-  const [state, setState] = useState({
-    lng: longitude.toFixed(5),
-    lat: latitude.toFixed(5),
+  const [viewport, setViewport] = useState({
+    longitude: longitude.toFixed(5),
+    latitude: latitude.toFixed(5),
     zoom: 0,
   })
   
@@ -26,13 +26,13 @@ const Map = ({ longitude, latitude }) => {
       style: "mapbox://styles/mapbox/streets-v11",
       // This is where the coordinates render to Map, e.g.:
       // center: [40.60942, -74.27337]
-      center: [state.lng, state.lat ],
-      zoom: state.zoom
+      center: [viewport.longitude, viewport.latitude ],
+      zoom: viewport.zoom
     })
 
-  setState(map.getCenter(state.lng))
+  setViewport(map.getCenter(viewport.longitude))
   
-  setState(map.getCenter(state.lat))
+  setViewport(map.getCenter(viewport.latitude))
 
     //Get location of user
     map.addControl(new mapboxgl.GeolocateControl({
@@ -59,7 +59,7 @@ const Map = ({ longitude, latitude }) => {
       <div className={classes.mapContainer} ref={mapContainerRef}>
         <div className={classes.sidebar}>
           <div>
-            Longitude: {longitude} | Latitude: {latitude} | Zoom: {state.zoom}
+            Longitude: {longitude} | Latitude: {latitude} | Zoom: {viewport.zoom}
           </div>
         </div>
       </div>
