@@ -5,7 +5,7 @@ const useStyles = createUseStyles({
     display: "flex",
     flexDirection: "row",
     maxWidth: '100%',
-    height: '340px',
+    height: '390px',
     marginTop: 50,
     marginRight: 100,
     marginBottom: 50,
