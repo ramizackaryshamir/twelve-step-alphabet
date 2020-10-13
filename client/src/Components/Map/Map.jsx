@@ -5,19 +5,22 @@ import useStyles from './Map.js'
 mapboxgl.accessToken =
   "pk.eyJ1IjoicmFtaXphY2thcnlzaGFtaXIiLCJhIjoiY2tjajRzMXA5MWMyczJybnFoMzB0cGFveiJ9.dJGkd1gcu3cPQ_l46OQT7w";
 
-const Map = ({ longitude, latitude }) => {
-
+const Map = ({ longitude, latitude, name, address1, address2, city, state }) => {
   const [viewport, setViewport] = useState({
     latitude: latitude.toFixed(5),
-    longitude: longitude.toFixed(5)
-    
+    longitude: longitude.toFixed(5),
+    name: name,
+    address1: address1,
+    address2: address2,
+    city: city,
+    state: state
   })
 
   const classes = useStyles()
 
   //useRefs to store references to the map  object and the map html element
-  const mapContainerRef = useRef();
-  
+  const mapContainerRef = useRef()
+
   //Initialize map when component mounts
   useEffect(() => {
     const map = new mapboxgl.Map({
@@ -26,7 +29,7 @@ const Map = ({ longitude, latitude }) => {
       // This is where the coordinates render to Map, e.g.:
       // center: [40.60942, -74.27337]
       center: [longitude, latitude],
-      zoom: 12
+      zoom: 12,
     })
 
     //Get location of user
@@ -41,22 +44,27 @@ const Map = ({ longitude, latitude }) => {
 
     //create a marker for meeting coordinates and render marker to map
     const renderData = (marker) => {
-      new mapboxgl.Marker(marker).setLngLat([longitude, latitude]).addTo(map)
+      new mapboxgl.Marker(marker)
+        .setLngLat([longitude, latitude])
+        .setPopup(new mapboxgl.Popup({ offset: 20 }).setHTML(`<h3> ${ name } <h5> ${address1} <br> ${address2} <br> ${city}, ${state}`))
+        .addTo(map)
     }
     renderData()
 
-    setViewport(map.getCenter(viewport).lng.toFixed(4));
-    setViewport(map.getCenter(viewport).lat.toFixed(4));
+    setViewport(map.getCenter(viewport).lng.toFixed(4))
+    setViewport(map.getCenter(viewport).lat.toFixed(4))
 
     //Clean up on unmount
     return () => map.remove()
-
-  }, []);
+  }, [])
 
   return (
     <div>
-      <div className={classes.mapContainer} ref={mapContainerRef} setViewport={viewport}>
-      </div>
+      <div
+        className={classes.mapContainer}
+        ref={mapContainerRef}
+        setViewport={viewport}
+      ></div>
     </div>
   )
 }
