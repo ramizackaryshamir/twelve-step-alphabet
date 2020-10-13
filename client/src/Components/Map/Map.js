@@ -3,13 +3,14 @@ const useStyles = createUseStyles({
 
   mapContainer: {
     display: "flex",
-    flexDirection: "column",
-    position: 'absolute',
-    border: '5px solid #FFD1DC',
-    top: 300,
-    bottom: 40,
-    left: 100,
-    right: 100
+    flexDirection: "row",
+    maxWidth: '100%',
+    height: '340px',
+    marginTop: 50,
+    marginRight: 100,
+    marginBottom: 50,
+    marginLeft: 100,
+    border: '5px solid #FFD1DC'
   },
 
   marker: {
