@@ -45,6 +45,14 @@ const Map = ({ longitude, latitude }) => {
       trackUserLocation: true
     }));
     
+    const renderData = (marker) => {
+        // create a HTML element for each feature
+        //make a marker for each feature and add to the map
+        new mapboxgl.Marker(marker).setLngLat([longitude, latitude]).addTo(map)
+      }
+    
+
+    renderData()
     //Add navigation control
     // map.addControl(new mapboxgl.NavigationControl(), "bottom-left")
     // map.on('move', () => {
