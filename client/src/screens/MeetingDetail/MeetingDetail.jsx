@@ -15,45 +15,46 @@ const MeetingDetail = (props) => {
   
   return (
     <>
-      <div className={classes.meetingCard}>
-        {allMeetings
-          .filter((meeting) => meeting.id === parseInt(params.id))
-          .map((meeting) => (
-            <Meeting
-              params={params.id}
-              key={meeting.id}
-              name={meeting.name}
-              address1={meeting.address1}
-              address2={meeting.address2}
-              city={meeting.city}
-              state={meeting.state}
-              dayOfWeek={meeting.dayOfWeek}
-              timeOfDay={meeting.timeOfDay}
-              organization={meeting.category.name}
-              longitude={meeting.longitude}
-              latitude={meeting.latitude}
-            />
-          ))}
-      </div>
+      <div className={classes.meeting}>
+        <div className={classes.meetingCard}>
+          {allMeetings
+            .filter((meeting) => meeting.id === parseInt(params.id))
+            .map((meeting) => (
+              <Meeting
+                params={params.id}
+                key={meeting.id}
+                name={meeting.name}
+                address1={meeting.address1}
+                address2={meeting.address2}
+                city={meeting.city}
+                state={meeting.state}
+                dayOfWeek={meeting.dayOfWeek}
+                timeOfDay={meeting.timeOfDay}
+                organization={meeting.category.name}
+                longitude={meeting.longitude}
+                latitude={meeting.latitude}
+              />
+            ))}
+        </div>
 
-      <div className={classes.mapCard}>
-        {allMeetings
-          .filter((meeting) => meeting.id === parseInt(params.id))
-          .map((meeting) => (
-            <Map
-              params={params.id}
-              key={meeting.id}
-              name={meeting.name}
-              address1={meeting.address1}
-              address2={meeting.address2}
-              city={meeting.city}
-              state={meeting.state}
-              longitude={parseFloat(meeting.longitude)}
-              latitude={parseFloat(meeting.latitude)}
-            />
-          ))}
+        <div className={classes.mapCard}>
+          {allMeetings
+            .filter((meeting) => meeting.id === parseInt(params.id))
+            .map((meeting) => (
+              <Map
+                params={params.id}
+                key={meeting.id}
+                name={meeting.name}
+                address1={meeting.address1}
+                address2={meeting.address2}
+                city={meeting.city}
+                state={meeting.state}
+                longitude={parseFloat(meeting.longitude)}
+                latitude={parseFloat(meeting.latitude)}
+              />
+            ))}
+        </div>
       </div>
-
       {/* 
         //
           //

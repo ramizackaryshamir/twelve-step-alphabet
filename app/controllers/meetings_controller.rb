@@ -3,7 +3,7 @@ class MeetingsController < ApplicationController
 
   # GET /meetings
   def index
-    @meetings = Meeting.limit(1000).offset(params[:offset])
+    @meetings = Meeting.limit(250).offset(params[:offset])
 
     render json: @meetings, include: :category
   end

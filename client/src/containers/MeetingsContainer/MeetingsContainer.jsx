@@ -7,12 +7,12 @@ import MeetingDetail from "../../screens/MeetingDetail/MeetingDetail.jsx"
 
 const MeetingsContainer = () => {
   
-  const [oneMeeting, setOneMeeting] = useState([])
+  // const [oneMeeting, setOneMeeting] = useState([])
   const [allMeetings, setAllMeetings] = useState([])
 
   useEffect(() => {
     fetchMeetings();
-    fetchMeeting();
+    // fetchMeeting();
   }, [])
 
   const fetchMeetings = async () => {
@@ -24,10 +24,10 @@ const MeetingsContainer = () => {
 //   const resp = await api.get(`/meetings/${id}`);
 //   return resp.data;
 //   }
-  const fetchMeeting = async (id) => {
-    const meeting = await getOneMeeting(id);
-    setOneMeeting(meeting);
-  }
+  // const fetchMeeting = async (id) => {
+  //   const meeting = await getOneMeeting(id);
+  //   setOneMeeting(meeting);
+  // }
 
   return (
     <>
@@ -69,7 +69,7 @@ const MeetingsContainer = () => {
         <Route path='/meeting-detail/:id'>
           <MeetingDetail
             allMeetings={allMeetings}
-            oneMeeting={oneMeeting}
+            // oneMeeting={oneMeeting}
           />
         </Route>
 

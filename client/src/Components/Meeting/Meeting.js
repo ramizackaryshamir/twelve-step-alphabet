@@ -12,7 +12,7 @@ const useStyles = createUseStyles({
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
-    paddingBottom: 10,
+    paddingBottom: 20,
     paddingTop: 10,
     marginBottom: 5,
     marginTop: 5,

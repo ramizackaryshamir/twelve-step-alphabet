@@ -4,11 +4,11 @@
     flex-direction: column;
     max-width: 100%;
     height: 390px;
-    margin-top: 50px;
+    margin-top: 100px;
     margin-right: 100px;
-    margin-bottom: 70px;
+    margin-bottom: 0px;
     margin-left: 100px;
-    border: 5px solid #FFD1DC;
+    border: 10px solid #FFD1DC;
     border-radius: 10px;
   }
 

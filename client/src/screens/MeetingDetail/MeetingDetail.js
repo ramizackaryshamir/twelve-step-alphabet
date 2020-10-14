@@ -1,6 +1,13 @@
 import { createUseStyles } from "react-jss"
 
 const useStyles = createUseStyles({
+  meeting: {
+    display: "flex",
+    flexDirection: "column",
+    width: '100vw',
+    height: '80vh',
+  },
+
   meetingDetail: {
     display: "flex",
     flexDirection: "column",
@@ -18,6 +25,7 @@ const useStyles = createUseStyles({
   mapCard: {
     outline: 'none',
     fontFamily: "Rubik",
+    marginBottom: 10,
     fontWeight: 400,
     textAlign: "justify",
   },

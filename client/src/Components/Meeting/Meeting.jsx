@@ -11,14 +11,13 @@ const Meeting = ( { id, name, address1, address2, city, state, timeOfDay, dayOfW
       <div className={classes.meetingCard}>
         <div className={classes.meetingCardLeft}>
           <p className={classes.elementLeft}>{organization}</p>
-          <p className={classes.elementLeft}>{state}</p>
+          <p className={classes.elementLeft}>{city}, {state}</p>
         </div>
 
         <div className={classes.meetingCardCenter}>
           <p className={classes.elementName}>{name}</p>
           <p className={classes.elementCenter}>{address1}</p>
           <p className={classes.elementCenter}>{address2}</p>
-          <p className={classes.elementCenter}>{city}</p>
         </div>
 
         <div className={classes.meetingCardRight}>
@@ -26,7 +25,7 @@ const Meeting = ( { id, name, address1, address2, city, state, timeOfDay, dayOfW
           <p className={classes.elementRight}>{dayOfWeek}</p>
         </div>
       </div>
-      </Link>
+    </Link>
   )
 }
 
