@@ -1,0 +1,38 @@
+.map-container {
+    outline: none;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    height: 390px;
+    margin-top: 50px;
+    margin-right: 100px;
+    margin-bottom: 50px;
+    margin-left: 100px;
+    border: 5px solid #FFD1DC;
+  }
+
+  .popup-box {
+    border-top: 5px solid #FFD1DC;
+    background-color: 'blue';
+}
+
+  .marker {
+    background-color: #FFD1D1;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .sidebar {
+    display: inline-block;
+    position: absolute;
+    margin-top: 40;
+    margin-left: 40;
+    padding: 12;
+    background-color: #404040;
+    color: #FFD1DC;
+    z-index: 1;
+    padding: 6;
+}
