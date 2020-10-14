@@ -26,7 +26,7 @@ const Meeting = ( { id, name, address1, address2, city, state, timeOfDay, dayOfW
           <p className={classes.elementRight}>{dayOfWeek}</p>
         </div>
       </div>
-    </Link>
+      </Link>
   )
 }
 

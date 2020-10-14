@@ -1,14 +1,18 @@
 import React from 'react'
 import Header from '../Header/Header.jsx'
 import Footer from '../Footer/Footer.jsx'
+import useStyles from './Layout.js'
 
 const Layout = ({ children }) => {
+  const classes = useStyles();
   
   return (
     <>
-      <Header />
-      <div>{children}</div>
-      <Footer />
+      <div className={classes.layout}>
+        <Header />
+        <div>{children}</div>
+        <Footer />
+      </div>
     </>
   )
 }

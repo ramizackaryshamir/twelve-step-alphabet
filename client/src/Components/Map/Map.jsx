@@ -67,13 +67,11 @@ const Map = ({ longitude, latitude, name, address1, address2, city, state }) => 
   }, [])
 
   return (
-    <div>
       <div
         className='map-container'
         ref={mapContainerRef}
         setViewport={viewport}
       ></div>
-    </div>
   )
 }
 
