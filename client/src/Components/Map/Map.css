@@ -13,7 +13,10 @@
 
   .popup-box {
     border-top: 5px solid #FFD1DC;
-    background-color: 'blue';
+    border-radius: 10px;
+    width: 290;
+    height: 290;
+    background-color: #FFD1DC;
 }
 
   .marker {

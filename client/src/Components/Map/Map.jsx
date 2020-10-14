@@ -40,11 +40,23 @@ const Map = ({ longitude, latitude, name, address1, address2, city, state }) => 
       })
     )
 
-    //create a marker for meeting coordinates and render marker to map
+    //create a Marker for meeting coordinates and render marker to map
     const renderData = (marker) => {
-      new mapboxgl.Marker(marker).setLngLat([longitude, latitude]).setPopup(new mapboxgl.Popup({ offset: 20, className: 'popup-box' }).setHTML(`<h3> ${ name } <h5> ${address1} <br> ${address2} <br> ${city}, ${state}`)).addTo(map)
+      new mapboxgl.Marker(marker)
+        .setLngLat([longitude, latitude])
+        //create a Popup with styling and set it to Marker
+        .setPopup(
+          new mapboxgl.Popup({
+            offset: 25,
+            className: "popup-box",
+            maxWidth: 'none',
+          }).setHTML(
+            `<h3> ${name} <h5> ${address1} <br> ${address2} <br> ${city}, ${state}`
+          )
+        )
+        .addTo(map)
     }
-   
+
     renderData()
 
     setViewport(map.getCenter(viewport).lng.toFixed(4))
