@@ -1,8 +1,8 @@
 import { createUseStyles } from 'react-jss'
 
 const useStyles = createUseStyles({
-  body: {
-    backgroundColor: "#FFD1DC",
+  layout: {
+    backgroundColor: "#BAD0D9",
   },
 })
 
