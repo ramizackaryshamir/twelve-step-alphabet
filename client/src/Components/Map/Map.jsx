@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react'
+import React, { useEffect, useRef } from "react"
 import mapboxgl from 'mapbox-gl'
 import './Map.css'
 
@@ -6,16 +6,7 @@ mapboxgl.accessToken =
   "pk.eyJ1IjoicmFtaXphY2thcnlzaGFtaXIiLCJhIjoiY2tjajRzMXA5MWMyczJybnFoMzB0cGFveiJ9.dJGkd1gcu3cPQ_l46OQT7w";
 
 const Map = ({ longitude, latitude, name, address1, address2, city, state }) => {
-  const [viewport, setViewport] = useState({
-    latitude: latitude.toFixed(5),
-    longitude: longitude.toFixed(5),
-    name: name,
-    address1: address1,
-    address2: address2,
-    city: city,
-    state: state
-  })
-
+  
   //useRefs to store references to the map  object and the map html element
   const mapContainerRef = useRef()
 
@@ -59,9 +50,6 @@ const Map = ({ longitude, latitude, name, address1, address2, city, state }) => 
 
     renderData()
 
-    setViewport(map.getCenter(viewport).lng.toFixed(4))
-    setViewport(map.getCenter(viewport).lat.toFixed(4))
-
     //Clean up on unmount
     return () => map.remove()
   }, [])
@@ -70,7 +58,6 @@ const Map = ({ longitude, latitude, name, address1, address2, city, state }) => 
       <div
         className='map-container'
         ref={mapContainerRef}
-        setViewport={viewport}
       ></div>
   )
 }
