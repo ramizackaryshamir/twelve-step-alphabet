@@ -8,7 +8,8 @@ const useStyles = createUseStyles({
     borderBottom: "10px solid #F2DABD",
     borderRadius: 5,
     backgroundColor: "#FFD1DC",
-    position: 'relative'
+    position: 'sticky',
+    top: 0,
   },
 })
 
