@@ -13,8 +13,9 @@ const useStyles = createUseStyles({
       borderRadius: 5,
       marginTop: 50,
       backgroundColor: "#FFD1DC",
-      position: 'relative',
+      position: 'sticky',
       fontSize: 15,
+      bottom: 0,
       fontFamily: "Cabin Sketch",
       color: "#F2DABD",
     }
