@@ -26,8 +26,6 @@ const useStyles = createUseStyles({
     outline: 'none',
     fontFamily: "Rubik",
     marginBottom: 10,
-    fontWeight: 400,
-    textAlign: "justify",
   },
 })
 
