@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from "react"
 import mapboxgl from 'mapbox-gl'
+import MapboxDirections from "@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions"
+import "@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions.css"
 import './Map.css'
 
 mapboxgl.accessToken =
@@ -21,16 +23,6 @@ const Map = ({ longitude, latitude, name, address1, address2, city, state }) => 
       zoom: 12,
     })
 
-    //Get location of user
-    map.addControl(
-      new mapboxgl.GeolocateControl({
-        positionOptions: {
-          enableHighAccuracy: true,
-        },
-        trackUserLocation: true,
-      })
-    )
-
     //create a Marker for meeting coordinates and render marker to map
     const renderData = (marker) => {
       new mapboxgl.Marker(marker)
@@ -40,7 +32,7 @@ const Map = ({ longitude, latitude, name, address1, address2, city, state }) => 
           new mapboxgl.Popup({
             offset: 25,
             className: "popup-box",
-            maxWidth: 'none',
+            maxWidth: "none",
           }).setHTML(
             `<h3> ${name} <h5> ${address1} <br> ${address2} <br> ${city}, ${state}`
           )
@@ -50,6 +42,25 @@ const Map = ({ longitude, latitude, name, address1, address2, city, state }) => 
 
     renderData()
 
+    //Integrate Mapbox Directions
+    const directions = new MapboxDirections({
+      accessToken: mapboxgl.accessToken,
+      unit: "metric",
+      profile: "mapbox/walking",
+    })
+
+    map.addControl(directions, "top-left")
+
+    //Get location of user
+    map.addControl(
+      new mapboxgl.GeolocateControl({
+        positionOptions: {
+          enableHighAccuracy: true,
+        },
+        trackUserLocation: true,
+      })
+    )
+    
     //Clean up on unmount
     return () => map.remove()
   }, [])
