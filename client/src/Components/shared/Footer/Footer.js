@@ -9,15 +9,15 @@ const useStyles = createUseStyles({
       height: 50,
       paddingTop: 25,
       paddingBottom: 10,   
-      borderTop: "10px solid #F2DABD",
+      borderTop: "10px solid #fdd989",
       borderRadius: 5,
       marginTop: 50,
-      backgroundColor: "#FFD1DC",
+      backgroundColor: "#ffa2be",
       position: 'sticky',
       fontSize: 15,
       bottom: 0,
       fontFamily: "Cabin Sketch",
-      color: "#F2DABD",
+      color: "#fdd989",
     }
   })
 

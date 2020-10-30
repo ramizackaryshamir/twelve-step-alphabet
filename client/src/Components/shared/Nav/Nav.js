@@ -20,7 +20,7 @@ const useStyles = createUseStyles({
     fontFamily: "Cabin Sketch",
     marginBottom: 5,
     position: 'sticky',
-    color: "#F2DABD",
+    color: "#fdd989",
   },
 })
 

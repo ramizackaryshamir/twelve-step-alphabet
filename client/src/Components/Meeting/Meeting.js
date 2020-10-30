@@ -16,9 +16,9 @@ const useStyles = createUseStyles({
     paddingTop: 10,
     marginBottom: 5,
     marginTop: 5,
-    border: "3px solid #FFD1DC",
+    border: "3px solid #ffa2be",
     borderRadius: 10,
-    backgroundColor: "#F2DABD",
+    backgroundColor: "#fdd78a",
   },
 
   meetingCardLeft: {

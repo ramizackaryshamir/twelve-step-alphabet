@@ -8,20 +8,20 @@
     margin-right: 100px;
     margin-bottom: 0px;
     margin-left: 100px;
-    border: 10px solid #FFD1DC;
+    border: 10px solid #ffa2be;
     border-radius: 10px;
   }
 
   .popup-box {
     width: 290;
     height: 290;
-    background-color: #FFD1DC;
-    border-top: 5px solid #FFD1DC;
+    background-color: #ffa2be;
+    border-top: 5px solid #ffa2be;
     border-radius: 10px;
 }
 
   .marker {
-    background-color: #FFD1D1;
+    background-color: #ffa2be;
     background-size: cover;
     width: 80px;
     height: 80px;
@@ -35,7 +35,7 @@
     margin-left: 40;
     padding: 12;
     background-color: #404040;
-    color: #FFD1DC;
+    color: #ffa2be;
     z-index: 1;
     padding: 6;
 }
