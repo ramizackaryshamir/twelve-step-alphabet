@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { useParams } from 'react-router-dom'
 import useStyles from './MeetingDetail.js'
 import Meeting from '../../Components/Meeting/Meeting.jsx'
