@@ -7,7 +7,9 @@ const Footer = () => {
   return (
     <>
       <div className={classes.footer}>
-        <p>Sobriety Dashboard</p>
+        <p>
+          Color Palette inspired by Agnes Martin's 'With My Back to the World'
+        </p>
         <p>Report Missing Rooms</p>
         <p>Feedback</p>
       </div>

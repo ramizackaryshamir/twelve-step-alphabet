@@ -33,16 +33,25 @@
 [Application Architecture](https://xd.adobe.com/view/4ca673fb-51dd-4ca0-a3c6-1a295c9854fd-19f5/)
 [Prototype: iphone X, XS, 11 Pro](https://xd.adobe.com/view/21403106-c549-4c49-a64f-509952a11ae4-7413/)
 
-### Color Palette
+### Color Palette [inspired by Agnes Martin's 'With My Back to the World'](https://www.moma.org/collection/works/79892)
 
-|__Meetings.jsx
+|__Map.css
+            |__#ffa2be
+            |__#fdd78a 
+|__Meetings.js
             |__#79e1fd
-|__Meeting.jsx
+|__Meeting.js
             |__#ffa2be
-            |__#
-|__Map.jsx
+            |__#fdd78a 
+|__Layout.js
+            |__#79e1fd
+|__Nav.js
+            |__#fdd989
+|__Header.js
+            |__#fdd989
             |__#ffa2be
-            |__#fdd78a
+|__Footer.js
+            |__#fdd989
 
 ### Component Hierarchy
 
