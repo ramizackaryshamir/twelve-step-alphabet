@@ -2,7 +2,7 @@ import {createUseStyles } from 'react-jss'
 
 const useStyles = createUseStyles({
   body: {
-    backgroundColor: "#BAD0D9",
+    backgroundColor: "#79e1fd",
   },
 
   meetingCard: {
