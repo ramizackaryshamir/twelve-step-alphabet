@@ -2,11 +2,12 @@
 
 **12 Step Alphabet** is a comprehensive 12 step meeting directory and review platform for [CMA](https://www.crystalmeth.org/) [NA](https://www.na.org/?ID=aboutus) [AA](https://www.aa.org/pages/en_US/what-is-aa) & [ALANON](https://al-anon.org/) 
 
+### [View Project](https://twelve-step-alphabet.netlify.app/)
+
 ### MVP
 - Use mitmproxy to reverse engineer API calls used by leading ios recovery applications
-- Build meeting database from retrieved datasets
+- Build comprehensive meeting database from retrieved datasets
 - Create functionality to allow users to search comprehensive directory of 12 step meetings
-- Create functionality to allow users to create, update, and delete reviews of 12 step meetings
 
 ### Goals
 
