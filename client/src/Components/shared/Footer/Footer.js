@@ -18,7 +18,15 @@ const useStyles = createUseStyles({
       bottom: 0,
       fontFamily: "Cabin Sketch",
       color: "#fdd989",
+  },
+  '@media (max-width: 375px)': {
+    footer: {
+      fontSize: 7,
+      height: 30,
+      paddingTop: 15,
+      paddingBottom: 5, 
     }
+  }
   })
 
 export default useStyles;
