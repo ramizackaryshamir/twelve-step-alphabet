@@ -22,7 +22,7 @@ const useStyles = createUseStyles({
     position: 'sticky',
     color: "#fdd989",
   },
-  '@media (max-width: 375px)': {
+  '@media (max-width: 415px)': {
     navBar: {
       width: 120,
       height: 25
