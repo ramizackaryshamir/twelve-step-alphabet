@@ -25,7 +25,7 @@ const useStyles = createUseStyles({
   '@media (max-width: 375px)': {
     navBar: {
       width: 120,
-      height: 35
+      height: 25
     },
     navItem: {
       fontSize: 7,
