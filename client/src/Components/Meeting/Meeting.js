@@ -85,7 +85,8 @@ const useStyles = createUseStyles({
       outline: "none",
       display: "flex",
       flexDirection: "row",
-      justifyContent: "center",
+      // justifyContent: "center",
+      width: '90%',
       paddingBottom: 5,
       paddingTop: 5,
       marginBottom: 0,
@@ -97,7 +98,7 @@ const useStyles = createUseStyles({
 
     meetingCardLeft: {
       marginLeft: 0,
-      width: 20,
+      width: 5,
       fontFamily: "Rubik",
       fontWeight: 200,
     },
@@ -105,10 +106,10 @@ const useStyles = createUseStyles({
     meetingCardCenter: {
       display: "flex",
       flexDirection: "column",
-      justifyContent: "center",
+      // justifyContent: "center",
       textAlign: "justify",
       textJustify: "inter-word",
-      width: 200,
+      width: 5,
       fontSize: 10,
       padding: 0,
       margin: "0px",
