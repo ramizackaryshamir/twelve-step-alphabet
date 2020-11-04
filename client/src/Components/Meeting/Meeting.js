@@ -85,8 +85,9 @@ const useStyles = createUseStyles({
       outline: "none",
       display: "flex",
       flexDirection: "row",
-      justifyContent: "space-between",
+      justifyContent: "space-around",
       width: '100%',
+      height: 80,
       paddingBottom: 5,
       paddingTop: 5,
       marginBottom: 5,
@@ -113,7 +114,7 @@ const useStyles = createUseStyles({
       width: 180,
       fontSize: 8,
       padding: 5,
-      margin: "0px 0px 0px 10px",
+      margin: "0px 0px 0px 0px",
     },
 
     meetingCardRight: {
@@ -125,9 +126,9 @@ const useStyles = createUseStyles({
     },
 
     elementLeft: {
-      marginTop: 10,
-      marginBottom: -20,
-      paddingBottom: 10,
+      marginTop: 30,
+      marginBottom: -30,
+      paddingBottom: 0,
     },
 
     elementCenter: {
@@ -149,8 +150,8 @@ const useStyles = createUseStyles({
 
     elementRight: {
       textAlign: "right",
-      marginTop: 10,
-      marginBottom: -10,
+      marginTop: 30,
+      marginBottom: -30,
       paddingBottom: 0,
     },
   }

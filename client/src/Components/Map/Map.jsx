@@ -20,7 +20,7 @@ const Map = ({ longitude, latitude, name, address1, address2, city, state }) => 
       // This is where the coordinates render to Map, e.g.:
       // center: [40.60942, -74.27337]
       center: [longitude, latitude],
-      zoom: 12,
+      zoom: 9,
     })
 
     //create a Marker for meeting coordinates and render marker to map

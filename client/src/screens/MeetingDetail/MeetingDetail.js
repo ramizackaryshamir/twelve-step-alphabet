@@ -27,6 +27,12 @@ const useStyles = createUseStyles({
     fontFamily: "Rubik",
     marginBottom: 10,
   },
+  '@media (max-width: 415px)': {
+    meetingCard: {
+      padding: "20px 20px 20px 20px",
+      marginTop: 40,
+    }
+  }
 })
 
 export default useStyles

@@ -39,3 +39,19 @@
     z-index: 1;
     padding: 6;
 }
+
+@media (max-width: 415px) {
+.map-container {
+    outline: none;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    height: 390px;
+    margin-top: 40px;
+    margin-right: 20px;
+    margin-bottom: 0px;
+    margin-left: 20px;
+    border: 10px solid #ffa2be;
+    border-radius: 10px;
+  }
+}
