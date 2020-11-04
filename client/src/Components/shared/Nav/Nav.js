@@ -24,16 +24,16 @@ const useStyles = createUseStyles({
   },
   '@media (max-width: 415px)': {
     navBar: {
-      width: 120,
-      height: 25,
-      justifyContent: "space-between"
+      width: '100%',
+      height: 35,
+      justifyContent: "space-evenly"
     },
     navItem: {
       outline: "none",
       display: "flex",
       flexDirection: "row",
-      fontSize: 8,
-      color: "red"
+      fontSize: 15,
+      color: "#fdd989"
     }
   }
 })

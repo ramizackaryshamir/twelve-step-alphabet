@@ -10,7 +10,7 @@ const useStyles = createUseStyles({
       paddingTop: 25,
       paddingBottom: 10,   
       borderTop: "10px solid #fdd989",
-      borderRadius: 5,
+      borderRadius: "5px 5px 0px 0px",
       marginTop: 50,
       backgroundColor: "#ffa2be",
       position: 'sticky',
