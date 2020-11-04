@@ -10,6 +10,9 @@ const useStyles = createUseStyles({
     flexDirection: "column",
     margin: "0px 100px 0px 100px",
   },
+  '@media (max-width: 415px)': {
+    margin: "0px",
+  }
 })
 
 export default useStyles

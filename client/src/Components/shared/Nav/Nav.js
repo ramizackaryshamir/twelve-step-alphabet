@@ -25,10 +25,14 @@ const useStyles = createUseStyles({
   '@media (max-width: 415px)': {
     navBar: {
       width: 120,
-      height: 25
+      height: 25,
+      justifyContent: "space-between"
     },
     navItem: {
-      fontSize: 7,
+      outline: "none",
+      display: "flex",
+      flexDirection: "row",
+      fontSize: 8,
       color: "red"
     }
   }
