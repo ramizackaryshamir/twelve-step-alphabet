@@ -102,7 +102,7 @@ const useStyles = createUseStyles({
       width: 120,
       fontSize: 8,
       fontFamily: "Rubik",
-      fontWeight: 500,
+      fontWeight: 900,
     },
 
     meetingCardCenter: {
@@ -123,7 +123,7 @@ const useStyles = createUseStyles({
       marginLeft: 20,
       fontSize: 8,
       fontFamily: "Rubik",
-      fontWeight: 500,
+      fontWeight: 900,
     },
 
     elementLeft: {
