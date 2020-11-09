@@ -1,5 +1,5 @@
 import React from "react"
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import useStyles from "./Review.js"
 
 export default function Review( reviewDetails ) {
@@ -7,7 +7,9 @@ export default function Review( reviewDetails ) {
     title,
     description,
     score,
-    userName
+    userName,
+    reviewId,
+    handleDelete
   } = reviewDetails
 
   const { id } = useParams()
@@ -28,27 +30,20 @@ export default function Review( reviewDetails ) {
         {/* Delete and Edit Buttons still need functionality 9-26-2020 */}
         <div className={classes.buttons}>
           <button
-            onClick={(e) => {
-              e.preventDefault()
-              console.log("onClick Delete button: Review.jsx 34")
+            onClick={() => {
+              handleDelete(parseInt(id), reviewId)
             }}
             alt="delete-button"
             className={classes.button}
           >
             Delete
           </button>
-          <button
-            onClick={(e) => {
-              e.preventDefault()
-              console.log("onClick Edit button: Review.jsx 44")
-            }}
-            alt="edit-button"
-            className={classes.button}
-          >
-            Edit
-          </button>
+          <Link to={`/meetings/${id}/reviews/${reviewId}/edit`}>
+            <button alt="edit-button" className={classes.button}>
+              Edit
+            </button>
+          </Link>
         </div>
-        
       </div>
     </>
   )

@@ -2,11 +2,8 @@ import React, { useState, useEffect } from 'react'
 import {useParams } from 'react-router-dom'
 import useStyles from './ReviewForm.js' 
 export default function ReviewForm({
-  rows,
-  cols,
-  createReview,
-  deleteReview,
-  editReview
+  handleSubmit,
+  allMeetings
 }) {
   const [formData, setFormData] = useState({
     title: "",
@@ -15,9 +12,24 @@ export default function ReviewForm({
     score: "0",
   })
 
-  const { id } = useParams()
+  const { id, reviewId } = useParams()
 
-  const { title, userName, description, score} = formData
+  const { title, userName, description, score } = formData
+  
+  useEffect(() => {
+    if (reviewId) {
+      let reviewData;
+      allMeetings.forEach(meeting => {
+        if (meeting.id === parseInt(id)) {
+          reviewData = meeting.reviews.find(review => {
+            return review.id === parseInt(reviewId)
+          })
+        }
+      });
+      const { title, userName, description, score } = reviewData;
+      setFormData({ title, userName, description, score })
+    }
+  }, [])
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -34,11 +46,10 @@ export default function ReviewForm({
       <div className={classes.body}>
         <div className={classes.form}>
           <form
-            // onSubmit={(e) => {
-            //   e.preventDefault()
-            //   console.log("onSubmit ReviewForm.jsx 123")
-            //   createReview(formData, id)
-            // }}
+            onSubmit={(e) => {
+              e.preventDefault()
+              handleSubmit(formData, reviewId ? reviewId: id, id)
+            }}
             alt="review-form"
           >
             <label>
@@ -74,8 +85,8 @@ export default function ReviewForm({
               <p>
                 <textarea
                   placeholder="Tell people about your experience."
-                  rows={rows}
-                  cols={cols}
+                  rows='10'
+                  cols='10'
                   className={classes.description}
                   name="description"
                   value={description} required
@@ -85,11 +96,6 @@ export default function ReviewForm({
             </label>
             <div className={classes.buttons}>
               <button
-                onClick={(e) => {
-                  e.preventDefault()
-                  console.log("onClick Submit button: ReviewForm.jsx 90")
-                  createReview(formData, id)
-                }}
                 alt="submit-button"
                 className={classes.button}
               >

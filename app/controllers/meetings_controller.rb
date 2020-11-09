@@ -5,12 +5,12 @@ class MeetingsController < ApplicationController
   def index
     @meetings = Meeting.limit(500).offset(params[:offset])
 
-    render json: @meetings, include: :category
+    render json: @meetings, include: [:category, :reviews]
   end
 
   # GET /meetings/1
   def show
-    render json: @meeting, include: :category
+    render json: @meeting, include: [:category, :reviews]
   end
 
   # POST /meetings
@@ -18,7 +18,7 @@ class MeetingsController < ApplicationController
     @meeting = Meeting.new(meeting_params)
 
     if @meeting.save
-      render json: @meeting, include: :category, status: :created
+      render json: @meeting, include: [:category, :reviews], status: :created
     else
       render json: @meeting.errors, status: :unprocessable_entity
     end
@@ -27,7 +27,7 @@ class MeetingsController < ApplicationController
   # PATCH/PUT /meetings/1
   def update
     if @meeting.update(meeting_params)
-      render json: @meeting, include: :category
+      render json: @meeting, include: [:category, :reviews]
     else
       render json: @meeting.errors, status: :unprocessable_entity
     end
