@@ -45,7 +45,7 @@ const MeetingDetail = (props) => {
                   />
                 ))}
                 <Link to={`/meetings/${meeting.id}/reviews/new`}>
-                <button> Create Review </button> 
+                  <button className={classes.postReviewBttn}> Post A Review </button> 
                 </Link>
               </div>
             ))}
@@ -69,34 +69,6 @@ const MeetingDetail = (props) => {
             ))}
         </div>
       </div>
-      {/* 
-        //
-          //
-        <div className={classes.mapCard}>
-          {meetings.map((meeting) => (
-          <Review 
-              key={meeting.id}
-              longitude={meeting.longitude}
-              latitude={meeting.latitude}
-              description={review.description}
-              score={review.score}
-            />
-          ))}
-        </div> */}
-      {/* <ReviewForm
-          fetchReviews={fetchReviews}
-          reviews={reviews}
-          id={params.id}
-          createReview={createReview}
-          rows="35"
-          cols="85"
-        /> */}
-      {/* </div> */}
-      {/* <Link to={`/meeting-detail/${params}/edit`}>
-        <button>Edit</button>
-      </Link>
-      <button onClick={() => handleDelete(food.id)}>Delete</button>
-    */}
     </>
   )
 }
