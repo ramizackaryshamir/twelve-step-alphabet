@@ -1,0 +1,13 @@
+.loading-container {
+  display: flex;
+  justify-content: center;
+  
+}
+.loading {
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+  width: 900px;
+  border:solid 5px #ffa2be;
+  borderRadius: 5px;
+}

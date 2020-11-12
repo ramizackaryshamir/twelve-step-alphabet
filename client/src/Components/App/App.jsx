@@ -4,10 +4,11 @@ import Layout from '../../Components/shared/Layout/Layout.jsx'
 import MeetingsContainer from '../../containers/MeetingsContainer/MeetingsContainer.jsx';
 
 const App = () => {
+
   return (
     <>
       <Layout>
-        <MeetingsContainer />
+         <MeetingsContainer />
       </Layout>
     </>
   )

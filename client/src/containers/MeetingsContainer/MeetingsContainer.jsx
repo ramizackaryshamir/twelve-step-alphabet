@@ -9,9 +9,15 @@ import {
 import ReviewForm from "../../Components/ReviewForm/ReviewForm.jsx"
 import Meetings from "../../screens/Meetings/Meetings.jsx"
 import MeetingDetail from "../../screens/MeetingDetail/MeetingDetail.jsx"
+import LoadingScreen from '../../Components/LoadingScreen/LoadingScreen.jsx'
 
 const MeetingsContainer = () => {
   const [allMeetings, setAllMeetings] = useState([])
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 10000)
+  })
 
   const history = useHistory()
 
@@ -30,11 +36,11 @@ const MeetingsContainer = () => {
       prevState.map((meeting) => {
         return meeting.id === meeting_id
           ? {
-              ...meeting,
-              reviews: meeting.reviews.filter(
-                (review) => review.id !== review_id
-              ),
-            }
+            ...meeting,
+            reviews: meeting.reviews.filter(
+              (review) => review.id !== review_id
+            ),
+          }
           : meeting
       })
     )
@@ -46,9 +52,9 @@ const MeetingsContainer = () => {
       prevState.map((meeting) => {
         return meeting.id === parseInt(id)
           ? {
-              ...meeting,
-              reviews: [...meeting.reviews, newReview],
-            }
+            ...meeting,
+            reviews: [...meeting.reviews, newReview],
+          }
           : meeting
       })
     )
@@ -61,11 +67,11 @@ const MeetingsContainer = () => {
       prevState.map((meeting) => {
         return meeting.id === parseInt(meetingId)
           ? {
-              ...meeting,
+            ...meeting,
             reviews: meeting.reviews.map(review => {
               return review.id === parseInt(id) ? updatedReview : review;
             })
-            }
+          }
           : meeting
       })
     )
@@ -74,54 +80,58 @@ const MeetingsContainer = () => {
 
   return (
     <>
-      <Switch>
-        <Route path="/meetings-cma">
-          <Meetings
-            allMeetings={allMeetings}
-            filterFn={(meeting) =>
-              meeting.category.name === "CMA - Crystal Meth Anonymous"
-            }
-          />
-        </Route>
-        <Route path="/meetings-na">
-          <Meetings
-            allMeetings={allMeetings}
-            filterFn={(meeting) =>
-              meeting.category.name === "NA - Narcotics Anonymous"
-            }
-          />
-        </Route>
-        <Route path="/meetings-aa">
-          <Meetings
-            allMeetings={allMeetings}
-            filterFn={(meeting) =>
-              meeting.category.name === "AA - Alcoholics Anonymous"
-            }
-          />
-        </Route>
-        <Route path="/meetings-al">
-          <Meetings
-            allMeetings={allMeetings}
-            filterFn={(meeting) => meeting.category.name === "AL - Al-Anon"}
-          />
-        </Route>
-        <Route path="/meeting-detail/:id">
-          <MeetingDetail
-            allMeetings={allMeetings}
-            handleDelete={handleDelete}
-          />
-        </Route>
-        <Route path="/meetings/:id/reviews/new">
-          <ReviewForm handleSubmit={handlePost} />
-        </Route>
+      {loading === true ? (
+        <LoadingScreen />
+      ) : (
+        < Switch >
+          <Route path="/meetings-cma">
+            <Meetings
+              allMeetings={allMeetings}
+              filterFn={(meeting) =>
+                meeting.category.name === "CMA - Crystal Meth Anonymous"
+              }
+            />
+          </Route>
+          <Route path="/meetings-na">
+            <Meetings
+              allMeetings={allMeetings}
+              filterFn={(meeting) =>
+                meeting.category.name === "NA - Narcotics Anonymous"
+              }
+            />
+          </Route>
+          <Route path="/meetings-aa">
+            <Meetings
+              allMeetings={allMeetings}
+              filterFn={(meeting) =>
+                meeting.category.name === "AA - Alcoholics Anonymous"
+              }
+            />
+          </Route>
+          <Route path="/meetings-al">
+            <Meetings
+              allMeetings={allMeetings}
+              filterFn={(meeting) => meeting.category.name === "AL - Al-Anon"}
+            />
+          </Route>
+          <Route path="/meeting-detail/:id">
+            <MeetingDetail
+              allMeetings={allMeetings}
+              handleDelete={handleDelete}
+            />
+          </Route>
+          <Route path="/meetings/:id/reviews/new">
+            <ReviewForm handleSubmit={handlePost} />
+          </Route>
 
-        <Route path="/meetings/:id/reviews/:reviewId/edit">
-          <ReviewForm allMeetings={allMeetings} handleSubmit={handlePut} />
-        </Route>
-        <Route path="/">
-          <Meetings allMeetings={allMeetings} filterFn={(meeting) => meeting} />
-        </Route>
-      </Switch>
+          <Route path="/meetings/:id/reviews/:reviewId/edit">
+            <ReviewForm allMeetings={allMeetings} handleSubmit={handlePut} />
+          </Route>
+          <Route path="/">
+            <Meetings allMeetings={allMeetings} filterFn={(meeting) => meeting} />
+          </Route>
+        </Switch>   
+        )}
     </>
   )
 }
