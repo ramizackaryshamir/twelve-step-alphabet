@@ -111,7 +111,7 @@ const useStyles = createUseStyles({
       flexWrap: "no-wrap",
       // justifyContent: "center",
       // textAlign: "justify",
-     
+
       width: 180,
       fontSize: 9,
       padding: 5,

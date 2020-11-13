@@ -1,6 +1,7 @@
-import {createUseStyles } from 'react-jss'
+import { createUseStyles } from 'react-jss'
 
 const useStyles = createUseStyles({
+
   header: {
     outline: "none",
     display: "flex",

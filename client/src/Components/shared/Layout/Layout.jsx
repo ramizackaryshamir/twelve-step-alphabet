@@ -1,11 +1,11 @@
-import React from 'react'
-import Header from '../Header/Header.jsx'
-import Footer from '../Footer/Footer.jsx'
-import useStyles from './Layout.js'
+import React from "react"
+import Header from "../Header/Header.jsx"
+import Footer from "../Footer/Footer.jsx"
+import useStyles from "./Layout.js"
 
 const Layout = ({ children }) => {
-  const classes = useStyles();
-  
+  const classes = useStyles()
+
   return (
     <>
       <div className={classes.layout}>
@@ -17,4 +17,4 @@ const Layout = ({ children }) => {
   )
 }
 
-export default Layout;
+export default Layout

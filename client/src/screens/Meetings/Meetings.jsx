@@ -1,6 +1,6 @@
-import React from 'react'
-import useStyles from './Meetings.js'
-import Meeting from '../../Components/Meeting/Meeting.jsx'
+import React from "react"
+import useStyles from "./Meetings.js"
+import Meeting from "../../Components/Meeting/Meeting.jsx"
 
 const Meetings = (props) => {
   const { allMeetings, filterFn } = props
@@ -29,4 +29,4 @@ const Meetings = (props) => {
   )
 }
 
-export default Meetings;
+export default Meetings

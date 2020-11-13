@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from 'react'
-import {useParams } from 'react-router-dom'
-import useStyles from './ReviewForm.js' 
-export default function ReviewForm({
-  handleSubmit,
-  allMeetings
-}) {
+import React, { useState, useEffect } from "react"
+import { useParams } from "react-router-dom"
+import useStyles from "./ReviewForm.js"
+
+const ReviewForm = ({ handleSubmit, allMeetings }) => {
   const [formData, setFormData] = useState({
     title: "",
     userName: "",
@@ -15,18 +13,18 @@ export default function ReviewForm({
   const { id, reviewId } = useParams()
 
   const { title, userName, description, score } = formData
-  
+
   useEffect(() => {
     if (reviewId) {
-      let reviewData;
-      allMeetings.forEach(meeting => {
+      let reviewData
+      allMeetings.forEach((meeting) => {
         if (meeting.id === parseInt(id)) {
-          reviewData = meeting.reviews.find(review => {
+          reviewData = meeting.reviews.find((review) => {
             return review.id === parseInt(reviewId)
           })
         }
-      });
-      const { title, userName, description, score } = reviewData;
+      })
+      const { title, userName, description, score } = reviewData
       setFormData({ title, userName, description, score })
     }
   }, [])
@@ -48,14 +46,15 @@ export default function ReviewForm({
           <form
             onSubmit={(e) => {
               e.preventDefault()
-              handleSubmit(formData, reviewId ? reviewId: id, id)
+              handleSubmit(formData, reviewId ? reviewId : id, id)
             }}
             alt="review-form"
           >
             <label>
               <div className={classes.formHeader}>
                 <input
-                  type="number" required
+                  type="number"
+                  required
                   min="0"
                   max="5"
                   className={classes.newScore}
@@ -64,7 +63,8 @@ export default function ReviewForm({
                   onChange={handleChange}
                 ></input>
                 <input
-                  type="text" required
+                  type="text"
+                  required
                   placeholder="Give your review a title."
                   className={classes.title}
                   name="title"
@@ -73,7 +73,8 @@ export default function ReviewForm({
                   alt="Give your review a title."
                 />
                 <input
-                  type="text" required
+                  type="text"
+                  required
                   placeholder="Tell people who you are."
                   className={classes.userName}
                   name="userName"
@@ -85,20 +86,18 @@ export default function ReviewForm({
               <p>
                 <textarea
                   placeholder="Tell people about your experience."
-                  rows='10'
-                  cols='10'
+                  rows="10"
+                  cols="10"
                   className={classes.description}
                   name="description"
-                  value={description} required
+                  value={description}
+                  required
                   onChange={handleChange}
                 />
               </p>
             </label>
             <div className={classes.buttons}>
-              <button
-                alt="submit-button"
-                className={classes.button}
-              >
+              <button alt="submit-button" className={classes.button}>
                 Submit
               </button>
             </div>
@@ -108,3 +107,5 @@ export default function ReviewForm({
     </>
   )
 }
+
+export default ReviewForm

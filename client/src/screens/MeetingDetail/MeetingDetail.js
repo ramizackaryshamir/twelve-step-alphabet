@@ -1,6 +1,7 @@
 import { createUseStyles } from "react-jss"
 
 const useStyles = createUseStyles({
+  
   meeting: {
     display: "flex",
     flexDirection: "column",

@@ -12,13 +12,14 @@ const MeetingDetail = (props) => {
 
   //params is assigned the value of the id in '/meetings/id'; 1 for '/meetings/1', 2 for '/meetings/2', etc.
   const params = useParams()
-  
+
   return (
     <>
       <div className={classes.meeting}>
         <div className={classes.meetingCard}>
           {allMeetings
-            .filter((meeting) => meeting.id === parseInt(params.id)).map((meeting) => (
+            .filter((meeting) => meeting.id === parseInt(params.id))
+            .map((meeting) => (
               <div>
                 <Meeting
                   params={params.id}
@@ -45,7 +46,10 @@ const MeetingDetail = (props) => {
                   />
                 ))}
                 <Link to={`/meetings/${meeting.id}/reviews/new`}>
-                  <button className={classes.postReviewBttn}> Post A Review </button> 
+                  <button className={classes.postReviewBttn}>
+                    {" "}
+                    Post A Review{" "}
+                  </button>
                 </Link>
               </div>
             ))}

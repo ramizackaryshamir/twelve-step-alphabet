@@ -1,16 +1,11 @@
 Review.destroy_all
 Meeting.destroy_all
-Category
-
-
-.destroy_all
+Category.destroy_all
 
 @AA = Category.create!(name: "AA - Alcoholics Anonymous")
 @NA = Category.create!(name: "NA - Narcotics Anonymous")
 @AL = Category.create!(name: "AL - Al-Anon")
 @CMA = Category.create!(name: "CMA - Crystal Meth Anonymous")
-
-
 
 meetings = Meeting.create!([
   {
@@ -94161,5 +94156,4 @@ meetings = Meeting.create!([
   }
 ])
 
-Review.create(title:'write a review', description:'describe your experience', score:1, userName:'David W', meeting:Meeting.first)
-
+Review.create(title:'Write a review', description:'Describe your experience', score:1, userName:'Your Name', meeting:Meeting.first)

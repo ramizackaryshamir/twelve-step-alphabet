@@ -9,7 +9,7 @@ import {
 import ReviewForm from "../../Components/ReviewForm/ReviewForm.jsx"
 import Meetings from "../../screens/Meetings/Meetings.jsx"
 import MeetingDetail from "../../screens/MeetingDetail/MeetingDetail.jsx"
-import LoadingScreen from '../../Components/LoadingScreen/LoadingScreen.jsx'
+import LoadingScreen from "../../Components/LoadingScreen/LoadingScreen.jsx"
 
 const MeetingsContainer = () => {
   const [allMeetings, setAllMeetings] = useState([])
@@ -36,11 +36,11 @@ const MeetingsContainer = () => {
       prevState.map((meeting) => {
         return meeting.id === meeting_id
           ? {
-            ...meeting,
-            reviews: meeting.reviews.filter(
-              (review) => review.id !== review_id
-            ),
-          }
+              ...meeting,
+              reviews: meeting.reviews.filter(
+                (review) => review.id !== review_id
+              ),
+            }
           : meeting
       })
     )
@@ -52,9 +52,9 @@ const MeetingsContainer = () => {
       prevState.map((meeting) => {
         return meeting.id === parseInt(id)
           ? {
-            ...meeting,
-            reviews: [...meeting.reviews, newReview],
-          }
+              ...meeting,
+              reviews: [...meeting.reviews, newReview],
+            }
           : meeting
       })
     )
@@ -67,11 +67,11 @@ const MeetingsContainer = () => {
       prevState.map((meeting) => {
         return meeting.id === parseInt(meetingId)
           ? {
-            ...meeting,
-            reviews: meeting.reviews.map(review => {
-              return review.id === parseInt(id) ? updatedReview : review;
-            })
-          }
+              ...meeting,
+              reviews: meeting.reviews.map((review) => {
+                return review.id === parseInt(id) ? updatedReview : review
+              }),
+            }
           : meeting
       })
     )
@@ -83,7 +83,7 @@ const MeetingsContainer = () => {
       {loading === true ? (
         <LoadingScreen />
       ) : (
-        < Switch >
+        <Switch>
           <Route path="/meetings-cma">
             <Meetings
               allMeetings={allMeetings}
@@ -128,10 +128,13 @@ const MeetingsContainer = () => {
             <ReviewForm allMeetings={allMeetings} handleSubmit={handlePut} />
           </Route>
           <Route path="/">
-            <Meetings allMeetings={allMeetings} filterFn={(meeting) => meeting} />
+            <Meetings
+              allMeetings={allMeetings}
+              filterFn={(meeting) => meeting}
+            />
           </Route>
-        </Switch>   
-        )}
+        </Switch>
+      )}
     </>
   )
 }

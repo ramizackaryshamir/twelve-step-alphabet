@@ -1,6 +1,7 @@
 import { createUseStyles } from 'react-jss'
 
 const useStyles = createUseStyles({
+
   body: {
     backgroundColor: "#FFD1DC",
   },
@@ -79,10 +80,11 @@ const useStyles = createUseStyles({
     borderRadius: 10,
     backgroundColor: "#F2DABD",
   },
+
   buttons: {
     display: "flex",
     justifyContent: "space-around",
-  },
+  }
 })
 
 export default useStyles

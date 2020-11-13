@@ -1,15 +1,15 @@
 import React from "react"
-import { Link, useParams } from 'react-router-dom'
+import { Link, useParams } from "react-router-dom"
 import useStyles from "./Review.js"
 
-export default function Review( reviewDetails ) {
+const Review = (reviewDetails) => {
   const {
     title,
     description,
     score,
     userName,
     reviewId,
-    handleDelete
+    handleDelete,
   } = reviewDetails
 
   const { id } = useParams()
@@ -48,3 +48,5 @@ export default function Review( reviewDetails ) {
     </>
   )
 }
+
+export default Review

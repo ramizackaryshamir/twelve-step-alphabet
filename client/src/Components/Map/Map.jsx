@@ -1,15 +1,22 @@
 import React, { useEffect, useRef } from "react"
-import mapboxgl from 'mapbox-gl'
+import mapboxgl from "mapbox-gl"
 import MapboxDirections from "@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions"
 import "@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions.css"
-import './Map.css'
+import "./Map.css"
 
 mapboxgl.accessToken =
-  "pk.eyJ1IjoicmFtaXphY2thcnlzaGFtaXIiLCJhIjoiY2tjajRzMXA5MWMyczJybnFoMzB0cGFveiJ9.dJGkd1gcu3cPQ_l46OQT7w";
+  "pk.eyJ1IjoicmFtaXphY2thcnlzaGFtaXIiLCJhIjoiY2tjajRzMXA5MWMyczJybnFoMzB0cGFveiJ9.dJGkd1gcu3cPQ_l46OQT7w"
 
-const Map = ({ longitude, latitude, name, address1, address2, city, state }) => {
-  
-  //useRefs to store references to the map  object and the map html element
+const Map = ({
+  longitude,
+  latitude,
+  name,
+  address1,
+  address2,
+  city,
+  state,
+}) => {
+  //useRefs to store references to the map object and the map html element
   const mapContainerRef = useRef()
 
   //Initialize map when component mounts
@@ -60,17 +67,12 @@ const Map = ({ longitude, latitude, name, address1, address2, city, state }) => 
         trackUserLocation: true,
       })
     )
-    
+
     //Clean up on unmount
     return () => map.remove()
   }, [])
 
-  return (
-      <div
-        className='map-container'
-        ref={mapContainerRef}
-      ></div>
-  )
+  return <div className="map-container" ref={mapContainerRef}></div>
 }
 
-export default Map;
+export default Map

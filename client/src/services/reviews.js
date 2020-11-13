@@ -1,10 +1,9 @@
 import api from './apiConfig.js'
 
- export const getAllReviews = async (id) => {
+export const getAllReviews = async (id) => {
   const resp = await api.get(`/meetings/${id}/reviews`);
   return resp.data;
- }
-
+}
 //Create Review
 export const postReview = async (formData, id) => {
   const resp = await api.post(`/meetings/${id}/reviews`, { review: formData });

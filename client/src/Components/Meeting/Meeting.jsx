@@ -1,9 +1,18 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import useStyles from './Meeting.js'
+import React from "react"
+import { Link } from "react-router-dom"
+import useStyles from "./Meeting.js"
 
-const Meeting = ( { id, name, address1, address2, city, state, timeOfDay, dayOfWeek, organization }) => {
-  
+const Meeting = ({
+  id,
+  name,
+  address1,
+  address2,
+  city,
+  state,
+  timeOfDay,
+  dayOfWeek,
+  organization,
+}) => {
   const classes = useStyles()
 
   return (
@@ -11,7 +20,9 @@ const Meeting = ( { id, name, address1, address2, city, state, timeOfDay, dayOfW
       <div className={classes.meetingCard}>
         <div className={classes.meetingCardLeft}>
           <p className={classes.elementLeft}>{organization}</p>
-          <p className={classes.elementLeft}>{city}, {state}</p>
+          <p className={classes.elementLeft}>
+            {city}, {state}
+          </p>
         </div>
 
         <div className={classes.meetingCardCenter}>
@@ -29,4 +40,4 @@ const Meeting = ( { id, name, address1, address2, city, state, timeOfDay, dayOfW
   )
 }
 
-export default Meeting;
+export default Meeting

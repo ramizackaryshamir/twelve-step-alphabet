@@ -1,8 +1,8 @@
-import React from 'react'
-import useStyles from './Footer.js'
+import React from "react"
+import useStyles from "./Footer.js"
 
 const Footer = () => {
-  const classes = useStyles();
+  const classes = useStyles()
 
   return (
     <>
@@ -17,4 +17,4 @@ const Footer = () => {
   )
 }
 
-export default Footer;
+export default Footer

@@ -20,13 +20,8 @@ export const getOneMeeting = async (id) => {
 
 //END
 
-// export const getAllReviews = async (id) => {
-//   const resp = await api.get(`/meetings/${id}/reviews`);
-//   return resp.data;
-// }
 //Create Meeting
 // export const postMeeting = async (meetingData) => {
 //   const resp = await api.post(`/meetings`, meetingData);
 //   return resp.data;
 // }
-

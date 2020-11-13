@@ -1,11 +1,11 @@
-import React from 'react'
-import './LoadingScreen.css'
+import React from "react"
+import "./LoadingScreen.css"
 import Spinner from "../../Assets/react-spinner_bean-eater-0.8s-364px.gif"
 
 const LoadingScreen = () => {
   return (
     <>
-      <div className='loading-container'>
+      <div className="loading-container">
         <img
           src={Spinner}
           className="loading"
@@ -16,4 +16,4 @@ const LoadingScreen = () => {
   )
 }
 
-export default LoadingScreen;
+export default LoadingScreen

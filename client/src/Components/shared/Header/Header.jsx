@@ -1,11 +1,8 @@
-import React from 'react'
-import useStyles from './Header.js'
-
+import React from "react"
+import useStyles from "./Header.js"
 import Nav from "../Nav/Nav.jsx"
 
-
 const Header = () => {
-  
   const classes = useStyles()
 
   return (
@@ -17,4 +14,4 @@ const Header = () => {
   )
 }
 
-export default Header;
+export default Header

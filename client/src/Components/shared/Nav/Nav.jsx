@@ -1,11 +1,10 @@
-import React from 'react'
-import useStyles from './Nav.js'
-import { NavLink } from 'react-router-dom'
+import React from "react"
+import useStyles from "./Nav.js"
+import { NavLink } from "react-router-dom"
 
 const Nav = () => {
-  
   const classes = useStyles()
-  
+
   return (
     <>
       <div className={classes.navBar}>
@@ -29,4 +28,4 @@ const Nav = () => {
   )
 }
 
-export default Nav;
+export default Nav

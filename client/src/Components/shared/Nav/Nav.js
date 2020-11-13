@@ -1,6 +1,7 @@
 import { createUseStyles } from 'react-jss'
 
 const useStyles = createUseStyles({
+
   navBar: {
     outline: "none",
     display: "flex",
@@ -13,6 +14,7 @@ const useStyles = createUseStyles({
     width: 600,
     height: 65
   },
+
   navItem: {
     textDecoration: "none",
     outline: "none",
@@ -22,12 +24,14 @@ const useStyles = createUseStyles({
     position: 'sticky',
     color: "#fdd989",
   },
+
   '@media (max-width: 415px)': {
     navBar: {
       width: '100%',
       height: 35,
       justifyContent: "space-evenly"
     },
+
     navItem: {
       outline: "none",
       display: "flex",

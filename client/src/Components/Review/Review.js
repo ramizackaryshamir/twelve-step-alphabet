@@ -1,6 +1,7 @@
 import { createUseStyles } from "react-jss"
 
 const useStyles = createUseStyles({
+
   reviewCard: {
     outline: "none",
     display: "flex",
