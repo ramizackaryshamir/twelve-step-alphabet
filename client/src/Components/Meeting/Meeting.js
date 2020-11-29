@@ -98,14 +98,10 @@ const useStyles = createUseStyles({
   },
 
 
+  // MEDIAQUERIES //
 
-
-
-
-  //
-  //
-  //
-  //media queries
+  // ALLGOOD
+  // iPhone X
   '@media (max-width: 415px)': {
     meetingCard: {
       outline: "none",
@@ -165,7 +161,6 @@ const useStyles = createUseStyles({
       textJustify: "inter-character",
       arginTop: 3,
       marginBottom: 0,
-     
     },
 
     meetingCardCenter: {

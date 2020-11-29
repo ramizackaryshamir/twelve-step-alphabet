@@ -41,18 +41,33 @@ const useStyles = createUseStyles({
     borderRadius: 5
   },
 
-  '@media (max-width: 415px)': {
+  
+  // MEDIAQUERIES //
+  '@media (max-height: 668px)': {
     meetingCard: {
-      padding: "10px 30px 50px 30px",
-      marginTop: 40,
+      marginTop: 10,
+      marginBottom: 10,
+    },
+
+    postReviewBttn: {
+      fontSize: 8,
+      height: 20,
+      marginTop: 10,
+      marginBottom: 10,
+      fontFamily: "Amatic SC",
+      fontWeight: 700,
+      border: '3px solid #ffa2be',
+      borderRadius: 3
     },
 
     mapCard: {
-      height: 200,
+      margtinTop: 10,
+      height: 50
     }
   },
 
-  '@media (max-height: 846px)': {
+  //iPhone 6/7/8 Plus
+  '@media (min-width: 410px) and (max-height: 846px)': {
     meetingCard: {
       height: 220,
       marginTop: 10,
@@ -60,11 +75,50 @@ const useStyles = createUseStyles({
 
     mapCard: {
       margtinTop: 20,
-      height: 300,
+      height: 30,
       
     }
-  }
+  },
 
+// ALLGOOD 
+// iPhone X
+  '@media (max-width: 420px)': {
+    meetingCard: {
+      marginTop: 20,
+      padding: "10px 30px 50px 30px", 
+    },
+
+    postReviewBttn: {
+      fontSize: 10,
+      height: 30,
+      marginTop: 10,
+      marginBottom: 10,
+      paddingTop: 1,
+      paddingRight: 5,
+      paddingBottom: 1,
+      paddingLeft: 5,
+      fontFamily: "Amatic SC",
+      fontWeight: 700,
+      border: '3px solid #ffa2be',
+      borderRadius: 3
+    },
+
+    mapCard: {
+      height: 200,
+    }
+  },
+
+// ALLGOOD
+// iPad
+'@media (min-width: 768px) and (max-height: 1024px)': { 
+    meetingCard: {
+      marginTop: 55,
+      marginRight: 0,
+      marginBottom: 10,
+      marginLeft: 0
+      
+    },
+  },
 })
 
 export default useStyles
