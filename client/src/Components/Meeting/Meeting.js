@@ -176,17 +176,19 @@ const useStyles = createUseStyles({
       marginBottom: -20,
       fontSize: 8,
       paddingBottom: 0,
-    }
-  },
-
-  meetingCardRight: {
-    marginTop: 10,
+    },
+    
+    meetingCardRight: {
+      marginTop: 10,
       marginRight: 30,
       marginLeft: 15,
       fontSize: 7,
       fontFamily: "Rubik",
       fontWeight: 300,
+    },
   },
+
+ 
     
   // '@media (max-height: 846px)': {
   //   meetingCard: {
