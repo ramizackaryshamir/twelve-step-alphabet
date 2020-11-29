@@ -98,11 +98,11 @@ const useStyles = createUseStyles({
       flexDirection: "row",
       justifyContent: "center",
       width: '100%',
-      height: 90,
+      height: 100,
       lineHeight: '1.6',
       paddingBottom: 15,
       paddingTop: 15,
-      marginBottom: 5,
+      marginBottom: 10,
       marginTop: 5,
       border: "3px solid #ffa2be",
       borderRadius: 10,
@@ -110,16 +110,18 @@ const useStyles = createUseStyles({
     },
 
     elementLeft: {
-      marginTop: 30,
-      marginBottom: -30,
-      fontSize: 8,
+      paddingTop: 20,
+
+      marginBottom: 0,
+      fontSize: 6,
       paddingBottom: 0,
     },
 
     meetingCardLeft: {
-      marginLeft: 10,
-      width: 90,
-      fontSize: 8,
+      marginTop: 40,
+      marginLeft: 20,
+      width: 100,
+      fontSize: 7,
       fontFamily: "Rubik",
       fontWeight: 700,
     },
@@ -138,8 +140,8 @@ const useStyles = createUseStyles({
       fontWeight: 200,
       textAlign: "justify",
       fontSize: 8,
-      textJustify: "inter-character",
-      marginBottom: 10,
+     textJustify: "inter-character",
+      marginBottom: 0,
       marginTop: 0,
     },
 
@@ -151,22 +153,23 @@ const useStyles = createUseStyles({
       // textAlign: "justify",
       width: 190,
       padding: 5,
-      margin: auto,
+      margin: "0px auto 0px 10px",
     },
  
     elementRight: {
       textAlign: "right",
-      marginTop: 30,
-      marginBottom: -30,
-      fontSize: 8,
+      marginBottom: 0,
+      paddingTop: 20,
+      fontSize: 7,
       paddingBottom: 0,
     }
   },
 
-    meetingCardRight: {
-      marginRight: 20,
+  meetingCardRight: {
+      marginTop: 40,
+      marginRight: 30,
       marginLeft: 15,
-      fontSize: 8,
+      fontSize: 6,
       fontFamily: "Rubik",
       fontWeight: 700,
   },
