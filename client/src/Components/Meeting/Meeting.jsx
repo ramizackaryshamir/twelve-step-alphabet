@@ -19,7 +19,7 @@ const Meeting = ({
     <Link to={`/meeting-detail/${id}`} className={classes.link}>
       <div className={classes.meetingCard}>
         <div className={classes.meetingCardLeft}>
-          <p className={classes.elementLeft}>{organization}</p>
+          <p className={classes.elementOrganization}>{organization}</p>
           <p className={classes.elementLeft}>
             {city}, {state}
           </p>

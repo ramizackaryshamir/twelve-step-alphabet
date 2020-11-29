@@ -50,6 +50,13 @@ const useStyles = createUseStyles({
     fontWeight: 700,
   },
 
+  elementOrganization: {
+    marginTop: 20,
+    fontSize: 16,
+    marginBottom: -20,
+    paddingBottom: 10,
+  },
+
   elementLeft: {
     marginTop: 20,
     fontSize: 16,
@@ -96,7 +103,7 @@ const useStyles = createUseStyles({
       outline: "none",
       display: "flex",
       flexDirection: "row",
-      justifyContent: "center",
+      justifyContent: "space-between",
       width: '100%',
       height: 100,
       lineHeight: '1.6',
@@ -109,27 +116,34 @@ const useStyles = createUseStyles({
       backgroundColor: "#fdd78a",
     },
 
-    elementLeft: {
-      paddingTop: 20,
+    elementOrganization: {
+      marginBottom: -20,
+      fontSize: 8,
+      
+      paddingBottom: 0,
+    },
 
-      marginBottom: 0,
-      fontSize: 6,
+    elementLeft: {
+      marginBottom: -20,
+      
+      fontSize: 7,
       paddingBottom: 0,
     },
 
     meetingCardLeft: {
-      marginTop: 40,
+      marginTop: 10,
       marginLeft: 20,
-      width: 100,
+      width: 100, 
+      fontWeight: 300,
       fontSize: 7,
       fontFamily: "Rubik",
-      fontWeight: 700,
     },
 
     elementName: {
       fontFamily: "Amatic SC",
-      fontSize: 15,
-      fontWeight: 900,
+      fontSize: 12,
+      fontWeight: 700,
+      lineHeight: 'normal',
       textAlign: "left",
       marginBottom: 0,
       marginTop: 10,
@@ -137,10 +151,10 @@ const useStyles = createUseStyles({
 
     elementCenter: {
       fontFamily: "Rubik",
-      fontWeight: 200,
+      fontWeight: 300,
       textAlign: "justify",
       fontSize: 8,
-     textJustify: "inter-character",
+      textJustify: "inter-character",
       marginBottom: 0,
       marginTop: 0,
     },
@@ -153,25 +167,24 @@ const useStyles = createUseStyles({
       // textAlign: "justify",
       width: 190,
       padding: 5,
-      margin: "0px auto 0px 10px",
+      margin: "-10px 20px 0px 5px",
     },
  
     elementRight: {
       textAlign: "right",
-      marginBottom: 0,
-      paddingTop: 20,
-      fontSize: 7,
+      marginBottom: -20,
+      fontSize: 8,
       paddingBottom: 0,
     }
   },
 
   meetingCardRight: {
-      marginTop: 40,
+    marginTop: 10,
       marginRight: 30,
       marginLeft: 15,
-      fontSize: 6,
+      fontSize: 7,
       fontFamily: "Rubik",
-      fontWeight: 700,
+      fontWeight: 300,
   },
     
   // '@media (max-height: 846px)': {
