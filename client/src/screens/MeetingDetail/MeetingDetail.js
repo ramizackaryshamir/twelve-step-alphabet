@@ -26,7 +26,8 @@ const useStyles = createUseStyles({
   mapCard: {
     outline: 'none',
     fontFamily: "Rubik",
-    marginBottom: 10,
+    marginTop: -80,
+    marginBottom: 50,
   },
 
   postReviewBttn: {
@@ -42,10 +43,28 @@ const useStyles = createUseStyles({
 
   '@media (max-width: 415px)': {
     meetingCard: {
-      padding: "20px 20px 20px 20px",
+      padding: "10px 30px 50px 30px",
       marginTop: 40,
+    },
+
+    mapCard: {
+      height: 200,
+    }
+  },
+
+  '@media (max-height: 846px)': {
+    meetingCard: {
+      height: 220,
+      marginTop: 10,
+    },
+
+    mapCard: {
+      margtinTop: 20,
+      height: 300,
+      
     }
   }
+
 })
 
 export default useStyles

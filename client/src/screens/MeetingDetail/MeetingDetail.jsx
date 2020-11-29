@@ -16,45 +16,42 @@ const MeetingDetail = (props) => {
   return (
     <>
       <div className={classes.meeting}>
-        <div className={classes.meetingCard}>
-          {allMeetings
-            .filter((meeting) => meeting.id === parseInt(params.id))
-            .map((meeting) => (
-              <div>
-                <Meeting
-                  params={params.id}
-                  key={meeting.id}
-                  name={meeting.name}
-                  address1={meeting.address1}
-                  address2={meeting.address2}
-                  city={meeting.city}
-                  state={meeting.state}
-                  dayOfWeek={meeting.dayOfWeek}
-                  timeOfDay={meeting.timeOfDay}
-                  organization={meeting.category.name}
-                  longitude={meeting.longitude}
-                  latitude={meeting.latitude}
+        {allMeetings
+          .filter((meeting) => meeting.id === parseInt(params.id))
+          .map((meeting) => (
+            <div className={classes.meetingCard}>
+              <Meeting
+                params={params.id}
+                key={meeting.id}
+                name={meeting.name}
+                address1={meeting.address1}
+                address2={meeting.address2}
+                city={meeting.city}
+                state={meeting.state}
+                dayOfWeek={meeting.dayOfWeek}
+                timeOfDay={meeting.timeOfDay}
+                organization={meeting.category.name}
+                longitude={meeting.longitude}
+                latitude={meeting.latitude}
+              />
+              {meeting.reviews.map((review) => (
+                <Review
+                  reviewId={review.id}
+                  title={review.title}
+                  description={review.description}
+                  score={review.score}
+                  userName={review.userName}
+                  handleDelete={handleDelete}
                 />
-                {meeting.reviews.map((review) => (
-                  <Review
-                    reviewId={review.id}
-                    title={review.title}
-                    description={review.description}
-                    score={review.score}
-                    userName={review.userName}
-                    handleDelete={handleDelete}
-                  />
-                ))}
-                <Link to={`/meetings/${meeting.id}/reviews/new`}>
-                  <button className={classes.postReviewBttn}>
-                    {" "}
-                    Post A Review{" "}
-                  </button>
-                </Link>
-              </div>
-            ))}
-        </div>
-
+              ))}
+              <Link to={`/meetings/${meeting.id}/reviews/new`}>
+                <button className={classes.postReviewBttn}>
+                  {" "}
+                  Post A Review{" "}
+                </button>
+              </Link>
+            </div>
+          ))}
         <div className={classes.mapCard}>
           {allMeetings
             .filter((meeting) => meeting.id === parseInt(params.id))

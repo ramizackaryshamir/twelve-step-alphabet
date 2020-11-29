@@ -76,6 +76,12 @@ const useStyles = createUseStyles({
     marginBottom: -20,
     paddingBottom: 10,
   },
+
+
+
+
+
+
   //
   //
   //
@@ -102,7 +108,7 @@ const useStyles = createUseStyles({
       width: 120,
       fontSize: 8,
       fontFamily: "Rubik",
-      fontWeight: 900,
+      fontWeight: 700,
     },
 
     meetingCardCenter: {
@@ -123,7 +129,7 @@ const useStyles = createUseStyles({
       marginLeft: 20,
       fontSize: 8,
       fontFamily: "Rubik",
-      fontWeight: 900,
+      fontWeight: 700,
     },
 
     elementLeft: {
@@ -136,6 +142,7 @@ const useStyles = createUseStyles({
       fontFamily: "Rubik",
       fontWeight: 400,
       textAlign: "justify",
+      fontSize: 10,
       // textJustify: "inter-word",
       marginBottom: 3,
       marginTop: 0,
@@ -155,7 +162,57 @@ const useStyles = createUseStyles({
       marginTop: 30,
       marginBottom: -30,
       paddingBottom: 0,
-    },
+    }
+  },
+
+    '@media (max-height: 846px)': {
+      elementCenter: {
+        fontFamily: "Rubik",
+        fontSize: 10,
+        fontWeight: 400,
+        textAlign: "justify",
+        textJustify: "inter-word",
+        marginBottom: 3,
+        marginTop: 0,
+      },
+
+      elementName: {
+        fontFamily: "Amatic SC",
+        fontSize: 12,
+        fontWeight: 700,
+        textAlign: "left",
+        marginBottom: 5,
+        marginTop: 3,
+      },
+
+      meetingCardRight: {
+        marginRight: 20,
+        marginLeft: 20,
+        fontSize: 8,
+        fontFamily: "Rubik",
+        fontWeight: 700,
+      },
+
+      elementRight: {
+        textAlign: "right",
+        marginTop: 30,
+        marginBottom: -30,
+        paddingBottom: 0,
+      },
+
+      meetingCardLeft: {
+        marginLeft: 10,
+        width: 120,
+        fontSize: 8,
+        fontFamily: "Rubik",
+        fontWeight: 700,
+      },
+      
+      elementLeft: {
+        marginTop: 30,
+        marginBottom: -30,
+        paddingBottom: 0,
+      },
   }
 })
 
