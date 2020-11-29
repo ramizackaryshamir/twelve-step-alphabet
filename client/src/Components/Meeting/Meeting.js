@@ -117,15 +117,15 @@ const useStyles = createUseStyles({
     },
 
     elementOrganization: {
+      marginTop: 20,
       marginBottom: -20,
       fontSize: 8,
-      
       paddingBottom: 0,
     },
 
     elementLeft: {
+      marginTop: 20,
       marginBottom: -20,
-      
       fontSize: 7,
       paddingBottom: 0,
     },
@@ -155,6 +155,7 @@ const useStyles = createUseStyles({
       textAlign: "justify",
       fontSize: 8,
       textJustify: "inter-character",
+      arginTop: 3,
       marginBottom: 0,
      
     },
@@ -164,9 +165,12 @@ const useStyles = createUseStyles({
       flexDirection: "column",
       flexWrap: "no-wrap",
       justifyContent: "center",
+      textAlign: "justify",
+      textJustify: "inter-word",
       // justifyContent: "center",
       // textAlign: "justify",
       width: 200,
+      fontSize: 15,
       padding: 5,
       margin: "0px 10px 0px 5px",
     },
@@ -175,6 +179,7 @@ const useStyles = createUseStyles({
       textAlign: "right",
       marginBottom: -20,
       fontSize: 8,
+      marginTop: 20,
       paddingBottom: 0,
     },
     
