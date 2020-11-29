@@ -103,7 +103,7 @@ const useStyles = createUseStyles({
       outline: "none",
       display: "flex",
       flexDirection: "row",
-      justifyContent: "space-between",
+      justifyContent: "space-evenly",
       width: '100%',
       height: 100,
       lineHeight: '1.6',
@@ -141,12 +141,12 @@ const useStyles = createUseStyles({
 
     elementName: {
       fontFamily: "Amatic SC",
-      fontSize: 12,
+      fontSize: 14,
       fontWeight: 700,
       lineHeight: 'normal',
       textAlign: "left",
       marginBottom: 0,
-      marginTop: 10,
+      marginTop: 5,
     },
 
     elementCenter: {
@@ -156,18 +156,19 @@ const useStyles = createUseStyles({
       fontSize: 8,
       textJustify: "inter-character",
       marginBottom: 0,
-      marginTop: 0,
+     
     },
 
     meetingCardCenter: {
       display: "flex",
       flexDirection: "column",
       flexWrap: "no-wrap",
+      justifyContent: "center",
       // justifyContent: "center",
       // textAlign: "justify",
-      width: 190,
+      width: 200,
       padding: 5,
-      margin: "-10px 20px 0px 5px",
+      margin: "0px 10px 0px 5px",
     },
  
     elementRight: {
