@@ -91,8 +91,8 @@ const useStyles = createUseStyles({
   
   elementRight: {
     textAlign: "right",
-    marginTop: 20,
     fontSize: 16,
+    marginTop: 20,
     marginBottom: -20,
     paddingBottom: 10,
   },
@@ -185,9 +185,9 @@ const useStyles = createUseStyles({
  
     elementRight: {
       textAlign: "right",
-      marginBottom: -20,
       fontSize: 8,
       marginTop: 20,
+      marginBottom: -20,
       paddingBottom: 0,
     },
     
