@@ -19,7 +19,7 @@ const useStyles = createUseStyles({
     bottom: 0,
     fontFamily: "Cabin Sketch",
     color: "#fdd989",
-    textShadow: '0.07em 0 black, 0 0.07em black, -0.07em 0 black, 0 -0.07em black',
+    textShadow: '0.07em 0 #79e1fd, 0 0.07em #79e1fd, -0.07em 0 #79e1fd, 0 -0.07em #79e1fd',
   },
 
   // ALLGOOD
