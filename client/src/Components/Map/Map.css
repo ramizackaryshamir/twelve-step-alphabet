@@ -56,4 +56,20 @@
   }
 }
 
+@media (max-height: 750px) {
+  .map-container {
+    outline: none;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    height: 120px;
+    margin-top: 40px;
+    margin-right: 20px;
+    margin-bottom: 0px;
+    margin-left: 20px;
+    border: 5px solid #ffa2be;
+    border-radius: 10px;
+  }
+}
+
 
