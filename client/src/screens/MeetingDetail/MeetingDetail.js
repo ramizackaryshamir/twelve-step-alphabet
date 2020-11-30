@@ -127,7 +127,7 @@ const useStyles = createUseStyles({
   // },
 
   '@media (min-height: 850px)': {
-    mapCard: { 
+    mapCard: {
       height: 600,
       weight: 200
     },
