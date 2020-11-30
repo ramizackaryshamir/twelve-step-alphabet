@@ -108,7 +108,6 @@ const useStyles = createUseStyles({
     }
   },
 
-  // ALLGOOD
   // iPad
   '@media (min-width: 768px) and (max-height: 1024px)': {
     meetingCard: {
@@ -119,12 +118,6 @@ const useStyles = createUseStyles({
 
     },
   },
-
-  // // iPad Pro 
-  // '@media (min-width: 1024px)': {
-  //   meetingCard: {
-  //   },
-  // },
 
   //iPhone 6/7/8
   '@media (min-height: 600px)': {

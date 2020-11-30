@@ -21,7 +21,6 @@ const useStyles = createUseStyles({
     color: "#191919",
   },
 
-  // ALLGOOD
   //iPhone X
   '@media (max-width: 415px)': {
     footer: {
@@ -33,18 +32,10 @@ const useStyles = createUseStyles({
   },
 
   '@media (min-height: 1100px)': {
-   footer: {
+    footer: {
       marginTop: 350,
     }
   }
-
-  // '@media (min-heigth: 700px)': {
-  //   footer: {
-  //     marginTop: 2000,
-  //     height: 70,
-  //     backgroundColor: "black",
-  //   }
-  // },
 })
 
 

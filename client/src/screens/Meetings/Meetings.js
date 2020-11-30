@@ -15,7 +15,6 @@ const useStyles = createUseStyles({
 
   // MEDIAQUERIES //
 
-  // ALLGOOD
   // iPhone X
   '@media (max-width: 415px)': {
     meetingCard: {
@@ -23,7 +22,6 @@ const useStyles = createUseStyles({
     }
   },
 
-  // ALLGOOD
   //iPad
   '@media (min-width: 768px) and (max-height: 1024px)': {
     meetingCard: {
