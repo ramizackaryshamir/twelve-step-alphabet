@@ -8,7 +8,6 @@
   display: flex;
   justify-content: space-evenly;
   margin: auto;
-  width: 100vw;
   border: solid 5px #ffa2be;
   border-radius: 5px;
 }
