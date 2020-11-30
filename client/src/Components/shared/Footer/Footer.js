@@ -15,10 +15,11 @@ const useStyles = createUseStyles({
     marginTop: 50,
     backgroundColor: "#ffa2be",
     position: 'sticky',
-    fontSize: 15,
+    fontSize: 17,
     bottom: 0,
     fontFamily: "Cabin Sketch",
     color: "#fdd989",
+    textShadow: '0.07em 0 black, 0 0.07em black, -0.07em 0 black, 0 -0.07em black',
   },
 
   // ALLGOOD
