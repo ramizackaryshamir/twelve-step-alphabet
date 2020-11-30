@@ -120,10 +120,16 @@ const useStyles = createUseStyles({
     },
   },
 
-  // ALLGOOD
-  // iPad Pro 
-  '@media (min-width: 1024px)': {
-    meetingCard: {
+  // // iPad Pro 
+  // '@media (min-width: 1024px)': {
+  //   meetingCard: {
+  //   },
+  // },
+
+  '@media (min-height: 850px)': {
+    mapCard: { 
+      height: 600,
+      weight: 200
     },
   }
 })
