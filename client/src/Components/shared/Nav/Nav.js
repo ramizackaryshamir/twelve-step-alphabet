@@ -22,7 +22,7 @@ const useStyles = createUseStyles({
     fontFamily: "Cabin Sketch",
     marginBottom: 5,
     position: 'sticky',
-    color: "#79e1fd",
+    color: "#191919",
   },
 
   '@media (max-width: 415px)': {
@@ -37,7 +37,7 @@ const useStyles = createUseStyles({
       display: "flex",
       flexDirection: "row",
       fontSize: 15,
-      color: "#79e1fd"
+      color: "#191919"
     }
   }
 })

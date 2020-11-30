@@ -18,7 +18,7 @@ const useStyles = createUseStyles({
     fontSize: 17,
     bottom: 0,
     fontFamily: "Cabin Sketch",
-    color: "#79e1fd",
+    color: "#191919",
   },
 
   // ALLGOOD
