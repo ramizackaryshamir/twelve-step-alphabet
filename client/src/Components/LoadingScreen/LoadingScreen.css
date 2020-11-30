@@ -12,22 +12,22 @@
   border-radius: 5px;
 }
 
-/* 
-  // ALLGOOD
-  // iPhone X
-  '@media (max-width: 415px)': {
-    meetingCard: {
-      margin: "5px 12px 5px 10px",
-    }
-  },
 
-  // ALLGOOD
-  //iPad
-  '@media (min-width: 768px) and (max-height: 1024px)': {
-    meetingCard: {
-      margin: "7px 7px 7px 7px",
-    },
-  }, */
+  /* // ALLGOOD
+  // iPhone X */
+  @media (max-width: 415px): {
+    meetingCard {
+      margin: 5px 12px 5px 10px,
+    }
+  }
+
+  /* // ALLGOOD
+  //iPad */
+  @media (min-width: 768px) and (max-height: 1024px): {
+    meetingCard {
+      margin: 7px 7px 7px 7px,
+    }
+  }
 
 
 
