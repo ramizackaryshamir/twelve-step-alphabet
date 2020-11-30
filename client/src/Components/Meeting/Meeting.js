@@ -22,7 +22,7 @@ const useStyles = createUseStyles({
     backgroundColor: "#fdd78a",
   },
 
-   meetingCardLeft: {
+  meetingCardLeft: {
     width: 220,
     marginTop: 10,
     marginBottom: 10,
@@ -69,7 +69,7 @@ const useStyles = createUseStyles({
     marginBottom: -20,
     paddingBottom: 10,
   },
-//
+  //
   elementCenter: {
     fontFamily: "Rubik",
     fontWeight: 400,
@@ -78,7 +78,7 @@ const useStyles = createUseStyles({
     marginTop: 3,
   },
 
-  
+
   elementName: {
     fontFamily: "Amatic SC",
     fontSize: 30,
@@ -87,8 +87,8 @@ const useStyles = createUseStyles({
     marginBottom: 3,
     marginTop: 3,
   },
-//
-  
+  //
+
   elementRight: {
     textAlign: "right",
     fontSize: 16,
@@ -137,7 +137,7 @@ const useStyles = createUseStyles({
     meetingCardLeft: {
       marginTop: 10,
       marginLeft: 20,
-      width: 100, 
+      width: 100,
       fontWeight: 300,
       fontSize: 7,
       fontFamily: "Rubik",
@@ -177,7 +177,7 @@ const useStyles = createUseStyles({
       padding: 5,
       margin: "0px 10px 0px 5px",
     },
- 
+
     elementRight: {
       textAlign: "right",
       fontSize: 8,
@@ -185,7 +185,7 @@ const useStyles = createUseStyles({
       marginBottom: -20,
       paddingBottom: 0,
     },
-    
+
     meetingCardRight: {
       width: 34,
       marginTop: 10,
@@ -198,8 +198,7 @@ const useStyles = createUseStyles({
     },
   },
 
- 
-    
+
   // '@media (max-height: 846px)': {
   //   meetingCard: {
   //     outline: "none",

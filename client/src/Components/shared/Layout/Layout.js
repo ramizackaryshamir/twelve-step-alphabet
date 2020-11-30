@@ -4,6 +4,8 @@ const useStyles = createUseStyles({
 
   layout: {
     backgroundColor: "#79e1fd",
+    height: '100vh',
+    width: '100vw'
   },
 })
 

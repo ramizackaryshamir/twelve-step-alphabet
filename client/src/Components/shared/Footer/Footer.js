@@ -21,6 +21,8 @@ const useStyles = createUseStyles({
     color: "#fdd989",
   },
 
+  // ALLGOOD
+  //iPhone X
   '@media (max-width: 415px)': {
     footer: {
       fontSize: 7,
@@ -28,7 +30,14 @@ const useStyles = createUseStyles({
       paddingTop: 15,
       paddingBottom: 5,
     }
+  },
+// ALLGOOD
+  '@media (min-heigth: 1120px': {
+    footer: {
+      marginTop: 1400,
+    }
   }
+ 
 })
 
 export default useStyles;

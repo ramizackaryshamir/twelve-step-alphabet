@@ -13,13 +13,13 @@ const useStyles = createUseStyles({
     margin: "0px 100px 0px 100px",
   },
 
-// MEDIAQUERIES //
+  // MEDIAQUERIES //
 
   // ALLGOOD
   // iPhone X
   '@media (max-width: 415px)': {
     meetingCard: {
-      margin: "5px 10px 5px 10px",
+      margin: "5px 12px 5px 10px",
     }
   },
 

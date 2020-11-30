@@ -1,7 +1,7 @@
 import { createUseStyles } from "react-jss"
 
 const useStyles = createUseStyles({
-  
+
   meeting: {
     display: "flex",
     flexDirection: "column",
@@ -41,7 +41,7 @@ const useStyles = createUseStyles({
     borderRadius: 5
   },
 
-  
+
   // MEDIAQUERIES //
   '@media (max-height: 668px)': {
     meetingCard: {
@@ -76,16 +76,16 @@ const useStyles = createUseStyles({
     mapCard: {
       margtinTop: 20,
       height: 30,
-      
+
     }
   },
 
-// ALLGOOD 
-// iPhone X
+  // ALLGOOD 
+  // iPhone X
   '@media (max-width: 420px)': {
     meetingCard: {
       marginTop: 20,
-      padding: "10px 30px 50px 30px", 
+      padding: "10px 30px 50px 30px",
     },
 
     postReviewBttn: {
@@ -108,17 +108,25 @@ const useStyles = createUseStyles({
     }
   },
 
-// ALLGOOD
-// iPad
-'@media (min-width: 768px) and (max-height: 1024px)': { 
+  // ALLGOOD
+  // iPad
+  '@media (min-width: 768px) and (max-height: 1024px)': {
     meetingCard: {
       marginTop: 55,
       marginRight: 0,
       marginBottom: 10,
       marginLeft: 0
-      
+
     },
   },
+
+// ALLGOOD
+// iPad Pro 
+  '@media (min-width: 1024px)': {
+    meetingCard: {
+      marginTop: 250,
+    }
+}
 })
 
 export default useStyles
