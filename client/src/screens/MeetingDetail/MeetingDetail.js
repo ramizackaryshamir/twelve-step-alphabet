@@ -126,10 +126,10 @@ const useStyles = createUseStyles({
   //   },
   // },
 
-  '@media (min-height: 850px)': {
+  //iPhone 6/7/8
+  '@media (min-height: 600px)': {
     mapCard: {
-      height: 600,
-      weight: 200
+      height: 220,
     },
   }
 })
