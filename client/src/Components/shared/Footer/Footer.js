@@ -31,13 +31,21 @@ const useStyles = createUseStyles({
       paddingBottom: 5,
     }
   },
-// ALLGOOD
-  '@media (min-heigth: 1120px': {
-    footer: {
-      marginTop: 1400,
+
+  '@media (min-height: 1100px)': {
+   footer: {
+      marginTop: 350,
     }
   }
- 
+
+  // '@media (min-heigth: 700px)': {
+  //   footer: {
+  //     marginTop: 2000,
+  //     height: 70,
+  //     backgroundColor: "black",
+  //   }
+  // },
 })
+
 
 export default useStyles;

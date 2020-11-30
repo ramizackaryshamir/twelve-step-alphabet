@@ -120,13 +120,13 @@ const useStyles = createUseStyles({
     },
   },
 
-// ALLGOOD
-// iPad Pro 
+  // ALLGOOD
+  // iPad Pro 
   '@media (min-width: 1024px)': {
     meetingCard: {
       marginTop: 250,
-    }
-}
+    },
+  }
 })
 
 export default useStyles
