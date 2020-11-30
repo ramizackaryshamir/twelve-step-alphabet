@@ -121,7 +121,7 @@ const useStyles = createUseStyles({
   },
 
   // ALLGOOD
-  iPad Pro 
+  // iPad Pro 
   '@media (min-width: 1024px)': {
     meetingCard: {
     },
