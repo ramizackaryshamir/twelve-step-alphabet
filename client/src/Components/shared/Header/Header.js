@@ -11,7 +11,6 @@ const useStyles = createUseStyles({
     backgroundColor: "#ffa2be",
     position: 'sticky',
     top: 0,
-    textShadow: '0.07em 0 #79e1fd, 0 0.07em #79e1fd, -0.07em 0 #79e1fd, 0 -0.07em #79e1fd',
   },
 })
 
