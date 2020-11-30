@@ -84,7 +84,15 @@ const useStyles = createUseStyles({
   buttons: {
     display: "flex",
     justifyContent: "space-around",
-  }
+  },
+
+  //iPhone X
+  '@media (max-width: 415px)': {
+    body: {
+      height: '60%',
+      width: '50%',
+    }
+  },
 })
 
 export default useStyles
