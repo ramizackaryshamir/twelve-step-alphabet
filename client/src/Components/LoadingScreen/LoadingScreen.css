@@ -11,3 +11,10 @@
   border: solid 5px #ffa2be;
   border-radius: 5px;
 }
+
+@media (max-width: 505px) {
+.loading {
+margin-top: -20px;
+
+}
+}
