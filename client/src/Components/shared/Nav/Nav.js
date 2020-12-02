@@ -25,7 +25,7 @@ const useStyles = createUseStyles({
     color: "#191919",
   },
 
-  '@media (max-width: 415px)': {
+  '@media (max-width: 505px)': {
     navBar: {
       width: '100%',
       height: 35,
