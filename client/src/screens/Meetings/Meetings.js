@@ -16,7 +16,7 @@ const useStyles = createUseStyles({
   // MEDIAQUERIES //
 
   // iPhone X
-  '@media (max-width: 415px)': {
+  '@media (max-width: 505px)': {
     meetingCard: {
       margin: "5px 12px 5px 10px",
     }

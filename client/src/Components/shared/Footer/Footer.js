@@ -22,7 +22,7 @@ const useStyles = createUseStyles({
   },
 
   //iPhone X
-  '@media (max-width: 415px)': {
+  '@media (max-width: 505px)': {
     footer: {
       fontSize: 7,
       height: 30,

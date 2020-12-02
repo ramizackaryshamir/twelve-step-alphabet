@@ -40,7 +40,7 @@
   padding: 6;
 }
 
-@media (max-width: 415px) {
+@media (max-width: 505px) {
   .map-container {
     outline: none;
     display: flex;

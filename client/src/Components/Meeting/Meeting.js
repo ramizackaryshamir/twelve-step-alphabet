@@ -102,7 +102,7 @@ const useStyles = createUseStyles({
 
   // ALLGOOD
   // iPhone X
-  '@media (max-width: 415px)': {
+  '@media (max-width: 505px)': {
     meetingCard: {
       outline: "none",
       display: "flex",

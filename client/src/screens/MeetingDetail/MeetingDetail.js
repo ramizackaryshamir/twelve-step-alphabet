@@ -82,7 +82,7 @@ const useStyles = createUseStyles({
 
   // ALLGOOD 
   // iPhone X
-  '@media (max-width: 420px)': {
+  '@media (max-width: 505px)': {
     meetingCard: {
       marginTop: 20,
       padding: "10px 30px 50px 30px",
