@@ -24,10 +24,13 @@ const useStyles = createUseStyles({
   //iPhone X
   '@media (max-width: 505px)': {
     footer: {
-      fontSize: 7,
+      fontSize: 8,
       height: 30,
       paddingTop: 15,
+      paddingRight: 5,
       paddingBottom: 5,
+      paddingLeft: 5,
+      justifyContent: "space-evenly",
     }
   },
 
