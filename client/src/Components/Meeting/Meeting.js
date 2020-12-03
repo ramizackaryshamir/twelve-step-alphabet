@@ -100,7 +100,6 @@ const useStyles = createUseStyles({
 
   // MEDIAQUERIES //
 
-  // ALLGOOD
   // iPhone X
   '@media (max-width: 505px)': {
     meetingCard: {
@@ -158,6 +157,7 @@ const useStyles = createUseStyles({
       fontWeight: 300,
       textAlign: "justify",
       fontSize: 8,
+      hypens: 'auto',
       textJustify: "inter-character",
       arginTop: 3,
       marginBottom: 0,
