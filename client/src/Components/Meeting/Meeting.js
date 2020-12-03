@@ -144,7 +144,7 @@ const useStyles = createUseStyles({
 
     elementName: {
       fontFamily: "Amatic SC",
-      fontSize: 14,
+      fontSize: 13,
       fontWeight: 700,
       lineHeight: 'normal',
       textAlign: "left",
