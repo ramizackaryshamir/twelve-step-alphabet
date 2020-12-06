@@ -46,8 +46,7 @@ const MeetingDetail = (props) => {
               ))}
               <Link to={`/meetings/${meeting.id}/reviews/new`}>
                 <button className={classes.postReviewBttn}>
-                  {" "}
-                  Post A Review{" "}
+                  Post A Review
                 </button>
               </Link>
             </div>
