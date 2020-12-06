@@ -66,7 +66,7 @@ const useStyles = createUseStyles({
     backgroundColor: "#F2DBAE",
     padding: 10,
     margin: "auto",
-    borderRadius: 15,
+    borderRadius: 10,
     border: "10px solid #BAD0D9",
   },
 

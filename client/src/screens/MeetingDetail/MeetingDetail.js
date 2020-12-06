@@ -80,7 +80,6 @@ const useStyles = createUseStyles({
     }
   },
 
-  // ALLGOOD 
   // iPhone X
   '@media (max-width: 505px)': {
     meetingCard: {
@@ -100,12 +99,14 @@ const useStyles = createUseStyles({
       fontFamily: "Amatic SC",
       fontWeight: 700,
       border: '3px solid #ffa2be',
-      borderRadius: 3
+      borderRadius: 3,
+      zIndex: 10,
     },
 
     mapCard: {
       height: 200,
-    }
+    },
+
   },
 
   // iPad
