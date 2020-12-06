@@ -91,23 +91,24 @@ const useStyles = createUseStyles({
       display: "flex",
       flexDirection: "row",
       justifyContent: "center",
-      height: 1080,
+      height: '100vh',
     },
-    
+
     formHeader: {
       display: "flex",
       flexDirection: "column",
       alignItems: "flex-end",
-      width: 600,
+      width: 100,
       margin: "auto",
     },
 
     title: {
       outline: "none",
       fontFamily: "Rubik",
+      fontSize: 8,
       fontWeight: 800,
-      width: 300,
-      height: 30,
+      width: 100,
+      height: 10,
       backgroundColor: "#F2DBAE",
       borderRadius: 5,
       padding: 10,
@@ -117,9 +118,10 @@ const useStyles = createUseStyles({
 
     userName: {
       outline: "none",
-      width: 300,
-      height: 30,
+      width: 100,
+      height: 10,
       fontFamily: "Rubik",
+      fontSize: 8,
       fontWeight: 800,
       backgroundColor: "#F2DBAE",
       padding: 10,
@@ -129,8 +131,10 @@ const useStyles = createUseStyles({
 
     newScore: {
       outline: "none",
-      width: 50,
-      height: 30,
+      width: 30,
+      height: 20,
+      fontFamily: "Rubik",
+      fontSize: 8,
       backgroundColor: "#F2DBAE",
       borderRadius: 5,
       border: "3px solid #BAD0D9",
@@ -141,9 +145,10 @@ const useStyles = createUseStyles({
     description: {
       outline: "none",
       fontFamily: "Rubik",
+      fontSize: 8,
       fontWeight: 800,
-      width: 600,
-      height: 600,
+      width: 300,
+      height: '50vh',
       backgroundColor: "#F2DBAE",
       padding: 10,
       margin: "auto",
@@ -155,10 +160,11 @@ const useStyles = createUseStyles({
       outline: "none",
       fontFamily: "Bungee",
       color: "#000000",
-      width: 140,
-      height: 50,
+      width: 60,
+      height: 30,
       border: "1px solid #000000",
       borderRadius: 10,
+      fontSize: 10,
       backgroundColor: "#F2DABD",
     },
 
