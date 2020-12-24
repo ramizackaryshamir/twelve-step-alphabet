@@ -4,16 +4,6 @@
 
 ### [View Project](https://twelve-step-alphabet.netlify.app/)
 
-### MVP
-- Use mitmproxy to reverse engineer API calls used by leading ios recovery applications
-- Build comprehensive meeting database from retrieved datasets
-- Create functionality to allow users to search comprehensive directory of 12 step meetings
-
-### Goals
-
-- _Develop a working product as basis for future iterations of development, with the end goal of releasing the application on Apple's App store_
-- _Refine recent advances in my React knowledge—including PropTypes for client-side error handling and React-JSS for dynamic CSS-through implementation in project development_
-
 ### Libraries and Dependencies
 
 |     Library      | Description                                |
@@ -135,21 +125,3 @@ src
 ### ERD 
 
 [ERD](https://app.lucidchart.com/invitations/accept/d4c11f10-7091-4a45-89fd-46d81e7900e2)
-
-### Post-MVP 
-
-- Map functionality to display meeting directory
-- Geolocation functionality to find local meetings
-- Anniversary functionality display user's sober date, and parse user's sober days
-- Bookmark functionality for user to bookmark meetings
-- Check-in functionality for user to manipulate and record user's meeting attendance
-
-***
-
-### Code Showcase
-
-> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
-
-### Code Issues & Resolutions
-
-> Use this section to list of all major issues encountered and their resolution.
