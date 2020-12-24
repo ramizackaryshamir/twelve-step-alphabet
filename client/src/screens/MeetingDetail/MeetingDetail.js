@@ -19,14 +19,14 @@ const useStyles = createUseStyles({
     display: "flex",
     flexDirection: "column",
     padding: "0px 100px 0px 100px",
-    marginTop: 50,
+    marginTop: 10,
     backgroundColor: "FFD1DC",
   },
 
   mapCard: {
     outline: 'none',
     fontFamily: "Rubik",
-    marginTop: -80,
+    marginTop: -30,
     marginBottom: 50,
   },
 
@@ -36,6 +36,7 @@ const useStyles = createUseStyles({
     marginTop: 10,
     padding: 10,
     fontFamily: "Amatic SC",
+    fontSize: 8,
     fontWeight: 900,
     border: '3px solid #ffa2be',
     borderRadius: 5
