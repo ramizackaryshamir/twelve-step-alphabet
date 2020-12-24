@@ -36,7 +36,7 @@ const useStyles = createUseStyles({
     marginTop: 10,
     padding: 10,
     fontFamily: "Amatic SC",
-    fontSize: 8,
+    fontSize: 10,
     fontWeight: 900,
     border: '3px solid #ffa2be',
     borderRadius: 5
@@ -106,6 +106,7 @@ const useStyles = createUseStyles({
 
     mapCard: {
       height: 200,
+      marginTop: -50,
     },
 
   },
