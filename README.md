@@ -13,11 +13,11 @@
 |     [React-JSS](https://www.npmjs.com/package/react-jss)      |  
  
 
-| Documentation |
-| ------------ |
-| [Medium: Intercept iOs/Android Network Calls using mitmproxy](https://medium.com/testvagrant/intercept-ios-android-network-calls-using-mitmproxy-4d3c94831f62) | 
-|[Mitmproxy Docs](https://docs.mitmproxy.org/stable/) |
-| [Rails Guides](https://guides.rubyonrails.org/) |
+| Documentation ||
+| ------------ |-------|
+| Medium |[Intercept iOs/Android Network Calls using mitmproxy](https://medium.com/testvagrant/intercept-ios-android-network-calls-using-mitmproxy-4d3c94831f62) | 
+|Mitmproxy | [Docs](https://docs.mitmproxy.org/stable/) |
+| Ruby on Rails |[Guides](https://guides.rubyonrails.org/) |
 
 #### Wireframes
 
