@@ -12,8 +12,12 @@
 | [React PropTypes](https://www.npmjs.com/package/prop-types) |  
 |     [React-JSS](https://www.npmjs.com/package/react-jss)      |  
  
-## Documenation
-[Medium: Intercept iOs/Android Network Calls using mitmproxy](https://medium.com/testvagrant/intercept-ios-android-network-calls-using-mitmproxy-4d3c94831f62) || [mitmproxy docs](https://docs.mitmproxy.org/stable/) || [Rails Guides](https://guides.rubyonrails.org/)
+
+| Documentation |
+| ------------ |
+| [Medium: Intercept iOs/Android Network Calls using mitmproxy](https://medium.com/testvagrant/intercept-ios-android-network-calls-using-mitmproxy-4d3c94831f62) | 
+|[Mitmproxy Docs](https://docs.mitmproxy.org/stable/) |
+| [Rails Guides](https://guides.rubyonrails.org/) |
 
 #### Wireframes
 
