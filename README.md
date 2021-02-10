@@ -7,12 +7,11 @@
 
 ## Application Dependencies
 
-
-| -------------- | | -------------- |
-|      [React](https://create-react-app.dev/)       | |
-|   [React Router](https://www.npmjs.com/package/react-router)   | |
-| [React PropTypes](https://www.npmjs.com/package/prop-types) | |
-|     [React-JSS](https://www.npmjs.com/package/react-jss)      | |
+| :-------------- | | -------------- |
+|      [React](https://create-react-app.dev/)   | a |
+|   [React Router](https://www.npmjs.com/package/react-router)   | a |
+| [React PropTypes](https://www.npmjs.com/package/prop-types) | a |
+|     [React-JSS](https://www.npmjs.com/package/react-jss)      | a |
 ### DOCS
 
 [Medium: Intercept iOs/Android Network Calls using mitmproxy](https://medium.com/testvagrant/intercept-ios-android-network-calls-using-mitmproxy-4d3c94831f62) || [mitmproxy docs](https://docs.mitmproxy.org/stable/) || [Rails Guides](https://guides.rubyonrails.org/)
