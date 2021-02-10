@@ -4,6 +4,7 @@
   width: 100vw;
   height: 100vh;
 }
+
 .loading {
   display: flex;
   justify-content: space-evenly;
@@ -13,8 +14,7 @@
 }
 
 @media (max-width: 505px) {
-.loading {
-margin-top: 60px;
-
-}
+  .loading {
+    margin-top: 60px;
+  }
 }
