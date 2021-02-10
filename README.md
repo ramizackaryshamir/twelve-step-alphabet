@@ -5,10 +5,7 @@
 
 ## [View Application](https://twelve-step-alphabet.netlify.app/)
 
-## Application Dependencies
-
-
-|                  |                
+## |     Application Dependencies             |                
 | :--------------: | 
 |[React](https://create-react-app.dev/)|  
 |[React Router](https://www.npmjs.com/package/react-router)|  
