@@ -1,7 +1,6 @@
 # 12 Step Alphabet
-#### React-on-Rails
 
-**12 Step Alphabet** is a comprehensive 12 step meeting directory and review platform for [CMA](https://www.crystalmeth.org/) [NA](https://www.na.org/?ID=aboutus) [AA](https://www.aa.org/pages/en_US/what-is-aa) & [ALANON](https://al-anon.org/) 
+Developed with React-on-Rails **12 Step Alphabet** is a comprehensive 12 step meeting directory and review platform for [CMA](https://www.crystalmeth.org/), [NA](https://www.na.org/?ID=aboutus), [AA](https://www.aa.org/pages/en_US/what-is-aa), and [ALANON](https://al-anon.org/) 
 
 ## [View Application](https://twelve-step-alphabet.netlify.app/)
 [![TSA](https://github.com/MeetYourCreator/twelve-step-alphabet/blob/master/client/public/12step-thumbnail-linkedin.png)](https://twelve-step-alphabet.netlify.app/)
