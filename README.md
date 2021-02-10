@@ -7,6 +7,8 @@
 
 ## Application Dependencies
 
+
+|     c             |         c       |
 | :--------------: | -------------- |
 |[React](https://create-react-app.dev/)|  |
 |[React Router](https://www.npmjs.com/package/react-router)|  |
